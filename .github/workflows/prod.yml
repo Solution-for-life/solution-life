@@ -28,6 +28,14 @@ jobs:
           cp .htaccess dist/solution-life/browser/.htaccess
 
 
+      - name: 🚀 Desplegar en GitHub Pages
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          branch: solution_preview
+          folder: dist/solution-life/browser
+          token: ${{secrets.GH_TOKEN}}
+
+
 
 
 
