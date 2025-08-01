@@ -21,7 +21,7 @@ jobs:
 
 
       - name: 🏗️ Construir el proyecto
-        run: npm run build -- --base-href "/"
+        run: npm run build -- --base-href "./"
 
       - name: 📂 Copiar .htaccess a la carpeta de build
         run: |
