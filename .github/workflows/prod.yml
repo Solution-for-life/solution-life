@@ -17,7 +17,7 @@ jobs:
 
       - name: Archivos de entorno
         run: npm run envs
-        env:
+
 
 
       - name: 🏗️ Construir el proyecto
