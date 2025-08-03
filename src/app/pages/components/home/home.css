@@ -1,0 +1,7 @@
+.cuadro_principal {
+  background-image: url('/assets/images/img-family-seguros.png');
+  background-size: auto;
+  background-repeat: no-repeat;
+  object-fit: cover;
+  background-position: left;
+}
