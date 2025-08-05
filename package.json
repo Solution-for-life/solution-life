@@ -29,6 +29,7 @@
     "@angular/router": "^20.1.0",
     "@fortawesome/fontawesome-free": "^7.0.0",
     "@tailwindcss/postcss": "^4.1.11",
+    "@tailwindplus/elements": "^1.0.4",
     "cross-env": "^7.0.3",
     "dotenv": "^17.2.1",
     "postcss": "^8.5.6",

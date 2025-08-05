@@ -1,12 +1,13 @@
 import { CommonModule } from '@angular/common';
-import { Component, input, signal } from '@angular/core';
+import { Component, CUSTOM_ELEMENTS_SCHEMA, input, signal } from '@angular/core';
 
 
 @Component({
   selector: 'app-header',
   imports: [CommonModule],
   templateUrl: './header.html',
-  styleUrl: './header.css'
+  styleUrl: './header.css',
+  schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
 export class Header {
 

@@ -8,6 +8,6 @@ import { Header } from '../../../components/header/header';
   templateUrl: './home.html',
   styleUrl: './home.css'
 })
-export class Home {
+export default class Home {
 
 }

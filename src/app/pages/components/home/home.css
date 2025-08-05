@@ -4,4 +4,5 @@
   background-repeat: no-repeat;
   object-fit: cover;
   background-position: left;
+  background-size: contain;
 }
