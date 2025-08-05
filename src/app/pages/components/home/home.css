@@ -6,3 +6,11 @@
   background-position: left;
   background-size: contain;
 }
+@media screen and (max-width: 768px) {
+  .cuadro_principal {
+    background-position: top;
+
+  }
+
+}
+
