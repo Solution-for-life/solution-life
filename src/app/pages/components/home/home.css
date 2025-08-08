@@ -6,6 +6,15 @@
   background-position: left;
   background-size: contain;
 }
+.cuadro_serevices {
+  background-image: url('/assets/images/primer-plano-de-una-persona-pensando-en-comprar-o-vender-una-casa.jpg');
+  background-size: cover;  /* Hace que ocupe todo el contenedor */
+  background-position: center; /* Centra la imagen */
+  background-repeat: no-repeat; /* Evita que se repita */
+  object-fit: contain;
+  /* background-size: contain; */
+}
+
 @media screen and (max-width: 768px) {
   .cuadro_principal {
     background-position: top;
