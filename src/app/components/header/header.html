@@ -1,40 +1,4 @@
-<!-- <div>
-  <div class="header flex flex-row items-center justify-around h-16 w-[100vw] bg-traslucido text-white">
-    <div>logo</div>
-    <div>
-      <ul class="list-none flex flex-row items-center gap-x-10 justify-around">
-        <li><a href="#">Inicio</a></li>
-        <li><a href="#">Sobre nosotros</a></li>
-        <li><a href="#">Contacto</a></li>
-        <li>
-          <div class="dropdown" (clickOutside)="closeDropdown()">
-            <button (click)="toggleDropdown()" class="dropdown-toggle flex flex-row items-center gap-x-2 justify-center" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-              <span class="dropdown-toggle-text">Servicios</span>
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-down"><polyline points="6 9 12 15 18 9"></polyline></svg>
-            </button>
-            <ul
-              *ngIf="isOpen()"
-              class="absolute z-10 mt-2 w-48 bg-blue-600  rounded-md shadow-lg"
-            >
-              <li><a href="#" class="block px-4 py-2 hover:bg-blue-700">Impuestos</a></li>
-              <li><a href="#" class="block px-4 py-2 hover:bg-blue-700">Seguros de Vida</a></li>
-              <li><a href="#" class="block px-4 py-2 hover:bg-blue-700">Mas Seguros</a></li>
-              <li><a href="#" class="block px-4 py-2 hover:bg-blue-700">Mas Seguros</a></li>
-            </ul>
-          </div>
-        </li>
-        <li><a href="#">Portfolio</a></li>
-      </ul>
-    </div>
-    <div class="flex flex-row items-center gap-x-10 justify-around">
-      <div>inicio de sesión</div>
-      <div>mi cuenta</div>
-    </div>
-  </div>
-</div> -->
 
-<!-- Include this script tag or install `@tailwindplus/elements` via npm: -->
-<!-- <script src="https://cdn.jsdelivr.net/npm/@tailwindplus/elements@1" type="module"></script> -->
 <header class="bg-[#00013A] w-[90vw] container mx-auto px-4">
   <nav aria-label="Global" class="mx-auto flex  items-center text-white lg:justify-space-around justify-between p-6 lg:px-8">
     <div class="flex lg:flex-1">
@@ -44,7 +8,7 @@
       </a>
     </div>
     <div class="flex lg:hidden">
-      <button type="button" command="show-modal" commandfor="mobile-menu" class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700">
+      <button type="button" command="show-modal" commandfor="mobile-menu" class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-white">
         <span class="sr-only text-white">Open main menu</span>
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" data-slot="icon" aria-hidden="true" class="size-6">
           <path d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" stroke-linecap="round" stroke-linejoin="round" />
@@ -155,7 +119,7 @@
               <span class="sr-only text-white">Your Company</span>
               <img src="https://tailwindcss.com/plus-assets/img/logos/mark.svg?color=indigo&shade=600" alt="" class="h-8 w-auto" />
             </a>
-            <button type="button" command="close" commandfor="mobile-menu" class="-m-2.5 rounded-md p-2.5 text-gray-700">
+            <button type="button" command="close" commandfor="mobile-menu" class="-m-2.5 rounded-md p-2.5 text-white">
               <span class="sr-only text-white">Close menu</span>
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" data-slot="icon" aria-hidden="true" class="size-6">
                 <path d="M6 18 18 6M6 6l12 12" stroke-linecap="round" stroke-linejoin="round" />
