@@ -1,0 +1,17 @@
+<div class="relative  w-full">
+
+  <!-- Contenedor del carrusel -->
+  <div
+    #carousel
+    class="flex overflow-x-auto  h-48 scroll-smooth snap-x snap-mandatory gap-4 px-10 scrollbar-hide">
+
+    <div *ngFor="let item of items"
+         class="min-w-[250px]  flex-shrink-0 snap-center bg-white  rounded-lg p-4">
+      <p class="font-semibold">{{ item.title }}</p>
+      <span class="text-gray-500">{{ item.name }}</span>
+    </div>
+
+  </div>
+
+</div>
+

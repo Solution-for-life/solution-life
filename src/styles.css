@@ -3,3 +3,16 @@
 * {
   font-family: 'Roboto', sans-serif;
 }
+h2{
+  font-size: 2.7rem;
+  color: #202124;
+  font-weight: 800;
+  padding: auto;
+}
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
