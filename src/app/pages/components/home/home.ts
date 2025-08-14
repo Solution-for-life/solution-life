@@ -4,7 +4,7 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { faCheckCircle, faCogs, faCubes, faHandshake, faStar, faUniversity, faUser } from '@fortawesome/free-solid-svg-icons';
 import { HomeContact } from "../home-contact/home-contact";
 import { CommonModule } from '@angular/common';
-import { TranslateModule, TranslateService } from '@ngx-translate/core';
+import { TranslateModule } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-home',
