@@ -6,6 +6,12 @@
     "solution-life": {
       "projectType": "application",
       "schematics": {},
+      "i18n": {
+        "sourceLocale": "es",
+        "locales": {
+          "en": "src/locale/messages.en.json"
+        }
+      },
       "root": "",
       "sourceRoot": "src",
       "prefix": "app",
@@ -15,7 +21,8 @@
           "options": {
             "browser": "src/main.ts",
             "polyfills": [
-              "zone.js"
+              "zone.js",
+              "@angular/localize/init"
             ],
             "tsConfig": "tsconfig.app.json",
             "assets": [
@@ -80,7 +87,8 @@
           "options": {
             "polyfills": [
               "zone.js",
-              "zone.js/testing"
+              "zone.js/testing",
+              "@angular/localize/init"
             ],
             "tsConfig": "tsconfig.spec.json",
             "assets": [
