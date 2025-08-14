@@ -1,5 +1,6 @@
 import { CommonModule } from '@angular/common';
-import { Component, CUSTOM_ELEMENTS_SCHEMA, input, signal } from '@angular/core';
+import { Component, CUSTOM_ELEMENTS_SCHEMA, inject, input, signal } from '@angular/core';
+import { TranslateService } from '@ngx-translate/core';
 
 
 @Component({
@@ -12,6 +13,12 @@ import { Component, CUSTOM_ELEMENTS_SCHEMA, input, signal } from '@angular/core'
 export class Header {
 
   isOpen = signal(false);
+
+  private readonly translate = inject(TranslateService);
+
+  switchLang(lang: string) {
+    this.translate.use(lang); // Afecta a toda la app
+  }
 
   toggleDropdown() {
     this.isOpen.update(open => !open);

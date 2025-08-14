@@ -1,12 +1,14 @@
-import { Component, signal } from '@angular/core';
+import { Component, inject, signal } from '@angular/core';
 import { Header } from '../../../components/header/header';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { faCheckCircle, faCogs, faCubes, faHandshake, faStar, faUniversity, faUser } from '@fortawesome/free-solid-svg-icons';
 import { HomeContact } from "../home-contact/home-contact";
+import { CommonModule } from '@angular/common';
+import { TranslateModule, TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-home',
-  imports: [Header, FontAwesomeModule, HomeContact],
+  imports: [Header, FontAwesomeModule, HomeContact, CommonModule, TranslateModule],
   templateUrl: './home.html',
   styleUrl: './home.css'
 })
@@ -18,4 +20,5 @@ export default class Home {
   faStar = faStar;
   faUniversity = faUniversity;
   faCogs = faCogs;
+
 }
