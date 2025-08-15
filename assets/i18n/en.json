@@ -1,3 +1,9 @@
 {
-  "introText": "Welcome to the application"
+  "introText": "Welcome to the application",
+  "About us": "About us",
+  "Services": "Services",
+  "Contact": "Contact",
+  "Company": "Company",
+  "Login": "Login",
+  "Language": "Language"
 }
