@@ -1,5 +1,7 @@
 @import "tailwindcss";/* You can add global styles to this file, and also import other style files */
-
+:root {
+  --color-primary: #000b1c;
+}
 * {
   font-family: 'Roboto', sans-serif;
 }
@@ -15,4 +17,11 @@ h2{
 .scrollbar-hide {
   -ms-overflow-style: none;
   scrollbar-width: none;
+}
+.tab-active{
+  background-color: #919191;
+}
+
+.color-primary {
+  background-color: var(--color-primary);
 }

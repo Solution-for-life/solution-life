@@ -1,4 +1,9 @@
 {
   "introText": "Bienvenido a la aplicación",
-  "introText2": "Esta es la página de inicio de nuestra aplicación"
+  "About us": "Nosotros",
+  "Services": "Servicios",
+  "Contact": "Contacto",
+  "Company": "Compañía",
+  "Login": "Iniciar sesión",
+  "Language": "Idioma"
 }
