@@ -16,3 +16,6 @@ h2{
   -ms-overflow-style: none;
   scrollbar-width: none;
 }
+.tab-active{
+  background-color: #919191;
+}
