@@ -1,17 +1,17 @@
-<div class="relative  w-full">
-
-  <!-- Contenedor del carrusel -->
+<div class="w-full overflow-hidden">
   <div
     #carousel
-    class="flex overflow-x-auto  h-48 scroll-smooth snap-x snap-mandatory gap-4 px-10 scrollbar-hide">
+    class="flex gap-4">
 
-    <div *ngFor="let item of items"
-         class="min-w-[250px]  flex-shrink-0 snap-center bg-white  rounded-lg p-4">
+    <div *ngFor="let item of displayItems" class="min-w-[250px] flex-shrink-0 bg-white shadow-md rounded-lg p-4">
+      <span class="fa fa-star text-[#64DD17] mr-2" aria-hidden="true"></span>
+      <span class="fa fa-star text-[#64DD17] mr-2" aria-hidden="true"></span>
+      <span class="fa fa-star text-[#64DD17] mr-2" aria-hidden="true"></span>
+      <span class="fa fa-star text-[#64DD17] mr-2" aria-hidden="true"></span>
+      <span class="fa fa-star text-[#64DD17] mr-2" aria-hidden="true"></span>
       <p class="font-semibold">{{ item.title }}</p>
       <span class="text-gray-500">{{ item.name }}</span>
     </div>
 
   </div>
-
 </div>
-
