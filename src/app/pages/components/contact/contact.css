@@ -1,0 +1,24 @@
+label{
+  position: absolute;
+  left: 15px;
+  top: 12px;
+  background-color: #fff;
+  color: #797979;
+  padding: 0px 5px;
+  font-size: 15px;
+  transition: transform 0.3s ease, color 0.3s ease;
+ pointer-events: none; /* Para que no moleste al hacer clic */
+}
+
+/* Cuando el input tiene foco O ya tiene texto */
+input:focus + label,
+input:not(:placeholder-shown) + label {
+  transform: translateY(-24px);
+  color: #202124;
+}
+textarea:focus + label,
+textarea:not(:placeholder-shown) + label {
+  transform: translateY(-24px);
+  color: #202124;
+}
+
