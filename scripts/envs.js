@@ -6,6 +6,15 @@ mkdirSync(envDir, { recursive: true });
 
 function generateEnvFile(env, outputPath) {
   const requiredKeys = [
+
+    'apiKey',
+    'authDomain',
+    'databaseURL',
+    'projectId',
+    'storageBucket',
+    'messagingSenderId',
+    'appId',
+    'measurementId',
     // add new varable here
   ];
 
@@ -15,8 +24,18 @@ function generateEnvFile(env, outputPath) {
     }
   }
 
-  const content = `
-export const environment = {
+  const content = `export const environment = {
+  firebase: {
+      apiKey: '${env.apiKey}',
+      authDomain: '${env.authDomain}',
+      databaseURL: '${env.databaseURL}',
+      projectId: '${env.projectId}',
+      storageBucket: '${env.storageBucket}',
+      messagingSenderId: '${env.messagingSenderId}',
+      appId: '${env.appId}',
+      measurementId: '${env.measurementId}',
+  }
+
   // add new varable here
 };
 `;

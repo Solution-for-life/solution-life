@@ -4,9 +4,14 @@ import { provideRouter } from '@angular/router';
 
 import { routes } from './app.routes';
 
+import { environment } from '@environments/environment';
+
 import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
 import { TRANSLATE_HTTP_LOADER_CONFIG, TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { provideHttpClient, withInterceptorsFromDi } from '@angular/common/http';
+import { initializeApp, provideFirebaseApp } from '@angular/fire/app';
+import { getAuth, provideAuth } from '@angular/fire/auth';
+import { getDatabase, provideDatabase } from '@angular/fire/database';
 
 
 export const appConfig: ApplicationConfig = {
@@ -23,6 +28,9 @@ export const appConfig: ApplicationConfig = {
       TranslateModule.forRoot({
         loader: { provide: TranslateLoader, useClass: TranslateHttpLoader }
       })
-    )
+    ),
+    provideFirebaseApp(() => initializeApp(environment.firebase)),
+    provideAuth(() => getAuth()),
+    provideDatabase(() => getDatabase())
   ]
 };
