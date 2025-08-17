@@ -15,3 +15,4 @@ export class DatabaseService {
     return snapshot.exists() ? snapshot.val() : null;
   }
 }
+
