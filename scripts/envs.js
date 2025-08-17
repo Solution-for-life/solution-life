@@ -53,9 +53,9 @@ try {
     console.log('🛠 Ejecutando en local');
     const devEnv = dotenv.parse(readFileSync('.env'));
     const prodEnv = existsSync('.env.prod') ? dotenv.parse(readFileSync('.env.prod')) : devEnv;
-    const testEnv = existsSync('.env.development') ? dotenv.parse(readFileSync('.env.development')) : devEnv;
+    // const testEnv = existsSync('.env.development') ? dotenv.parse(readFileSync('.env.development')) : devEnv;
 
-    generateEnvFile(devEnv, `${envDir}/environment.development.ts`);
+    // generateEnvFile(devEnv, `${envDir}/environment.development.ts`);
     generateEnvFile(prodEnv, `${envDir}/environment.ts`);
     // generateEnvFile(testEnv, `${envDir}/environment.devProduction.ts`);
   }
