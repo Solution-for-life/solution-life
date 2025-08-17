@@ -6,5 +6,23 @@
   "Contact": "Contact",
   "Company": "Company",
   "Login": "Login",
-  "Language": "Language"
+  "Language": "Language",
+  "footer" : {
+    "email" : "Email",
+    "phone" : "Phone",
+    "Services": "Services",
+    "home": "Home",
+    "quick links": "Quick Links",
+    "get in touch": "Contact",
+    "Company": "Company",
+    "Login": "Login",
+    "Stay Updated": "Stay Updated",
+    "placeholder": "Your email",
+    "newsletter": "subscribe to our newsletter",
+    "policy" : "Privacy Policy",
+    "terms" : "Terms of Service",
+    "cookies" : "Cookies",
+    "Language": "Language",
+    "rights": "All rights reserved"
+  }
 }

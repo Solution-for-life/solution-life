@@ -5,5 +5,23 @@
   "Contact": "Contacto",
   "Company": "Compañía",
   "Login": "Iniciar sesión",
-  "Language": "Idioma"
+  "Language": "Idioma",
+  "footer" : {
+    "email" : "Correo electrónico",
+    "phone" : "Teléfono",
+    "Services": "Servicios",
+    "home": "Inicio",
+    "get in touch": "Contacto",
+    "quick links": "Enlaces rápidos",
+    "Company": "Compañía",
+    "Login": "Iniciar sesión",
+    "Stay Updated": "Mantenerse actualizado",
+    "placeholder": "Tu correo electrónico",
+    "newsletter": "suscribirse a nuestro boletín",
+    "policy" : "Política de privacidad",
+    "terms" : "Términos de servicio",
+    "cookies" : "Cookies",
+    "Language": "Idioma",
+    "rights": "Todos los derechos reservados"
+  }
 }
