@@ -2,7 +2,7 @@ label{
   position: absolute;
   left: 15px;
   top: 12px;
-  background-color: #262f3d;
+  background-color: #1a2433;
   color: #797979;
   padding: 0px 5px;
   font-size: 15px;
@@ -14,13 +14,13 @@ label{
 input:focus + label,
 input:not(:placeholder-shown) + label {
   transform: translateY(-24px);
-  background-color: #1a2433;
+  /* background: linear-gradient(to top, #1a2433, #262f3d); */
   color: #fff;
 }
 textarea:focus + label,
 textarea:not(:placeholder-shown) + label {
   transform: translateY(-24px);
-  background-color: #1a2433;
+  /* background: linear-gradient(to top, #1a2433, #262f3d); */
   color: #fff;
 }
 
