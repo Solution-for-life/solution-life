@@ -33,7 +33,7 @@ function generateEnvFile(env, outputPath) {
       storageBucket: '${env.storageBucket}',
       messagingSenderId: '${env.messagingSenderId}',
       appId: '${env.appId}',
-      measurementId: '${env.measurementId}',
+      measurementId: '${env.measurementId}'
   }
 
   // add new varable here
