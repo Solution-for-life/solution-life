@@ -5,10 +5,11 @@ import { faCheckCircle, faCogs, faCubes, faHandshake, faStar, faUniversity, faUs
 import { HomeContact } from "../home-contact/home-contact";
 import { CommonModule } from '@angular/common';
 import { TranslateModule } from '@ngx-translate/core';
+import { Footer } from '../../../components/footer/footer';
 
 @Component({
   selector: 'app-home',
-  imports: [Header, FontAwesomeModule, HomeContact, CommonModule, TranslateModule],
+  imports: [Header, FontAwesomeModule, HomeContact, CommonModule, TranslateModule, Footer],
   templateUrl: './home.html',
   styleUrl: './home.css'
 })

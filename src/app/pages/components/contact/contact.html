@@ -1,5 +1,20 @@
 <app-header></app-header>
-<div class=" w-full">
+<div class="w-full color-primary relative">
+<div class="absolute top-0 left-0 w-full h-full overflow-hidden opacity-20">
+  <!-- bolas existentes -->
+  <div class="absolute top-20 left-10 w-32 h-32 bg-blue-500 rounded-full filter blur-3xl animate-float1"></div>
+  <div class="absolute top-40 right-20 w-40 h-40 bg-purple-500 rounded-full filter blur-3xl animate-float2"></div>
+  <div class="absolute bottom-10 left-1/2 w-48 h-48 bg-cyan-500 rounded-full filter blur-3xl animate-float3"></div>
+
+  <!-- nuevas bolas -->
+  <div class="absolute top-5 right-5 w-24 h-24 bg-pink-500 rounded-full filter blur-2xl animate-float2"></div>
+  <div class="absolute bottom-20 left-5 w-28 h-28 bg-yellow-400 rounded-full filter blur-3xl animate-float1"></div>
+  <div class="absolute bottom-32 right-1/3 w-36 h-36 bg-green-500 rounded-full filter blur-3xl animate-float3"></div>
+  <div class="absolute top-1/2 left-1/4 w-20 h-20 bg-red-500 rounded-full filter blur-2xl animate-float2"></div>
+  <div class="absolute top-1/3 right-1/4 w-44 h-44 bg-indigo-400 rounded-full filter blur-3xl animate-float1"></div>
+</div>
+
+
   <div class="container mx-auto px-4">
     <div class="flex flex-col items-center text-center justify-center">
       <div class="w-[75%] h-full">
@@ -88,6 +103,7 @@
       </div>
     </div>
   </div>
-  <div class="w-full mt-10 py-10">
-     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3928.242352489672!2d-84.14913122382764!3d33.89931752578902!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88f5a45ee410e8e5%3A0x1c6e101c68182178!2s680%20Hillcrest%20Rd%20NW%2C%20Lilburn%2C%20GA%2030047%2C%20EE.%20UU.!5e1!3m2!1ses-419!2sco!4v1755401743637!5m2!1ses-419!2sco" class="w-full h-[60vh]" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></div>
+  <div class="w-full mt-10">
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3311.624900385359!2d-84.14913122342874!3d33.89931307321493!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88f5a45ee410e8e5%3A0x1c6e101c68182178!2s680%20Hillcrest%20Rd%20NW%2C%20Lilburn%2C%20GA%2030047%2C%20EE.%20UU.!5e0!3m2!1ses-419!2sco!4v1755432618039!5m2!1ses-419!2sco" width="100%" height="500" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 </div>
+<app-footer></app-footer>
