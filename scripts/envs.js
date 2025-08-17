@@ -7,14 +7,14 @@ mkdirSync(envDir, { recursive: true });
 function generateEnvFile(env, outputPath) {
   const requiredKeys = [
 
-    'apiKey',
-    'authDomain',
-    'databaseURL',
-    'projectId',
-    'storageBucket',
-    'messagingSenderId',
-    'appId',
-    'measurementId',
+    'APIKEY',
+    'AUTHDOMAIN',
+    'DATABASEURL',
+    'PROJECTID',
+    'STORAGEBUCKET',
+    'MESSAGINGSENDERID',
+    'APPID',
+    'MEASUREMENTID',
     // add new varable here
   ];
 
@@ -26,14 +26,14 @@ function generateEnvFile(env, outputPath) {
 
   const content = `export const environment = {
   firebase: {
-      apiKey: '${env.apiKey}',
-      authDomain: '${env.authDomain}',
-      databaseURL: '${env.databaseURL}',
-      projectId: '${env.projectId}',
-      storageBucket: '${env.storageBucket}',
-      messagingSenderId: '${env.messagingSenderId}',
-      appId: '${env.appId}',
-      measurementId: '${env.measurementId}',
+      apiKey: '${env.APIKEY}',
+      authDomain: '${env.AUTHDOMAIN}',
+      databaseURL: '${env.DATABASEURL}',
+      projectId: '${env.PROJECTID}',
+      storageBucket: '${env.STORAGEBUCKET}',
+      messagingSenderId: '${env.MESSAGINGSENDERID}',
+      appId: '${env.APPID}',
+      measurementId: '${env.MEASUREMENTID}',
   }
 
   // add new varable here
@@ -57,7 +57,7 @@ try {
 
     generateEnvFile(devEnv, `${envDir}/environment.development.ts`);
     generateEnvFile(prodEnv, `${envDir}/environment.ts`);
-    generateEnvFile(testEnv, `${envDir}/environment.devProduction.ts`);
+    // generateEnvFile(testEnv, `${envDir}/environment.devProduction.ts`);
   }
 } catch (err) {
   console.error('❌ Error generando archivos de entorno:', err.message);
