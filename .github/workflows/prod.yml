@@ -25,7 +25,7 @@ jobs:
             authDomain : ${{secrets.AUTHDOMAIN}}
             databaseURL : ${{secrets.DATABASEURL}}
             storageBucket : ${{secrets.STORAGEBUCKET}}
-            apiKey : ${{secrets.apiKey}}
+            apiKey : ${{secrets.APIKEY}}
 
 
       - name: 🏗️ Construir el proyecto
