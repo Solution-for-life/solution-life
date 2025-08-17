@@ -1,12 +1,44 @@
 {
   "introText": "Welcome to the application",
   "introText2": "This is the home page of our application",
-  "About us": "About us",
-  "Services": "Services",
-  "Contact": "Contact",
-  "Company": "Company",
-  "Login": "Login",
-  "Language": "Language",
+
+  "header"  : {
+    "home": "Home",
+    "about us": "About us",
+    "contact": "Contact",
+    "services": "Services",
+    "company": "Company",
+    "login": "Login",
+    "language": "Language",
+    "subService": {
+      "insurance": {
+        "title": "Insurance",
+        "description": "Get a better understanding of your traffic"
+      },
+      "taxes": {
+        "title": "Taxes",
+        "description": "Speak directly to your customers"
+      },
+      "inmigration": {
+        "title": "Inmigration",
+        "description": "Your customers' data will be safe and secure"
+      },
+      "realestate": {
+        "title": "Real Estate",
+        "description": "Connect with third-party tools"
+      }
+    }
+  },
+  "contact": {
+    "title": "Contact us",
+    "description": "Lorem ipsum dolor sit amet, consectetur acommodo consequat.",
+    "form": {
+      "name": "Name",
+      "email": "Email",
+      "phone": "Phone",
+      "message": "Message"
+    }
+  },
   "footer" : {
     "email" : "Email",
     "phone" : "Phone",

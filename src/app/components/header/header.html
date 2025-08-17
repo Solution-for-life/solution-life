@@ -14,16 +14,16 @@
       </button>
     </div>
     <el-popover-group class="hidden lg:flex justify-between lg:gap-x-12">
-      <span  [routerLink]="['/about-us']" [routerLinkActive]="['tab-active']" class="p-2 rounded-sm text-sm/6 font-semibold text-white hover:bg-[#000675] cursor-pointer">{{"About us" | translate}}</span>
-      <span  [routerLink]="['/contact']" [routerLinkActive]="['tab-active']" class="p-2 rounded-sm text-sm/6 font-semibold text-white hover:bg-[#000675] cursor-pointer">{{"Contact" | translate}}</span>
+      <span  [routerLink]="['/about-us']" [routerLinkActive]="['tab-active']" class="p-2 rounded-sm text-sm/6 font-semibold text-white hover:bg-[#000675] cursor-pointer">{{"header.about us" | translate}}</span>
+      <span  [routerLink]="['/contact']" [routerLinkActive]="['tab-active']" class="p-2 rounded-sm text-sm/6 font-semibold text-white hover:bg-[#000675] cursor-pointer">{{"header.contact" | translate}}</span>
 
       <div class="relative hover:bg-[#000675] rounded-sm ">
         <button popovertarget="desktop-menu-product" class="p-2  flex items-center gap-x-1 text-sm/6 font-semibold text-white cursor-pointer">
-          {{"Services" | translate}}
+          {{"header.services" | translate}}
           <span class="fa-solid fa-chevron-down"></span>
         </button>
 
-        <el-popover id="desktop-menu-product" anchor="bottom" popover class="w-screen max-w-md overflow-hidden rounded-3xl bg-[#00013A] shadow-lg ring-1 ring-gray-900/5 transition transition-discrete [--anchor-gap:--spacing(3)] backdrop:bg-transparent open:block data-closed:translate-y-1 data-closed:opacity-0 data-enter:duration-200 data-enter:ease-out data-leave:duration-150 data-leave:ease-in">
+        <el-popover id="desktop-menu-product" anchor="bottom" popover class="w-screen max-w-md overflow-hidden rounded-3xl color-primary shadow-lg ring-1 ring-gray-900/5 transition transition-discrete [--anchor-gap:--spacing(3)] backdrop:bg-transparent open:block data-closed:translate-y-1 data-closed:opacity-0 data-enter:duration-200 data-enter:ease-out data-leave:duration-150 data-leave:ease-in">
           <div class="p-4">
             <div class="group relative flex items-center gap-x-6 rounded-lg p-4 text-sm/6 hover:bg-[#000675]">
               <div class="flex size-11 flex-none items-center justify-center rounded-lg text-white group-hover:bg-[#000675]">
@@ -34,10 +34,10 @@
               </div>
               <div class="flex-auto">
                 <a href="#" class="block font-semibold text-white">
-                  Seguros
+                  {{"header.subService.insurance.title" | translate}}
                   <span class="absolute inset-0"></span>
                 </a>
-                <p class="mt-1 text-white">Get a better understanding of your traffic</p>
+                <p class="mt-1 text-white">{{"header.subService.insurance.description" | translate}}</p>
               </div>
             </div>
             <div class="group relative flex items-center gap-x-6 rounded-lg p-4 text-sm/6 hover:bg-[#000675]">
@@ -48,10 +48,10 @@
               </div>
               <div class="flex-auto">
                 <a href="#" class="block font-semibold text-white">
-                  Impuestos
+                  {{"header.subService.taxes.title" | translate}}
                   <span class="absolute inset-0"></span>
                 </a>
-                <p class="mt-1 text-white">Speak directly to your customers</p>
+                <p class="mt-1 text-white">{{"header.subService.taxes.description" | translate}}</p>
               </div>
             </div>
             <div class="group relative flex items-center gap-x-6 rounded-lg p-4 text-sm/6 hover:bg-[#000675]">
@@ -62,10 +62,10 @@
               </div>
               <div class="flex-auto">
                 <a href="#" class="block font-semibold text-white">
-                  Inmigracion
+                  {{"header.subService.inmigration.title" | translate}}
                   <span class="absolute inset-0"></span>
                 </a>
-                <p class="mt-1 text-white">Your customers' data will be safe and secure</p>
+                <p class="mt-1 text-white">{{"header.subService.inmigration.description" | translate}}</p>
               </div>
             </div>
             <div class="group relative flex items-center gap-x-6 rounded-lg p-4 text-sm/6 hover:bg-[#000675]">
@@ -76,31 +76,16 @@
               </div>
               <div class="flex-auto">
                 <a href="#" class="block font-semibold text-white">
-                  Bienes Raíces
+                  {{"header.subService.realestate.title" | translate}}
                   <span class="absolute inset-0"></span>
                 </a>
-                <p class="mt-1 text-white">Connect with third-party tools</p>
+                <p class="mt-1 text-white">{{"header.subService.realestate.description" | translate}}</p>
               </div>
             </div>
-
-          </div>
-          <div class="grid grid-cols-2 divide-x divide-gray-900/5 text-white">
-            <a href="#" class="flex items-center justify-center gap-x-2.5 p-3 text-sm/6 font-semibold text-white hover:bg-[#000675]">
-              <svg viewBox="0 0 20 20" fill="currentColor" data-slot="icon" aria-hidden="true" class="size-5 flex-none text-gray-400">
-                <path d="M2 10a8 8 0 1 1 16 0 8 8 0 0 1-16 0Zm6.39-2.908a.75.75 0 0 1 .766.027l3.5 2.25a.75.75 0 0 1 0 1.262l-3.5 2.25A.75.75 0 0 1 8 12.25v-4.5a.75.75 0 0 1 .39-.658Z" clip-rule="evenodd" fill-rule="evenodd" />
-              </svg>
-              Watch demo
-            </a>
-            <a href="#" class="flex items-center justify-center gap-x-2.5 p-3 text-sm/6 font-semibold text-white hover:bg-[#000675]">
-              <svg viewBox="0 0 20 20" fill="currentColor" data-slot="icon" aria-hidden="true" class="size-5 flex-none text-gray-400">
-                <path d="M2 3.5A1.5 1.5 0 0 1 3.5 2h1.148a1.5 1.5 0 0 1 1.465 1.175l.716 3.223a1.5 1.5 0 0 1-1.052 1.767l-.933.267c-.41.117-.643.555-.48.95a11.542 11.542 0 0 0 6.254 6.254c.395.163.833-.07.95-.48l.267-.933a1.5 1.5 0 0 1 1.767-1.052l3.223.716A1.5 1.5 0 0 1 18 15.352V16.5a1.5 1.5 0 0 1-1.5 1.5H15c-1.149 0-2.263-.15-3.326-.43A13.022 13.022 0 0 1 2.43 8.326 13.019 13.019 0 0 1 2 5V3.5Z" clip-rule="evenodd" fill-rule="evenodd" />
-              </svg>
-              Contact sales
-            </a>
           </div>
         </el-popover>
       </div>
-      <span  [routerLink]="['/company']" [routerLinkActive]="['tab-active']" class="p-2 rounded-sm text-sm/6 font-semibold text-white hover:bg-[#000675] cursor-pointer">{{"Company" | translate}}</span>
+      <span  [routerLink]="['/company']" [routerLinkActive]="['tab-active']" class="p-2 rounded-sm text-sm/6 font-semibold text-white hover:bg-[#000675] cursor-pointer">{{"header.company" | translate}}</span>
     </el-popover-group>
     <div class="hidden lg:flex lg:flex-1 gap-10 lg:justify-end">
       <!-- <span (click)="router.navigate(['login'])" class="p-2 rounded-sm text-sm/6 font-semibold text-white hover:bg-[#000675]">{{"Login" | translate}} <span aria-hidden="true">&rarr;</span></span> -->
@@ -136,11 +121,11 @@
           <div class="mt-6 flow-root">
             <div class="-my-6 divide-y divide-gray-500/10">
               <div class="space-y-2 py-6">
-                <span [routerLink]="['/about-us']" [routerLinkActive]="['tab-active']" class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-white hover:text-white">{{"About us" | translate}}</span>
-                <span [routerLink]="['/contact']" [routerLinkActive]="['tab-active']" class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-white hover:text-white">{{"Contact" | translate}}</span>
+                <span [routerLink]="['/about-us']" [routerLinkActive]="['tab-active']" class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-white hover:text-white">{{"header.about us" | translate}}</span>
+                <span [routerLink]="['/contact']" [routerLinkActive]="['tab-active']" class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-white hover:text-white">{{"header.contact" | translate}}</span>
                 <div class="-mx-3">
                   <button type="button" command="--toggle" commandfor="products" class="flex w-full items-center justify-between rounded-lg py-2 pr-3.5 pl-3 text-base/7 font-semibold text-white hover:text-white">
-                    {{"Services" | translate}}
+                    {{"header.services" | translate}}
                     <span class="fa-solid fa-chevron-down"></span>
                   </button>
                   <el-disclosure id="products" hidden class="mt-2 block space-y-2">
@@ -150,10 +135,10 @@
                     <a href="#" class="block rounded-lg py-2 pr-3 pl-6 text-sm/7 font-semibold text-white hover:text-white">Bienes Raíces</a>
                   </el-disclosure>
                 </div>
-                <span [routerLink]="['/company']" [routerLinkActive]="['tab-active']" class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-white hover:text-white">{{"Company" | translate}}</span>
+                <span [routerLink]="['/company']" [routerLinkActive]="['tab-active']" class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-white hover:text-white">{{"header.company" | translate}}</span>
               </div>
               <div class="py-6">
-                <span [routerLink]="['/login']" class="-mx-3 block rounded-lg px-3 py-2.5 text-base/7 font-semibold text-white hover:text-white">{{"Login" | translate}} <span aria-hidden="true">&rarr;</span></span>
+                <span [routerLink]="['/login']" class="-mx-3 block rounded-lg px-3 py-2.5 text-base/7 font-semibold text-white hover:text-white">{{"header.login" | translate}} <span aria-hidden="true">&rarr;</span></span>
               </div>
             </div>
           </div>
