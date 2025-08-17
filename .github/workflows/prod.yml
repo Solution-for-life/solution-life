@@ -18,14 +18,14 @@ jobs:
       - name: Archivos de entorno
         run: npm run envs
         env:
-            apiKey : ${{secrets.APIKEY}}
-            authDomain : ${{secrets.AUTHDOMAIN}}
-            databaseURL : ${{secrets.DATABASEURL}}
-            projectId : ${{secrets.PROJECTID}}
-            storageBucket : ${{secrets.STORAGEBUCKET}}
-            messagingSenderId : ${{secrets.MESSAGINGSENDERID}}
-            appId : ${{secrets.APPID}}
-            measurementId : ${{secrets.MEASUREMENTID}}
+            APIKEY: ${{ secrets.APIKEY }}
+            AUTHDOMAIN: ${{ secrets.AUTHDOMAIN }}
+            DATABASEURL: ${{ secrets.DATABASEURL }}
+            PROJECTID: ${{ secrets.PROJECTID }}
+            STORAGEBUCKET: ${{ secrets.STORAGEBUCKET }}
+            MESSAGINGSENDERID: ${{ secrets.MESSAGINGSENDERID }}
+            APPID: ${{ secrets.APPID }}
+            MEASUREMENTID: ${{ secrets.MEASUREMENTID }}
 
 
       - name: 🏗️ Construir el proyecto
