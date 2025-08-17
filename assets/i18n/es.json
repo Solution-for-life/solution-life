@@ -1,11 +1,43 @@
 {
   "introText": "Bienvenido a la aplicación",
-  "About us": "Nosotros",
-  "Services": "Servicios",
-  "Contact": "Contacto",
-  "Company": "Compañía",
-  "Login": "Iniciar sesión",
-  "Language": "Idioma",
+  "introText2": "Esta es la página de inicio de nuestra aplicación",
+  "header" : {
+    "home": "Inicio",
+    "about us": "Nosotros",
+    "contact": "Contacto",
+    "services": "Servicios",
+    "company": "Compañía",
+    "login": "Iniciar sesión",
+    "language": "Idioma",
+    "subService": {
+      "insurance": {
+        "title": "Seguros",
+        "description": "Obtén una mejor comprensión de tu tráfico"
+      },
+      "taxes": {
+        "title": "Impuestos",
+        "description": "Habla directamente con tus clientes"
+      },
+      "inmigration": {
+        "title": "Inmigración",
+        "description": "Los datos de tus clientes estarán seguros y protegidos"
+      },
+      "realestate": {
+        "title": "Bienes Raíces",
+        "description": "Conéctate con herramientas de terceros"
+      }
+    }
+  },
+  "contact": {
+    "title": "Contactanos",
+    "description": "Lorem ipsum dolor sit amet, consectetur acommodo consequat.",
+    "form": {
+      "name": "Nombre completo",
+      "email": "Correo electronico",
+      "phone": "No. de teléfono",
+      "message": "Dejanos tu mensaje"
+    }
+  },
   "footer" : {
     "email" : "Correo electrónico",
     "phone" : "Teléfono",
