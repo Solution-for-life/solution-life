@@ -23,5 +23,11 @@ h2{
 }
 
 .color-primary {
+
+  /* @apply bg-blue-950/90 */
+
   background-color: var(--color-primary);
+
 }
+
+

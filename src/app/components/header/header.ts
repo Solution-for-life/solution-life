@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component, CUSTOM_ELEMENTS_SCHEMA, inject, input, signal } from '@angular/core';
+import { Component, CUSTOM_ELEMENTS_SCHEMA, HostListener, inject, input, signal } from '@angular/core';
 import { Router, RouterLink, RouterLinkActive } from '@angular/router';
 import { TranslateService, TranslateModule } from '@ngx-translate/core';
 
@@ -18,13 +18,18 @@ import { TranslateService, TranslateModule } from '@ngx-translate/core';
 export class Header {
 
   isOpen = signal(false);
-
+  isSticky = false;
 
   readonly router = inject(Router);
   private readonly translate = inject(TranslateService);
 
   switchLang(lang: string) {
     this.translate.use(lang); // Afecta a toda la app
+  }
+
+  @HostListener('window:scroll', [])
+  onWindowScroll() {
+    this.isSticky = window.scrollY > 400; // cambia "150" por el punto que quieras
   }
 
   toggleDropdown() {

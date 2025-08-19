@@ -8,8 +8,11 @@
         <div class="absolute top-40 right-20 w-40 h-40 bg-purple-500 rounded-full filter blur-3xl animate-float2"></div>
         <div class="absolute bottom-10 left-1/2 w-48 h-48 bg-cyan-500 rounded-full filter blur-3xl animate-float3"></div>
       </div>
-      <div class="cuadro_principal container mx-auto px-4">
-        <div class="flex flex-col items-center text-center justify-center h-[90vh] w-full  text-white">
+      <div class="cuadro_principal relative  mx-auto px-4">
+        <div class="absolute top-0 left-0 w-full h-full overflow-hidden opacity-50 z-0 bg-black">
+          <img src="/assets/images/backgroundlanding.png" class="w-full h-full object-cover">
+        </div>
+        <div class="flex flex-col items-center text-center justify-center h-[90vh] w-full relative  text-white">
           <div class="flex flex-col items-center justify-center h-full w-full ">
             <h1 class="text-4xl font-bold">{{"introText" | translate}}</h1>
             <p class="text-2xl mb-5">{{"introText2" | translate}}</p>
@@ -255,7 +258,13 @@
 
 
 
-  </div>
-  <app-home-contact></app-home-contact>
+</div>
+<app-home-contact></app-home-contact>
+
+<span
+  class="fixed text-5xl bottom-10 right-5 z-90 fa-brands fa-whatsapp cursor-pointer
+  text-[#128c3b] transition-all duration-300
+  hover:text-[#25d366] hover:scale-110">
+</span>
 
 <app-footer></app-footer>

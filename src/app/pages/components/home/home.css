@@ -1,13 +1,3 @@
-
-
-.cuadro_principal {
-  background-image: url('/assets/images/img-family-seguros.png');
-  background-size: auto;
-  background-repeat: no-repeat;
-  object-fit: cover;
-  background-position: left;
-  background-size: contain;
-}
 .cuadro_serevices {
   background-image: url('/assets/images/primer-plano-de-una-persona-pensando-en-comprar-o-vender-una-casa.jpg');
   background-size: cover;  /* Hace que ocupe todo el contenedor */
