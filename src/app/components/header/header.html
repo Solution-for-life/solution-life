@@ -4,7 +4,7 @@
     <div class="flex lg:flex-1">
       <a href="#" class="-m-1.5 p-1.5">
         <span class="sr-only text-white">Your Company</span>
-        <img src="/assets/images/logo-negative (1).svg" alt="" class="h-10 w-auto" />
+        <img src="/assets/images/logo-white-background (2).svg" alt="" class="h-10 w-auto" />
       </a>
     </div>
     <div class="flex lg:hidden">
@@ -47,7 +47,8 @@
     <div class="hidden lg:flex lg:flex-1 gap-10 lg:justify-end">
       <!-- <span (click)="router.navigate(['login'])" class="p-2 rounded-sm text-sm/6 font-semibold text-white hover:bg-[#000675]">{{"Login" | translate}} <span aria-hidden="true">&rarr;</span></span> -->
       <button popovertarget="menu-language">
-        <span class="fa-solid fa-chevron-down"></span>
+        <span class="fa-solid fa-globe"></span>
+        <span class="fa-solid fa-chevron-down text-xs"></span>
       </button>
       <el-popover id="menu-language" anchor="bottom" popover class="w-fit max-w-md overflow-hidden text-xs bg-[#00013A] shadow-lg ring-1 ring-gray-900/5 transition transition-discrete [--anchor-gap:--spacing(3)] backdrop:bg-transparent open:block data-closed:translate-y-1 data-closed:opacity-0 data-enter:duration-200 data-enter:ease-out data-leave:duration-150 data-leave:ease-in">
         <div class="hover:bg-[#000675] rounded-md">
@@ -98,6 +99,7 @@
               </div>
             </div>
           </div>
+
           <div id="menu-language2"  class="flex w-full gap-4 text-xs justify-end">
             <div class="hover:bg-[#000675] rounded-md">
               <button (click)="switchLang('es')" class="text-white p-2 cursor-pointer">🇪🇸 ES</button>
