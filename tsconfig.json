@@ -17,7 +17,8 @@
     "paths": {
       "@environments/*": ["./src/environments/*"],
       "@assets/*": ["./src/assets/*"],
-      "@dbService/*": ["./src/app/services/database.service"],
+      "@dbService/database.service": ["./src/app/services/database.service"],
+      "@interfaces/*": ["./src/app/interfaces/*"],
     }
   },
   "angularCompilerOptions": {
