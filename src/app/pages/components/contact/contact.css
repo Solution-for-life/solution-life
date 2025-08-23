@@ -14,13 +14,11 @@ label{
 input:focus + label,
 input:not(:placeholder-shown) + label {
   transform: translateY(-24px);
-  /* background: linear-gradient(to top, #1a2433, #262f3d); */
   color: #fff;
 }
 textarea:focus + label,
 textarea:not(:placeholder-shown) + label {
   transform: translateY(-24px);
-  /* background: linear-gradient(to top, #1a2433, #262f3d); */
   color: #fff;
 }
 
