@@ -31,11 +31,11 @@
                   <span class="fa-solid text-xl" [ngClass]="item.icon"></span>
                 </div>
                 <div class="flex-auto">
-                  <a href="#" class="block font-semibold text-white">
-                    {{ item.title[this.lang] | titlecase }}
+                  <a [routerLink]="['/services', item.url]" class="text-white hover:text-white">
+                    {{ item.title[this.langService.getLang()] | titlecase }}
                     <span class="absolute inset-0"></span>
                   </a>
-                  <p class="mt-1 text-white">{{ item.briefDescription[this.lang] }}</p>
+                  <p class="mt-1 text-white line-clamp-2">{{ item.briefDescription[this.langService.getLang()] }}</p>
                 </div>
               </div>
             }
@@ -88,7 +88,7 @@
                   </button>
                   <el-disclosure id="products" hidden class="mt-2 block space-y-2">
                     @for (item of this.services; track $index) {
-                      <a href="#" class="block rounded-lg py-2 pr-3 pl-6 text-sm/7 font-semibold text-white hover:text-white">{{ item.title[this.lang] }}</a>
+                      <a href="#" class="block rounded-lg py-2 pr-3 pl-6 text-sm/7 font-semibold text-white hover:text-white">{{ item.title[this.langService.getLang()] }}</a>
                     }
                   </el-disclosure>
                 </div>

@@ -6,10 +6,11 @@ import { HomeContact } from "../home-contact/home-contact";
 import { CommonModule } from '@angular/common';
 import { TranslateModule } from '@ngx-translate/core';
 import { Footer } from '../../../components/footer/footer';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-home',
-  imports: [Header, FontAwesomeModule, HomeContact, CommonModule, TranslateModule, Footer],
+  imports: [Header, FontAwesomeModule, HomeContact, CommonModule, TranslateModule, Footer, RouterLink],
   templateUrl: './home.html',
   styleUrl: './home.css'
 })

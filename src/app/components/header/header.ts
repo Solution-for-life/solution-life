@@ -5,6 +5,7 @@ import { DatabaseService } from '@dbService/database.service';
 import { TranslateService, TranslateModule } from '@ngx-translate/core';
 import { Service } from '@interfaces/service';
 import { Lang } from '../../types/lang';
+import { LanguageService } from '../../services/language.service';
 
 @Component({
   selector: 'app-header',
@@ -27,10 +28,10 @@ export class Header {
   private readonly translate = inject(TranslateService);
   private readonly db = inject(DatabaseService);
   public services : Service[] = [];
-  public lang: Lang = 'en';
+  public readonly langService = inject(LanguageService);
 
   switchLang(lang: Lang) {
-    this.lang = lang;
+    this.langService.setLang(lang);
     this.translate.use(lang);
   }
 
