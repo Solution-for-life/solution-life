@@ -2,19 +2,23 @@
 <div class="w-full color-primary relative">
   <div class="container mx-auto px-4">
     <div class="flex flex-col items-center text-center justify-center">
-      <div class="w-[75%] h-full">
+      <div class="lg:w-[70%] w-[90%] h-full">
 
           <img src="/assets/images/contact.jpg" class="rounded w-full  object-cover" alt="">
 
         <div class="mt-[-5.5rem] flex flex-col items-center text-center">
-          <div class="w-[75%] flex flex-col items-center h-full ">
-            <div class=" card p-10 w-full rounded-sm bg-[#1a2433] text-white shadow-lg mb-10">
+          <div class="lg:w-[70%] w-[85%] flex flex-col items-center h-full ">
+            <div class=" card lg:p-10 p-3 w-full rounded-sm bg-[#1a2433] text-white shadow-lg mb-10">
               <div class="carrd-header text-left">
-                <h3 class="text-2xl font-bold">{{"contact.title" | translate}}</h3>
-                <h2 class="text-white!">Lorem ipsum dolor sit amet, consectetur acommodo consequat.</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
+                <ul class="flex  text-white!  lg:mb-5">
+                  <li class="list-inside mr-2"><a href="#" class="text-white hover:text-[#64DD17]">Home</a></li>
+                  <li class="list-disc list-inside ml-2">{{"contact.title" | translate}}</li>
+                </ul>
+                <!-- <p class="font-bold">{{"contact.title" | translate}}</p> -->
+                <h3 class="lg:text-4xl p-3 text-2xl font-bold text-white! lg:mb-2">Lorem ipsum dolor sit amet consectetur ut labore.</h3>
+                <p class="lg:p-3 px-3 lg:text-2xl">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.</p>
               </div>
-              <div class="w-full mt-10">
+              <div class="w-full mt-10 lg:p-4">
                 <div class="w-full">
                   <form [formGroup]="form" class="space-y-6">
                     <div class="flex flex-col">
@@ -36,7 +40,7 @@
                       </div>
                     </div>
 
-                    <div class="flex flex-col">
+                    <div class="flex flex-col mb-10">
                       <div class="mt-2 relative">
                         <textarea formControlName="message" id="message" type="text" name="message" required  class="block w-full border rounded-md bg-[#1a2433] px-3 py-2.5 text-base  outline-1 -outline-offset-1 outline-white/10 placeholder:text-gray-500 focus:outline-2 focus:-outline-offset-2 focus:outline-[#fff] sm:text-sm/6"></textarea>
                         <label for="message" class="font-semibold text-left text-gray-200">{{"contact.form.message" | translate}}</label>
@@ -44,7 +48,7 @@
                     </div>
 
                     <div class="w-full flex justify-center text-center">
-                      <button type="submit" (click)="submitForm()" class="cursor-pointer flex w-[70%] justify-center rounded-md bg-[#64DD17] px-3 py-1.5 text-white font-semibold  hover:bg-[#09B850] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#09B850]">enviar</button>
+                      <button type="submit" (click)="submitForm()" class="cursor-pointer flex w-[70%] justify-center rounded-md bg-[#64DD17] px-3 py-1.5 text-white font-semibold  hover:bg-[#09B850] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#09B850]">Enviar</button>
                     </div>
                   </form>
                 </div>
