@@ -28,6 +28,11 @@
       }
     }
   },
+  "services": {
+    "button" : "Obtener más información",
+    "title": "Servicios",
+    "description": "Lorem ipsum dolor sit amet, consectetur acommodo consequat lorem ipsum dolor sit amet, consectetur acommodo consequat. consectetur acommodo consequat lorem ipsum dolor sit amet, consectetur acommodo consequat. consectetur acommodo consequat lorem ipsum dolor sit amet, consectetur acommodo consequat. consectetur acommodo consequat lorem ipsum dolor sit amet, consectetur acommodo consequat. consectetur acommodo consequat lorem ipsum dolor sit amet, consectetur acommodo consequat. consectetur acommodo consequat lorem ipsum dolor sit amet, consectetur acommodo consequat. consectetur acommodo consequat lorem ipsum dolor sit amet, consectetur acommodo consequat."
+  },
   "contact": {
     "title": "Contactanos",
     "description": "Lorem ipsum dolor sit amet, consectetur acommodo consequat.",
