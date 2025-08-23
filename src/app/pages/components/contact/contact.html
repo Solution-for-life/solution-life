@@ -1,20 +1,5 @@
 <app-header></app-header>
 <div class="w-full color-primary relative">
-<div class="absolute top-0 left-0 w-full h-full overflow-hidden opacity-20">
-  <!-- bolas existentes -->
-  <div class="absolute top-20 left-10 w-32 h-32 bg-blue-500 rounded-full filter blur-3xl animate-float1"></div>
-  <div class="absolute top-40 right-20 w-40 h-40 bg-purple-500 rounded-full filter blur-3xl animate-float2"></div>
-  <div class="absolute bottom-10 left-1/2 w-48 h-48 bg-cyan-500 rounded-full filter blur-3xl animate-float3"></div>
-
-  <!-- nuevas bolas -->
-  <div class="absolute top-5 right-5 w-24 h-24 bg-pink-500 rounded-full filter blur-2xl animate-float2"></div>
-  <div class="absolute bottom-20 left-5 w-28 h-28 bg-yellow-400 rounded-full filter blur-3xl animate-float1"></div>
-  <div class="absolute bottom-32 right-1/3 w-36 h-36 bg-green-500 rounded-full filter blur-3xl animate-float3"></div>
-  <div class="absolute top-1/2 left-1/4 w-20 h-20 bg-red-500 rounded-full filter blur-2xl animate-float2"></div>
-  <div class="absolute top-1/3 right-1/4 w-44 h-44 bg-indigo-400 rounded-full filter blur-3xl animate-float1"></div>
-</div>
-
-
   <div class="container mx-auto px-4">
     <div class="flex flex-col items-center text-center justify-center">
       <div class="w-[75%] h-full">
@@ -25,52 +10,43 @@
           <div class="w-[75%] flex flex-col items-center h-full ">
             <div class=" card p-10 w-full rounded-sm bg-[#1a2433] text-white shadow-lg mb-10">
               <div class="carrd-header text-left">
-                <h3 class="text-2xl font-bold">Contactanos</h3>
+                <h3 class="text-2xl font-bold">{{"contact.title" | translate}}</h3>
                 <h2 class="text-white!">Lorem ipsum dolor sit amet, consectetur acommodo consequat.</h2>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
               </div>
               <div class="w-full mt-10">
                 <div class="w-full">
-                  <form action="#" method="POST" class="space-y-6">
-
+                  <form [formGroup]="form" class="space-y-6">
                     <div class="flex flex-col">
                       <div class="mt-2 relative">
-                        <input id="nombreCompleto" type="nombreCompleto" placeholder=" "  name="nombreCompleto" required autocomplete="nombreCompleto" class="block w-full border rounded-md bg-[#1a2433] px-3 py-2.5 text-base  outline-1 -outline-offset-1 outline-white/10 placeholder:text-gray-700 focus:outline-2 focus:-outline-offset-2 focus:outline-[#fff] sm:text-sm/6" />
-                        <label for="nombreCompleto" class="font-semibold text-left text-gray-200">Nombre completo</label>
+                        <input formControlName="name" id="name" type="text"  required class="block w-full border rounded-md bg-[#1a2433] px-3 py-2.5 text-base  outline-1 -outline-offset-1 outline-white/10 placeholder:text-gray-700 focus:outline-2 focus:-outline-offset-2 focus:outline-[#fff] sm:text-sm/6" />
+                        <label for="name" class="font-semibold text-left text-gray-200">{{"contact.form.name" | translate}}</label>
+                      </div>
+                    </div>
+                    <div class="flex flex-col">
+                      <div class="mt-2 relative">
+                        <input formControlName="email" id="email" type="text" name="email" required class="block w-full rounded-md bg-[#1a2433] px-3 py-2.5 border  outline-1 -outline-offset-1 outline-white/10 placeholder:text-gray-500 focus:outline-2 focus:-outline-offset-2 focus:outline-[#fff] sm:text-sm/6" />
+                        <label for="email" class="font-semibold text-left text-gray-200">{{"contact.form.email" | translate}}</label>
+                      </div>
+                    </div>
+                    <div class="flex flex-col">
+                      <div class="mt-2 relative">
+                        <input formControlName="phone" id="phone" type="text" name="phone" required  class="block w-full border rounded-md bg-[#1a2433] px-3 py-2.5 text-base  outline-1 -outline-offset-1 outline-white/10 placeholder:text-gray-500 focus:outline-2 focus:-outline-offset-2 focus:outline-[#fff] sm:text-sm/6" />
+                        <label for="phone" class="font-semibold text-left text-gray-200">{{"contact.form.phone" | translate}}</label>
                       </div>
                     </div>
 
                     <div class="flex flex-col">
                       <div class="mt-2 relative">
-                        <input id="email" type="email" name="email" placeholder=" " required autocomplete="email" class="block w-full rounded-md bg-[#1a2433] px-3 py-2.5 border  outline-1 -outline-offset-1 outline-white/10 placeholder:text-gray-500 focus:outline-2 focus:-outline-offset-2 focus:outline-[#fff] sm:text-sm/6" />
-                        <label for="email" class="font-semibold text-left text-gray-200">Correo electronico</label>
-                      </div>
-                    </div>
-
-
-                    <div class="flex flex-col">
-                      <div class="mt-2 relative">
-                        <input id="telefono" type="telefono" name="telefono" placeholder=" " required autocomplete="current-password" class="block w-full border rounded-md bg-[#1a2433] px-3 py-2.5 text-base  outline-1 -outline-offset-1 outline-white/10 placeholder:text-gray-500 focus:outline-2 focus:-outline-offset-2 focus:outline-[#fff] sm:text-sm/6" />
-                        <label for="telefono" class="font-semibold text-left text-gray-200">No. de teléfono</label>
-                      </div>
-                    </div>
-
-                    <div class="flex flex-col">
-                      <div class="mt-2 relative">
-                        <textarea id="mensaje" type="mensaje" name="mensaje" placeholder=" " required autocomplete="current-password" class="block w-full border rounded-md bg-[#1a2433] px-3 py-2.5 text-base  outline-1 -outline-offset-1 outline-white/10 placeholder:text-gray-500 focus:outline-2 focus:-outline-offset-2 focus:outline-[#fff] sm:text-sm/6"></textarea>
-                        <label for="telefono" class="font-semibold text-left text-gray-200">Dejanos tu mensaje</label>
+                        <textarea formControlName="message" id="message" type="text" name="message" required  class="block w-full border rounded-md bg-[#1a2433] px-3 py-2.5 text-base  outline-1 -outline-offset-1 outline-white/10 placeholder:text-gray-500 focus:outline-2 focus:-outline-offset-2 focus:outline-[#fff] sm:text-sm/6"></textarea>
+                        <label for="message" class="font-semibold text-left text-gray-200">{{"contact.form.message" | translate}}</label>
                       </div>
                     </div>
 
                     <div class="w-full flex justify-center text-center">
-                      <button type="submit" class="cursor-pointer flex w-[70%] justify-center rounded-md bg-[#64DD17] px-3 py-1.5 text-white font-semibold  hover:bg-[#09B850] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#09B850]">Guardar</button>
+                      <button type="submit" (click)="submitForm()" class="cursor-pointer flex w-[70%] justify-center rounded-md bg-[#64DD17] px-3 py-1.5 text-white font-semibold  hover:bg-[#09B850] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#09B850]">enviar</button>
                     </div>
                   </form>
-
-                  <p class="mt-10 text-center text-sm/6 text-gray-400">
-                    Not a member?
-
-                  </p>
                 </div>
               </div>
             </div>
@@ -78,7 +54,7 @@
           </div>
         </div>
       </div>
-      <div class="grid grid-cols-1 lg:grid-cols-3 w-full mt-10 flex justify-between text-left text-gray-400 gap-10 mb-10">
+      <div class="grid-cols-1 lg:grid-cols-3 w-full mt-10 grid justify-between text-left text-gray-400 gap-10 mb-10">
         <div  class="p-6 shadow-lg bg-white/10 border rounded">
           <span class="fa fa-map-marker-alt text-[#64DD17] text-[2.5rem] mb-5 " aria-hidden="true"></span>
           <h5 class="text-2xl font-bold">
