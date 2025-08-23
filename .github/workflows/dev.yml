@@ -1,0 +1,71 @@
+name: Solutions For Life
+on:
+  push:
+    branches:
+      - development
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Use node 24
+        uses: actions/setup-node@v3
+        with:
+          node-version: 24
+      - name: Install dependencies
+        run: npm install
+
+      - name: Archivos de entorno
+        run: npm run envs
+        env:
+            APIKEY: ${{ secrets.APIKEY }}
+            AUTHDOMAIN: ${{ secrets.AUTHDOMAIN }}
+            DATABASEURL: ${{ secrets.DATABASEURL }}
+            PROJECTID: ${{ secrets.PROJECTID }}
+            STORAGEBUCKET: ${{ secrets.STORAGEBUCKET }}
+            MESSAGINGSENDERID: ${{ secrets.MESSAGINGSENDERID }}
+            APPID: ${{ secrets.APPID }}
+            MEASUREMENTID: ${{ secrets.MEASUREMENTID }}
+
+
+      - name: 🏗️ Construir el proyecto
+        run: npm run build -- --base-href "/"
+
+      - name: 📂 Copiar .htaccess a la carpeta de build
+        run: |
+          cp .htaccess dist/solution-life/browser/.htaccess
+
+
+      - name: 🚀 Desplegar en GitHub Pages
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          branch: solution_preview_dev
+          folder: dist/solution-life/browser
+          token: ${{secrets.GH_TOKEN}}
+
+  deploy_ftp:
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - name: 📂 Descargar la última versión de solution_preview_dev
+        run: |
+          git fetch origin solution_preview_dev
+          git checkout solution_preview_dev
+
+      - name: 🚀 Subir archivos al servidor FTP
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.4
+        with:
+          server: ${{ secrets.FTP_URL_PROFF }}
+          username: ${{ secrets.FTP_USER_PROFF }}
+          password: ${{ secrets.FTP_PASSWORD_PROFF }}
+          port: 21
+          protocol: ftp
+          local-dir: ./
+          server-dir: /public_html/development/
+          exclude: |
+            .git
+            .github
+          dangerous-clean-slate: true  # Esta opción borra todos los archivos en el servidor antes de hacer el despliegue
