@@ -61,7 +61,7 @@
     "Language": "Idioma",
     "rights": "Todos los derechos reservados"
   },
-"privacyPolicy": {
+  "privacyPolicy": {
     "title": "Política de Privacidad",
     "lastUpdated": "Última actualización: 24 de agosto de 2025",
 
@@ -185,5 +185,62 @@
     "contact": "Contáctenos",
     "contact.email": "Por correo electrónico: services@solutionsforlifeatl.com",
     "contact.mail": "Por correo postal: 680 Hillcrest Rd NW, Lilburn, GA 30047, EE. UU."
+  },
+  "cookies": {
+    "title": "Política de Cookies",
+    "lastUpdated": "Última actualización: 24 de agosto de 2025",
+
+    "intro": "Esta Política de Cookies explica qué son las Cookies y cómo las usamos. Debe leer esta política para comprender qué tipo de cookies usamos, o la información que recopilamos mediante las Cookies y cómo se utiliza esa información.",
+    "generator": "Esta Política de Cookies ha sido creada con la ayuda del Generador Gratuito de Políticas de Cookies.",
+    "noPID": "Las cookies normalmente no contienen información que identifique personalmente a un usuario, pero la información personal que almacenamos sobre usted puede vincularse con la información almacenada en y obtenida de las Cookies.",
+    "referPrivacy": "Para más información sobre cómo usamos, almacenamos y mantenemos segura su información personal, consulte nuestra Política de Privacidad.",
+    "noSensitiveInfo": "No almacenamos información personal sensible, como direcciones postales, contraseñas de cuentas, etc., en las Cookies que utilizamos.",
+
+    "interpretationAndDefinitions": "Interpretación y Definiciones",
+    "interpretationTitle": "Interpretación",
+    "interpretationText": "Las palabras cuya letra inicial está en mayúscula tienen los significados definidos en las siguientes condiciones. Las siguientes definiciones tendrán el mismo significado independientemente de si aparecen en singular o en plural.",
+    "definitionsTitle": "Definiciones",
+
+    "defCompany": "Compañía (referida como \"la Compañía\", \"Nosotros\" o \"Nuestro\" en esta Política de Cookies) se refiere a Solutions For Life, 680 Hillcrest Rd NW, Lilburn, GA 30047, EE. UU.",
+    "defCookies": "Cookies significa pequeños archivos que se colocan en su computadora, dispositivo móvil o cualquier otro dispositivo por un sitio web, que contienen detalles de su historial de navegación en ese sitio web, entre muchos otros usos.",
+    "defWebsite": "Sitio web se refiere a Solutions For Life, accesible desde https://www.solutionsforlifeatl.com",
+    "defYou": "Usted significa la persona que accede o usa el Sitio web, o una empresa o cualquier entidad legal en nombre de la cual dicha persona accede o usa el Sitio web, según corresponda.",
+
+    "useOfCookies": "El uso de las Cookies",
+    "typeOfCookies": "Tipos de Cookies que Usamos",
+    "typeIntro": "Las Cookies pueden ser \"Persistentes\" o de \"Sesión\". Las Cookies persistentes permanecen en su computadora o dispositivo móvil cuando usted se desconecta, mientras que las Cookies de sesión se eliminan tan pronto como cierra su navegador web.",
+    "purposesIntro": "Usamos tanto Cookies de sesión como persistentes para los fines establecidos a continuación:",
+
+    "necessaryTitle": "Cookies Necesarias / Esenciales",
+    "necessaryType": "Tipo: Cookies de Sesión",
+    "necessaryAdmin": "Administradas por: Nosotros",
+    "necessaryPurpose": "Propósito: Estas Cookies son esenciales para proporcionarle servicios disponibles a través del Sitio web y permitirle usar algunas de sus funciones. Ayudan a autenticar a los usuarios y a prevenir el uso fraudulento de cuentas. Sin estas Cookies, no se pueden proporcionar los servicios que usted ha solicitado, y solo usamos estas Cookies para proporcionarle esos servicios.",
+
+    "functionalityTitle": "Cookies de Funcionalidad",
+    "functionalityType": "Tipo: Cookies Persistentes",
+    "functionalityAdmin": "Administradas por: Nosotros",
+    "functionalityPurpose": "Propósito: Estas Cookies nos permiten recordar las elecciones que realiza cuando utiliza el Sitio web, como recordar sus datos de inicio de sesión o la preferencia de idioma. El propósito de estas Cookies es brindarle una experiencia más personalizada y evitar que tenga que volver a ingresar sus preferencias cada vez que utiliza el Sitio web.",
+
+    "choicesTitle": "Sus Opciones con Respecto a las Cookies",
+    "choicesText1": "Si prefiere evitar el uso de Cookies en el Sitio web, primero debe desactivar el uso de Cookies en su navegador y luego eliminar las Cookies guardadas en su navegador asociadas con este sitio web. Puede usar esta opción para evitar el uso de Cookies en cualquier momento.",
+    "choicesText2": "Si no acepta nuestras Cookies, puede experimentar algunas inconveniencias en el uso del Sitio web y algunas funciones pueden no funcionar correctamente.",
+    "choicesText3": "Si desea eliminar las Cookies o indicar a su navegador web que elimine o rechace las Cookies, visite las páginas de ayuda de su navegador.",
+
+    "choices.chromePrefix": "Para el navegador web Chrome, visite esta página de Google:",
+    "choices.chromeText": "Ayuda de Chrome",
+    "choices.iePrefix": "Para el navegador web Internet Explorer, visite esta página de Microsoft:",
+    "choices.ieText": "Soporte de Microsoft",
+    "choices.firefoxPrefix": "Para el navegador web Firefox, visite esta página de Mozilla:",
+    "choices.firefoxText": "Soporte de Mozilla",
+    "choices.safariPrefix": "Para el navegador web Safari, visite esta página de Apple:",
+    "choices.safariText": "Soporte de Apple",
+    "choices.otherBrowsers": "Para cualquier otro navegador web, visite las páginas oficiales de su navegador.",
+
+    "moreInfoTitle": "Más Información sobre las Cookies",
+    "moreInfoText": "Puede obtener más información sobre las cookies: Cookies: ¿Qué hacen?.",
+
+    "contactTitle": "Contáctenos",
+    "contactEmail": "Por correo electrónico: services@solutionsforlifeatl.com",
+    "contactAddress": "Por correo postal: 680 Hillcrest Rd NW, Lilburn, GA 30047, EE. UU."
   }
 }
