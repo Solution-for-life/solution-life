@@ -10,9 +10,8 @@ import { Lang } from '../../types/lang';
   imports: [
     CommonModule,
     TranslateModule,
-    // RouterLink,
-    // RouterLinkActive,
-  ],
+    RouterLink
+],
   templateUrl: './footer.html',
   styleUrl: './footer.css'
 })
