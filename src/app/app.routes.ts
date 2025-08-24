@@ -6,6 +6,7 @@ import { Login } from './pages/components/login/login';
 import { Services } from './pages/components/services/services';
 import { Service } from './pages/components/service/service';
 import { PrivacyAndPolicy } from './pages/components/privacy-and-policy/privacy-and-policy';
+import { CookiesPolicy } from './pages/components/cookies-policy/cookies-policy';
 
 export const routes: Routes = [
   { path: '', component: Home},
@@ -15,5 +16,6 @@ export const routes: Routes = [
   { path: 'services', component: Services},
   { path: 'services/:id', component: Service},
   { path: 'privacy-and-policies', component: PrivacyAndPolicy},
+  { path: 'cookies-policy', component: CookiesPolicy},
   { path: '**', redirectTo: '' }
 ];

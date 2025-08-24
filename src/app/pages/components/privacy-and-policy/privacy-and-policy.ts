@@ -16,5 +16,5 @@ import { TranslateService, TranslateModule } from '@ngx-translate/core';
   styles: ``
 })
 export class PrivacyAndPolicy {
-    private readonly translate = inject(TranslateService);
+    // private readonly translate = inject(TranslateService);
 }
