@@ -1,10 +1,15 @@
 
-<header [class.fixed]="isSticky" [class.top-0]="isSticky" [class.shadow-md]="isSticky" class="w-full transition-all! duration-300! z-90 p-4 bg-black/70">
+<header [class.fixed]="isSticky" [class.top-0]="isSticky" [class.shadow-md]="isSticky" class="w-full transition-all! duration-300! z-90 p-4 bg-black/80">
   <nav  class=" flex  items-center text-white  justify-between ">
     <div class="flex lg:flex-1">
       <a href="#" class="-m-1.5 p-1.5">
         <span class="sr-only text-white">Your Company</span>
-        <img src="/assets/images/logo-white-background (2).svg" alt="" class="h-10 w-auto" />
+        @if (!isSticky) {
+          <img src="/assets/images/logo-white-background (2).svg" alt="" class="h-10 w-auto" />
+        }
+        @else {
+          <img src="/assets/images/logo-negative (1).svg" alt="" class="h-10 w-auto" />
+        }
       </a>
     </div>
     <div class="flex lg:hidden">

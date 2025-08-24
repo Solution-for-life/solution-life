@@ -3,7 +3,7 @@ export interface Service {
     title: language ;
     url: string;
     briefDescription: language ;
-    description: language ;
+    longDescription: language ;
     icon?: string;
     createdAt?: Date;
     updatedAt?: Date;

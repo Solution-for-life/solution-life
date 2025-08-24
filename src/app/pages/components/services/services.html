@@ -3,26 +3,30 @@
   <div class="absolute top-0 left-0 w-full h-full overflow-hidden opacity-40">
     <div class="absolute top-20 left-10 w-32 h-32 bg-blue-500 rounded-full filter blur-3xl animate-float1"></div>
     <div class="absolute top-40 right-20 w-40 h-40 bg-purple-500 rounded-full filter blur-3xl animate-float2"></div>
-    <div class="absolute bottom-10 left-1/2 w-48 h-48 bg-cyan-500 rounded-full filter blur-3xl animate-float3"></div>
+    <!-- <div class="absolute bottom-10 left-1/2 w-48 h-48 bg-cyan-500 rounded-full filter blur-3xl animate-float3"></div> -->
   </div>
   <div class="max-w-7xl relative z-2 mx-auto pt-10  w-full  h-full">
     <h3 class="text-center text-slate-100 text-4xl mb-10">{{"services.title" | translate}}</h3>
-    <p class="text-justify font-light  text-slate-100 text-md leading-loose  mb-10">{{"services.description" | translate}}</p>
+    <p class=" p-3 font-light  text-slate-100 text-md leading-loose  mb-10">{{"services.description" | translate}}</p>
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 gap-10 place-items-center p-2 sm:p-5">
       @for (item of this.services; track $index) {
-        <div class="bg-slate-300 shadow hover:shadow-xl rounded-xl flex flex-col items-center justify-start p-4 sm:p-10 h-fit w-fit max-w-90 hover:bg-slate-200 transition-all duration-500 ease-in-out hover:scale-101">
-            <div class="rounded-full bg-slate-700 p-4 mt-5">
-              <span class="fa-solid text-2xl text-amber-50" [ngClass]="item.icon"></span>
-            </div>
-            <div class="flex flex-col items-center justify-center mt-5">
-              <h3 class="text-2xl text-slate-700">{{item.title[this.langService.getLang()] | titlecase}}</h3>
-            </div>
-            <p class="text-sm mt-10 text-center mb-5 text-slate-500 line-clamp-3">{{item.briefDescription[this.langService.getLang()]}}</p>
+        <div class="relative drop-shadow-xl h-90 w-90 overflow-hidden rounded-xl shadow-slate-700 hover:shadow-2xl shadow-xl bg-[#3d3c3d] transition-all duration-500 ease-in-out hover:scale-101">
+          <div class="absolute flex flex-col items-center justify-center text-white z-[1] opacity-90 rounded-xl inset-0.5  bg-[#323132]">
+              <div class="rounded-full bg-slate-400 p-4 mt-5">
+                <span class="fa-solid text-2xl text-amber-50" [ngClass]="item.icon"></span>
+              </div>
+              <div class="flex flex-col items-center justify-center mt-5">
+                <h3 class="text-2xl text-slate-300">{{item.title[this.langService.getLang()] | titlecase}}</h3>
+              </div>
+              <p class="text-sm mt-10 text-center mb-5 text-slate-200 line-clamp-3">{{item.briefDescription[this.langService.getLang()]}}</p>
 
-            <button [routerLink]="['/services', item.url]" class="cursor-pointer bg-green-600 hover:bg-green-700 text-white font-bold py-2 px-4 rounded">
-              {{"services.button" | translate}}
-            </button>
+              <button [routerLink]="['/services', item.url]" class="cursor-pointer bg-green-600 hover:bg-green-700 text-white font-bold py-2 px-4 rounded">
+                {{"services.button" | translate}}
+              </button>
+          </div>
+          <div class="absolute w-56 h-48 bg-white blur-[50px] -left-1/2 -top-1/2"></div>
         </div>
+
       }
     </div>
   </div>
