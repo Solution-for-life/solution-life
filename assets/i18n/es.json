@@ -60,5 +60,130 @@
     "cookies" : "Cookies",
     "Language": "Idioma",
     "rights": "Todos los derechos reservados"
+  },
+"privacyPolicy": {
+    "title": "Política de Privacidad",
+    "lastUpdated": "Última actualización: 24 de agosto de 2025",
+
+    "intro1": "Esta Política de Privacidad describe nuestras políticas y procedimientos sobre la recopilación, uso y divulgación de su información cuando utiliza el Servicio y le informa sobre sus derechos de privacidad y cómo la ley lo protege.",
+    "intro2": "Usamos sus Datos Personales para proporcionar y mejorar el Servicio. Al utilizar el Servicio, usted acepta la recopilación y el uso de la información de acuerdo con esta Política de Privacidad. Esta Política de Privacidad se creó con la ayuda del Generador de Políticas de Privacidad.",
+
+    "interpretationDefinitions": "Interpretación y Definiciones",
+    "interpretation": "Interpretación",
+    "interpretationText": "Las palabras cuya letra inicial está en mayúscula tienen los significados definidos en las siguientes condiciones. Las siguientes definiciones tendrán el mismo significado independientemente de si aparecen en singular o en plural.",
+    "definitions": "Definiciones",
+
+    "definition": {
+      "account": "Cuenta significa una cuenta única creada para que usted acceda a nuestro Servicio o a partes de nuestro Servicio.",
+      "affiliate": "Afiliada significa una entidad que controla, es controlada por o está bajo control común con una parte, donde \"control\" significa la propiedad del 50% o más de las acciones, intereses de capital u otros valores con derecho a voto.",
+      "company": "La Compañía se refiere a Solutions For Life, 680 Hillcrest Rd NW, Lilburn, GA 30047, EE. UU.",
+      "cookies": "Las Cookies son pequeños archivos colocados en su computadora, dispositivo móvil u otro dispositivo por un sitio web.",
+      "country": "País se refiere a: Georgia, Estados Unidos.",
+      "device": "Dispositivo significa cualquier dispositivo que pueda acceder al Servicio, como una computadora, un teléfono móvil o una tableta digital.",
+      "personalData": "Datos Personales es cualquier información que se refiera a una persona identificada o identificable.",
+      "service": "Servicio se refiere al Sitio Web.",
+      "serviceProvider": "Proveedor de Servicios significa cualquier persona física o jurídica que procesa los datos en nombre de la Compañía.",
+      "usageData": "Datos de Uso se refiere a los datos recopilados automáticamente mediante el uso del Servicio o desde su infraestructura.",
+      "website": "Sitio Web se refiere a Solutions For Life, accesible desde solutionsforlifeatl.com",
+      "you": "Usted significa la persona que accede o utiliza el Servicio, o la empresa/entidad legal en nombre de la cual dicha persona accede o utiliza el Servicio."
+    },
+
+    "collectingData": "Recopilación y Uso de sus Datos Personales",
+    "typesOfData": "Tipos de Datos Recopilados",
+
+    "personalData": "Datos Personales",
+    "personalDataText": "Mientras utiliza nuestro Servicio, podemos pedirle que nos proporcione cierta información de identificación personal que pueda utilizarse para contactarle o identificarle. La información de identificación personal puede incluir:",
+    "personalData.email": "Dirección de correo electrónico",
+    "personalData.name": "Nombre y apellidos",
+    "personalData.phone": "Número de teléfono",
+    "personalData.usageData": "Datos de Uso",
+
+    "usageDataTitle": "Datos de Uso",
+    "usageDataText": "Los Datos de Uso se recopilan automáticamente al utilizar el Servicio. Los Datos de Uso pueden incluir información como dirección IP, tipo y versión de navegador, páginas visitadas, tiempo de permanencia, identificadores del dispositivo y datos de diagnóstico.",
+
+    "cookiesTitle": "Tecnologías de Seguimiento y Cookies",
+    "cookiesText": "Utilizamos Cookies y tecnologías de seguimiento similares para registrar la actividad y almacenar cierta información. Las tecnologías utilizadas incluyen balizas, etiquetas y scripts.",
+    "cookies": {
+      "necessary": "Cookies Necesarias/Esenciales (de Sesión) – para autenticar usuarios y prevenir fraude.",
+      "acceptance": "Cookies de Política/Aceptación de Aviso (Persistentes) – para recordar el consentimiento de cookies.",
+      "functionality": "Cookies de Funcionalidad (Persistentes) – para recordar datos de inicio de sesión o preferencias de idioma."
+    },
+
+    "useOfData": "Uso de sus Datos Personales",
+    "use": {
+      "provideService": "Proporcionar y mantener nuestro Servicio",
+      "manageAccount": "Gestionar su Cuenta",
+      "contractPerformance": "Cumplimiento de un contrato",
+      "contact": "Contactarle",
+      "marketing": "Proporcionar noticias, ofertas y eventos salvo que usted se oponga",
+      "requests": "Gestionar sus solicitudes",
+      "transfers": "Para transferencias comerciales",
+      "analytics": "Para analítica, mejoras y seguridad"
+    },
+
+    "retention": "Conservación de sus Datos Personales",
+    "retentionText": "La Compañía conservará los Datos Personales solo durante el tiempo necesario para cumplir con los fines establecidos en esta Política de Privacidad, para cumplir con obligaciones legales, resolver disputas y hacer cumplir acuerdos. Los Datos de Uso generalmente se conservan por un período más corto, a menos que se utilicen para mejorar la seguridad o la ley exija conservarlos.",
+
+    "transfer": "Transferencia de sus Datos Personales",
+    "transferText": "Su información puede transferirse y mantenerse en computadoras ubicadas fuera de su estado o país. Al enviar su información, usted acepta dicha transferencia. Garantizamos que existen protecciones adecuadas.",
+
+    "deletion": "Eliminación de sus Datos Personales",
+    "deletionText": "Usted puede solicitar la eliminación de sus Datos Personales en cualquier momento. Puede actualizar, modificar o eliminar su información desde su Cuenta o contactándonos. Parte de la información puede conservarse según lo exija la ley.",
+
+    "disclosure": "Divulgación de sus Datos Personales",
+    "disclosure.business": "Transacciones Comerciales: Si la Compañía participa en una fusión, adquisición o venta de activos, sus Datos Personales pueden transferirse.",
+    "disclosure.law": "Aplicación de la ley: Podemos divulgar Datos Personales si así lo exige la ley.",
+    "disclosure.other": "Otros requisitos legales: Podemos divulgar sus Datos Personales de buena fe para cumplir obligaciones legales, proteger derechos, investigar conductas indebidas, garantizar la seguridad o prevenir responsabilidad.",
+
+    "security": "Seguridad de sus Datos Personales",
+    "securityText": "Utilizamos medios comercialmente aceptables para proteger sus datos, pero ninguna transmisión o almacenamiento es 100% seguro.",
+
+    "children": "Privacidad de los Menores",
+    "childrenText": "Nuestro Servicio no está dirigido a menores de 13 años. No recopilamos conscientemente información de niños. Si llegamos a saberlo, la eliminamos de inmediato.",
+
+    "links": "Enlaces a Otros Sitios Web",
+    "linksText": "Nuestro Servicio puede contener enlaces a sitios web de terceros. No somos responsables de sus prácticas de privacidad. Revise sus políticas.",
+
+    "changes": "Cambios a esta Política de Privacidad",
+    "changesText": "Podemos actualizar esta Política de Privacidad periódicamente. Los cambios se publicarán en esta página y actualizaremos la fecha de \"Última actualización\". Se recomienda revisar periódicamente.",
+
+    "rights": "Sus Derechos de Privacidad",
+
+    "ccpaTitle": "CCPA y CPRA (Residentes de California)",
+    "ccpa": {
+      "know": "Derecho a Saber",
+      "delete": "Derecho a Eliminar",
+      "correct": "Derecho a Corregir",
+      "optOut": "Derecho a Optar por No Participar en la Venta/Compartición",
+      "limit": "Derecho a Limitar el Uso de Datos Personales Sensibles",
+      "nonDiscrimination": "Derecho a No Ser Discriminado"
+    },
+
+    "gdprTitle": "GDPR (Usuarios del EEE y Reino Unido)",
+    "gdpr": {
+      "access": "Derecho de Acceso",
+      "rectification": "Derecho a la Rectificación",
+      "erasure": "Derecho de Supresión (\"Derecho al Olvido\")",
+      "restrict": "Derecho a Restringir el Tratamiento",
+      "portability": "Derecho a la Portabilidad de Datos",
+      "object": "Derecho de Oposición",
+      "withdraw": "Derecho a Retirar el Consentimiento"
+    },
+
+    "caloppaTitle": "CalOPPA (Ley de Privacidad en Línea de California)",
+    "caloppa": {
+      "anonymous": "Los usuarios pueden visitar de forma anónima",
+      "link": "El enlace a la Política de Privacidad incluye la palabra \"Privacidad\" y es visible en la página de inicio",
+      "changes": "Notificamos cambios a los usuarios en esta página",
+      "review": "Los usuarios pueden revisar/cambiar los Datos Personales iniciando sesión o contactándonos",
+      "dnt": "Respetamos las señales de No Rastrear (DNT)"
+    },
+
+    "exercising": "Ejercicio de sus Derechos",
+    "exercisingText": "Para ejercer sus derechos bajo CCPA, CPRA, GDPR o CalOPPA, comuníquese con nosotros. Podemos requerir la verificación de su identidad antes de responder.",
+
+    "contact": "Contáctenos",
+    "contact.email": "Por correo electrónico: services@solutionsforlifeatl.com",
+    "contact.mail": "Por correo postal: 680 Hillcrest Rd NW, Lilburn, GA 30047, EE. UU."
   }
 }
