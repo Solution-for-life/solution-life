@@ -58,13 +58,13 @@ jobs:
       - name: 🚀 Subir archivos al servidor FTP
         uses: SamKirkland/FTP-Deploy-Action@v4.3.4
         with:
-          server: ${{ secrets.FTP_URL_PROFF }}
-          username: ${{ secrets.FTP_USER_PROFF }}
-          password: ${{ secrets.FTP_PASSWORD_PROFF }}
+          server: ${{ secrets.FTP_URL_SOLUTION }}
+          username: ${{ secrets.FTP_URL_USERNAME_SOLUTION }}
+          password: ${{ secrets.FTP_URL_PASSWORD_SOLUTION }}
           port: 21
           protocol: ftp
           local-dir: ./
-          server-dir: /public_html/production/
+          server-dir: /public_html/
           exclude: |
             .git
             .github
