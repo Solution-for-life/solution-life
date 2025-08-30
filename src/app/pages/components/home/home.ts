@@ -7,10 +7,11 @@ import { CommonModule } from '@angular/common';
 import { TranslateModule } from '@ngx-translate/core';
 import { Footer } from '../../../components/footer/footer';
 import { RouterLink } from '@angular/router';
+import { CarruselComponent } from "../carrusel/carrusel";
 
 @Component({
   selector: 'app-home',
-  imports: [Header, FontAwesomeModule, HomeContact, CommonModule, TranslateModule, Footer, RouterLink],
+  imports: [Header, FontAwesomeModule, HomeContact, CommonModule, TranslateModule, Footer, RouterLink, CarruselComponent],
   templateUrl: './home.html',
   styleUrl: './home.css'
 })

@@ -3,13 +3,16 @@
     #carousel
     class="flex gap-4">
 
-    <div *ngFor="let item of displayItems" class="min-w-[250px] flex-shrink-0 bg-white shadow-md rounded-lg p-4">
-      <span class="fa fa-star text-[#64DD17] mr-2" aria-hidden="true"></span>
-      <span class="fa fa-star text-[#64DD17] mr-2" aria-hidden="true"></span>
-      <span class="fa fa-star text-[#64DD17] mr-2" aria-hidden="true"></span>
-      <span class="fa fa-star text-[#64DD17] mr-2" aria-hidden="true"></span>
-      <span class="fa fa-star text-[#64DD17] mr-2" aria-hidden="true"></span>
-      <p class="font-semibold">{{ item.title }}</p>
+    <div *ngFor="let item of displayItems" class="min-w-[250px] flex-shrink-0 bg-[#1a2433] text-white shadow-md rounded-lg p-4">
+      <div class="mb-6 flex ">
+
+        <span class="fa fa-star text-[#64DD17] mr-2" aria-hidden="true"></span>
+        <span class="fa fa-star text-[#64DD17] mr-2" aria-hidden="true"></span>
+        <span class="fa fa-star text-[#64DD17] mr-2" aria-hidden="true"></span>
+        <span class="fa fa-star text-[#64DD17] mr-2" aria-hidden="true"></span>
+        <span class="fa fa-star text-[#64DD17] mr-2" aria-hidden="true"></span>
+      </div>
+      <p class="font-semibold mb-3">{{ item.title }}</p>
       <span class="text-gray-500">{{ item.name }}</span>
     </div>
 
