@@ -1,4 +1,7 @@
-<app-header></app-header>
+
+<div class="bg-[#00013A] w-full">
+  <app-header></app-header>
+</div>
 <div class="aling-center flex flex-col items-center justify-center color-primary ">
     <!-- SECTION DE INICIO -->
     <div class="relative bg-gradient-to-br w-full">
@@ -13,10 +16,10 @@
           <img src="/assets/images/backgroundlanding.png" class="w-full h-full object-cover">
         </div>
         <div class="flex flex-col items-center text-center justify-center h-[90vh] w-full relative  text-white">
-          <div class="flex flex-col items-center justify-center h-full w-full ">
+          <div class="flex flex-col items-center justify-center h-auto w-auto lg:w-150 mx-auto">
             <h1 class="text-4xl font-bold">{{"introText" | translate}}</h1>
             <p class="text-2xl mb-5">{{"introText2" | translate}}</p>
-            <a type="boton" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Ir a la página de sobre nosotros</a>
+            <a type="boton" class="w-80 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded cursor-pointer">Conoce más sobre nosotros</a>
           </div>
         </div>
       </div>
@@ -74,7 +77,7 @@
                       <div class="grid-cols-2 gap-5 mb-5 flex items-center justify-center">
                         <div class="bg-[#1a2433] text-white p-2 rounded-sm text-center">
                           <h3 class="lg:text-[2.7rem] text-[1.8rem] font-bold">10+</h3>
-                          <p class="lg:text-[1.5rem] font-bold">Years of experience</p>
+                          <p class="lg:text-[1.5rem] font-bold">Años de experiencia</p>
                         </div>
                         <div class="bg-green-500 text-white p-2 rounded-sm text-center">
                             <h3 class="lg:text-[2.7rem] text-[1.8rem] font-bold">1.2K</h3>
@@ -88,22 +91,22 @@
 
                   </div>
                   <div class="flex flex-col items-left lg:p-10 h-auto w-full">
-                    <span class="mb-5 font-[400] bg-[#80808030] p-1 w-[265px]">Tu puerta de entrada al éxito digital</span>
-                    <h2 class="mb-10 text-3xl! lg:text-4xl! font-bold">¡Definiendo el futuro de las experiencias en línea!</h2>
-                    <p class="mb-10 font-[500] text-gray-400">Sumérgete en una nueva era de éxito digital con Mizzle. Nuestro equipo combina un diseño vanguardista con un desarrollo sólido para crear sitios web que cautivan y convierten.</p>
+                    <span class="mb-5 mt-3 font-[400] bg-[#80808030] p-1 max-w-75 ">✨Tu puerta de entrada al éxito digital</span>
+                    <h2 class="mb-10 text-3xl! lg:text-4xl! font-bold">¡Simplificamos lo complicado para que disfrutes lo importante!</h2>
+                    <p class="mb-10 font-[500] text-gray-400">En Solutions for Life creemos que cada persona merece vivir con tranquilidad, confianza y seguridad. Somos una empresa dedicada a brindar soluciones fáciles, eficientes y personalizadas en seguros, impuestos, inmigración y bienes raíces.</p>
                     <ul class="mb-10">
                       <li class="p-2">
 
                         <i class="fa fa-check-circle text-[#09b850] mr-2"></i>
-                        <font> Énfasis en soluciones basadas en el retorno de la inversión</font>
+                        <span class="text-sm"> Ofrecemos soluciones integrales en seguros, impuestos, inmigración y bienes raíces</span>
                       </li>
                       <li class="p-2">
                         <i class="fa fa-check-circle text-[#09b850] mr-2"></i>
-                        <font> Énfasis en soluciones basadas en el retorno </font>
+                        <span class="text-sm"> Creemos en la confianza, la transparencia y el trato humano. </span>
                       </li>
                       <li class="p-2">
                         <i class="fa fa-check-circle text-[#09b850] mr-2"></i>
-                        <font> Énfasis en soluciones basadas en el retorno de la inversión (ROI)</font>
+                        <span class="text-sm"> Te acompañamos a proteger tu futuro y alcanzar tus metas.</span>
                       </li>
                     </ul>
                     <a type="boton" class="bg-blue-500 hover:bg-blue-700 w-48 text-center text-white font-bold py-2 px-4 rounded">Ver más</a>
@@ -131,111 +134,71 @@
         </div>
         <div class="flex justify-around mb-[30px] p-4">
           <div class="grid mt-[50px] xs:grid-cols-4 sm:grid-cols-4 lg:grid-cols-4 grid-cols-1 gap-8 justify-center items-center p-4 h-full md:w-[70vw] lg:w-[70vw] xl:w-[70vw] 2xl:w-[70vw] w-[90vw]">
-            <div class="flex flex-col  p-4  bg-[#1a2433] mt-[2.5rem] text-white  rounded-sm transition duration-300 transform hover:-translate-y-1 hover:scale-110">
-              <div class="car_body px-4 py-2">
-                 <div class="car_icon mt-[-3.5rem] mb-[1.6rem] rounded-[50%] text-[1.2rem] bg-white text-[#64DD17] w-[3.5rem] h-[3.5rem] flex justify-center items-center line-height-[3.5rem]">
-                    <fa-icon [icon]="faCubes"  aria-hidden="true"></fa-icon>
-                 </div>
-                 <h5 class="align-middle text-[1.4rem]  font-bold mb-5 " >Seguros de vida</h5>
-                 <p class="align-middle text-[0.8rem]  text-[#bebcbc] font-semibold mb-5 ">Aca encuentras todas las opciones de seguros de vida</p>
+            <div class="flex flex-col relative p-4  bg-[#1a2433] mt-[2.5rem] text-white  rounded-sm transition duration-300 transform hover:-translate-y-1 hover:scale-110">
+              <div class=" mt-[-2.5rem] mb-[1.6rem] rounded-[50%] text-[1.2rem] bg-white text-[#64DD17] w-[3.5rem] h-[3.5rem] flex justify-center items-center line-height-[3.5rem]">
+                <span class="fa fa-cubes" aria-hidden="true"></span>
               </div>
-              <div class="car_footer px-4 py-2">
-                <a class="hover:text-[#64DD17] flex items-center justify-flex-start gap-1"   href=""><font> Saber mas</font><span class="fa fa-long-arrow-right" aria-hidden="true"></span></a>
-              </div>
-
+              <h5 class="align-middle text-xl  font-bold mb-5 " >Seguro de vida</h5>
+              <p class="align-middle text-[0.8rem]  text-[#bebcbc] font-semibold mb-5 ">Protege el bienestar de tus seres queridos en caso de que faltes.</p>
+              <a href="http://" class="hover:text-[#64dd17]">Saber más <span><i class="fa fa-long-arrow-right" aria-hidden="true"></i></span></a>
             </div>
-            <div class="flex flex-col  p-4  bg-[#1a2433] mt-[2.5rem] text-white  rounded-sm transition duration-300 transform hover:-translate-y-1 hover:scale-110">
-              <div class="car_body px-4 py-2">
-                 <div class="car_icon mt-[-3.5rem] mb-[1.6rem] rounded-[50%] text-[1.2rem] bg-white text-[#64DD17] w-[3.5rem] h-[3.5rem] flex justify-center items-center line-height-[3.5rem]">
-                  <fa-icon [icon]="faUser"  aria-hidden="true"></fa-icon>
-                 </div>
-                 <h5 class="align-middle text-[1.4rem] font-bold mb-5 " >Seguros de vida</h5>
-                 <p class="align-middle text-[0.8rem] text-[#bebcbc] font-semibold mb-5 ">Aca encuentras todas las opciones de seguros de vida</p>
+            <div class="flex flex-col relative p-4  bg-[#1a2433] mt-[2.5rem] text-white  rounded-sm transition duration-300 transform hover:-translate-y-1 hover:scale-110">
+              <div class=" mt-[-2.5rem] mb-[1.6rem] rounded-[50%] text-[1.2rem] bg-white text-[#64DD17] w-[3.5rem] h-[3.5rem] flex justify-center items-center line-height-[3.5rem]">
+                <span class="fa fa-cubes" aria-hidden="true"></span>
               </div>
-              <div class="car_footer px-4 py-2 h-full ">
-                <a class="hover:text-[#64DD17] flex items-center justify-flex-start gap-1"   href=""><font> Saber más</font><span class="fa fa-long-arrow-right" aria-hidden="true"></span></a>
-              </div>
-
+              <h5 class="align-middle text-xl  font-bold mb-5 " >Seguro de salud</h5>
+              <p class="align-middle text-[0.8rem]  text-[#bebcbc] font-semibold mb-5 ">Accede a atención médica de calidad sin preocuparte por los altos costos.</p>
+              <a href="http://" class="hover:text-[#64dd17]">Saber más <span><i class="fa fa-long-arrow-right" aria-hidden="true"></i></span></a>
             </div>
-            <div class="flex flex-col  p-4  bg-[#1a2433] mt-[2.5rem] text-white  rounded-sm transition duration-300 transform hover:-translate-y-1 hover:scale-110">
-              <div class="car_body px-4 py-2">
-                 <div class="car_icon mt-[-3.5rem] mb-[1.6rem] rounded-[50%] text-[1.2rem] bg-white text-[#64DD17] w-[3.5rem] h-[3.5rem] flex justify-center items-center line-height-[3.5rem]">
-                   <fa-icon [icon]="faStar"  aria-hidden="true"></fa-icon>
-                 </div>
-                 <h5 class="align-middle text-[1.4rem] font-bold mb-5 " >Seguros de vida</h5>
-                 <p class="align-middle text-[0.8rem] text-[#bebcbc] font-semibold mb-5 ">Aca encuentras todas las opciones de seguros de vida</p>
+            <div class="flex flex-col relative p-4  bg-[#1a2433] mt-[2.5rem] text-white  rounded-sm transition duration-300 transform hover:-translate-y-1 hover:scale-110">
+              <div class=" mt-[-2.5rem] mb-[1.6rem] rounded-[50%] text-[1.2rem] bg-white text-[#64DD17] w-[3.5rem] h-[3.5rem] flex justify-center items-center line-height-[3.5rem]">
+                <span class="fa fa-cubes" aria-hidden="true"></span>
               </div>
-              <div class="car_footer px-4 py-2 h-full ">
-                <a class="hover:text-[#64DD17] flex items-center justify-flex-start gap-1"   href=""><font> Saber más</font><span class="fa fa-long-arrow-right" aria-hidden="true"></span></a>
-              </div>
-
+              <h5 class="align-middle text-xl  font-bold mb-5 " >Declaraciones personales</h5>
+              <p class="align-middle text-[0.8rem]  text-[#bebcbc] font-semibold mb-5 ">Te ayudamos a declarar tus impuestos de manera rápida.</p>
+              <a href="http://" class="hover:text-[#64dd17]">Saber más <span><i class="fa fa-long-arrow-right" aria-hidden="true"></i></span></a>
             </div>
-            <div class="flex flex-col  p-4  bg-[#1a2433] mt-[2.5rem] text-white  rounded-sm transition duration-300 transform hover:-translate-y-1 hover:scale-110">
-              <div class="car_body px-4 py-2">
-                 <div class="car_icon mt-[-3.5rem] mb-[1.6rem] rounded-[50%] text-[1.2rem] bg-white text-[#64DD17] w-[3.5rem] h-[3.5rem] flex justify-center items-center line-height-[3.5rem]">
-                  <span class="fa fa-handshake" aria-hidden="true"></span>
-                 </div>
-                 <h5 class="align-middle text-[1.4rem] font-bold mb-5 " >Seguros de vida</h5>
-                 <p class="align-middle text-[0.8rem] text-[#bebcbc] font-semibold mb-5 ">Aca encuentras todas las opciones de seguros de vida</p>
+            <div class="flex flex-col relative p-4  bg-[#1a2433] mt-[2.5rem] text-white  rounded-sm transition duration-300 transform hover:-translate-y-1 hover:scale-110">
+              <div class=" mt-[-2.5rem] mb-[1.6rem] rounded-[50%] text-[1.2rem] bg-white text-[#64DD17] w-[3.5rem] h-[3.5rem] flex justify-center items-center line-height-[3.5rem]">
+                <span class="fa fa-cubes" aria-hidden="true"></span>
               </div>
-              <div class="car_footer px-4 py-2 h-full ">
-                <a class="hover:text-[#64DD17] flex items-center justify-flex-start gap-1"   href=""><font> Saber más </font><span class="fa fa-long-arrow-right" aria-hidden="true"></span></a>
-              </div>
-
+              <h5 class="align-middle text-xl  font-bold mb-5 " >Contabilidad de negocios</h5>
+              <p class="align-middle text-[0.8rem]  text-[#bebcbc] font-semibold mb-5 ">Mantenemos tus finanzas organizadas, con  acompañamiento profesional.</p>
+              <a href="http://" class="hover:text-[#64dd17]">Saber más <span><i class="fa fa-long-arrow-right" aria-hidden="true"></i></span></a>
             </div>
-            <!-- DIPLICADOS -->
-            <div class="flex flex-col  p-4  bg-[#1a2433] mt-[2.5rem] text-white  rounded-sm transition duration-300 transform hover:-translate-y-1 hover:scale-110">
-              <div class="car_body px-4 py-2">
-                 <div class="car_icon mt-[-3.5rem] mb-[1.6rem] rounded-[50%] text-[1.2rem] bg-white text-[#64DD17] w-[3.5rem] h-[3.5rem] flex justify-center items-center line-height-[3.5rem]">
-                  <span class="fa fa-calendar" aria-hidden="true"></span>
-                 </div>
-                 <h5 class="align-middle text-[1.4rem] font-bold mb-5 " >Seguros de vida</h5>
-                 <p class="align-middle text-[0.8rem] text-[#bebcbc] font-semibold mb-5 ">Aca encuentras todas las opciones de seguros de vida</p>
+            <div class="flex flex-col relative p-4  bg-[#1a2433] mt-[2.5rem] text-white  rounded-sm transition duration-300 transform hover:-translate-y-1 hover:scale-110">
+              <div class=" mt-[-2.5rem] mb-[1.6rem] rounded-[50%] text-[1.2rem] bg-white text-[#64DD17] w-[3.5rem] h-[3.5rem] flex justify-center items-center line-height-[3.5rem]">
+                <span class="fa fa-cubes" aria-hidden="true"></span>
               </div>
-              <div class="car_footer px-4 py-2 h-full ">
-                <a class="hover:text-[#64DD17] flex items-center justify-flex-start gap-1"   href=""><font> Saber más</font><span class="fa fa-long-arrow-right" aria-hidden="true"></span></a>
-              </div>
-
+              <h5 class="align-middle text-xl  font-bold mb-5 " >Permisos de trabajo</h5>
+              <p class="align-middle text-[0.8rem]  text-[#bebcbc] font-semibold mb-5 ">Te brindamos una gestión rápida y confiable para tus permisos de trabajo.</p>
+              <a href="http://" class="hover:text-[#64dd17]">Saber más <span><i class="fa fa-long-arrow-right" aria-hidden="true"></i></span></a>
             </div>
-            <div class="flex flex-col  p-4  bg-[#1a2433] mt-[2.5rem] text-white  rounded-sm transition duration-300 transform hover:-translate-y-1 hover:scale-110">
-              <div class="car_body px-4 py-2">
-                 <div class="car_icon mt-[-3.5rem] mb-[1.6rem] rounded-[50%] text-[1.2rem] bg-white text-[#64DD17] w-[3.5rem] h-[3.5rem] flex justify-center items-center line-height-[3.5rem]">
-                  <span class="fa fa-users" aria-hidden="true"></span>
-                 </div>
-                 <h5 class="align-middle text-[1.4rem] font-bold mb-5 " >Seguros de vida</h5>
-                 <p class="align-middle text-[0.8rem] text-[#bebcbc] font-semibold mb-5 ">Aca encuentras todas las opciones de seguros de vida</p>
+            <div class="flex flex-col relative p-4  bg-[#1a2433] mt-[2.5rem] text-white  rounded-sm transition duration-300 transform hover:-translate-y-1 hover:scale-110">
+              <div class=" mt-[-2.5rem] mb-[1.6rem] rounded-[50%] text-[1.2rem] bg-white text-[#64DD17] w-[3.5rem] h-[3.5rem] flex justify-center items-center line-height-[3.5rem]">
+                <span class="fa fa-cubes" aria-hidden="true"></span>
               </div>
-              <div class="car_footer px-4 py-2 h-full ">
-                <a class="hover:text-[#64DD17] flex items-center justify-flex-start gap-1"   href=""><font> Saber más</font><span class="fa fa-long-arrow-right" aria-hidden="true"></span></a>
-              </div>
-
+              <h5 class="align-middle text-xl  font-bold mb-5 " >Ajustes de residencia</h5>
+              <p class="align-middle text-[0.8rem]  text-[#bebcbc] font-semibold mb-5 ">Si deseas regularizar tu estatus migratorio, te ayudamos con confianza y seguridad.</p>
+              <a href="http://" class="hover:text-[#64dd17]">Saber más <span><i class="fa fa-long-arrow-right" aria-hidden="true"></i></span></a>
             </div>
-            <div class="flex flex-col  p-4  bg-[#1a2433] mt-[2.5rem] text-white  rounded-sm transition duration-300 transform hover:-translate-y-1 hover:scale-110">
-              <div class="car_body px-4 py-2">
-                 <div class="car_icon mt-[-3.5rem] mb-[1.6rem] rounded-[50%] text-[1.2rem] bg-white text-[#64DD17] w-[3.5rem] h-[3.5rem] flex justify-center items-center line-height-[3.5rem]">
-                    <fa-icon [icon]="faCogs"  aria-hidden="true"></fa-icon>
-                 </div>
-                 <h5 class="align-middle text-[1.4rem] font-bold mb-5 " >Seguros de vida</h5>
-                 <p class="align-middle text-[0.8rem] text-[#bebcbc] font-semibold mb-5 ">Aca encuentras todas las opciones de seguros de vida</p>
+            <div class="flex flex-col relative p-4  bg-[#1a2433] mt-[2.5rem] text-white  rounded-sm transition duration-300 transform hover:-translate-y-1 hover:scale-110">
+              <div class=" mt-[-2.5rem] mb-[1.6rem] rounded-[50%] text-[1.2rem] bg-white text-[#64DD17] w-[3.5rem] h-[3.5rem] flex justify-center items-center line-height-[3.5rem]">
+                <span class="fa fa-cubes" aria-hidden="true"></span>
               </div>
-              <div class="car_footer px-4 py-2 h-full ">
-                <a class="hover:text-[#64DD17] flex items-center justify-flex-start gap-1"   href=""><font> Saber más</font><span class="fa fa-long-arrow-right" aria-hidden="true"></span></a>
-              </div>
-
+              <h5 class="align-middle text-xl  font-bold mb-5 " >Compra de vivienda</h5>
+              <p class="align-middle text-[0.8rem]  text-[#bebcbc] font-semibold mb-5 ">Te acompañamos en la búsqueda para que compres la casa perfecta para ti y tu familia.</p>
+              <a href="http://" class="hover:text-[#64dd17]">Saber más <span><i class="fa fa-long-arrow-right" aria-hidden="true"></i></span></a>
             </div>
-            <div class="flex flex-col  p-4  bg-[#1a2433] mt-[2.5rem] text-white  rounded-sm transition duration-300 transform hover:-translate-y-1 hover:scale-110">
-              <div class="car_body px-4 py-2">
-                 <div class="car_icon mt-[-3.5rem] mb-[1.6rem] rounded-[50%] text-[1.2rem] bg-white text-[#64DD17] w-[3.5rem] h-[3.5rem] flex justify-center items-center line-height-[3.5rem]">
-                  <span class="fa fa-university" aria-hidden="true"></span>
-                 </div>
-                 <h5 class="align-middle text-[1.4rem] font-bold mb-5 " >Seguros de vida</h5>
-                 <p class="align-middle text-[0.8rem] text-[#bebcbc] font-semibold mb-5 ">Aca encuentras todas las opciones de seguros de vida</p>
+            <div class="flex flex-col relative p-4  bg-[#1a2433] mt-[2.5rem] text-white  rounded-sm transition duration-300 transform hover:-translate-y-1 hover:scale-110">
+              <div class=" mt-[-2.5rem] mb-[1.6rem] rounded-[50%] text-[1.2rem] bg-white text-[#64DD17] w-[3.5rem] h-[3.5rem] flex justify-center items-center line-height-[3.5rem]">
+                <span class="fa fa-cubes" aria-hidden="true"></span>
               </div>
-              <div class="car_footer px-4 py-2 h-full ">
-                <a class="hover:text-[#64DD17] flex items-center justify-flex-start gap-1"   href=""><font> Saber más </font><span class="fa fa-long-arrow-right" aria-hidden="true"></span></a>
-              </div>
-
+              <h5 class="align-middle text-xl  font-bold mb-5 " >Inversión en propiedades</h5>
+              <p class="align-middle text-[0.8rem]  text-[#bebcbc] font-semibold mb-5 ">Te ayudamos a identificar oportunidades que sumen valor a tu futuro.</p>
+              <a href="http://" class="hover:text-[#64dd17]">Saber más <span><i class="fa fa-long-arrow-right" aria-hidden="true"></i></span></a>
             </div>
+
 
           </div>
         </div>
@@ -263,8 +226,8 @@
 
 <span
   class="fixed text-5xl bottom-10 right-5 z-90 fa-brands fa-whatsapp cursor-pointer
-  text-[#128c3b] transition-all duration-300
-  hover:text-[#25d366] hover:scale-110">
+  text-[#25d366] transition-all duration-300
+  hover:text-[#128c3b] hover:scale-110">
 </span>
 
 <app-footer></app-footer>

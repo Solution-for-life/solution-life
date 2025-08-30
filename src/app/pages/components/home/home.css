@@ -3,7 +3,7 @@
   background-size: cover;  /* Hace que ocupe todo el contenedor */
   background-position: center; /* Centra la imagen */
   background-repeat: no-repeat; /* Evita que se repita */
-  object-fit: contain;
+  object-fit: cover;
   /* background-size: contain; */
 }
 
