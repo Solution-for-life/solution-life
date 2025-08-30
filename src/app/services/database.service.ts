@@ -38,6 +38,7 @@ export class DatabaseService {
     const reference = ref(this.db, `${collectionName}`);
     const q = query(reference, orderByChild('url'), equalTo(url));
     const snapshot = await get(q);
+    console.log(snapshot.val());
     return snapshot.exists() ? snapshot.val() : null;
   }
 

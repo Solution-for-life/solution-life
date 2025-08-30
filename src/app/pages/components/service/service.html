@@ -1,9 +1,28 @@
 <app-header></app-header>
-<div class="h-dvh color-primary w-full p-2 sm:p-5 pb-28 relative">
+<div class="color-primary min-h-dvh w-full h-fit p-2 sm:p-5 pb-28 relative">
+  <div class="absolute top-0 left-0 w-full h-full z-1 overflow-hidden opacity-50">
+    <div class="absolute top-20 left-10 w-32 h-32 bg-blue-500 rounded-full filter blur-3xl animate-float1"></div>
+    <div class="absolute top-40 right-20 w-40 h-40 bg-purple-500 rounded-full filter blur-3xl animate-float2"></div>
+    <div class="absolute bottom-10 left-1/2 w-48 h-48 bg-cyan-500 rounded-full filter blur-3xl animate-float3"></div>
+  </div>
+
   <div class="flex flex-col items-center max-w-7xl relative z-2 mx-auto pt-10 w-full h-full">
       <h1 class="w-fit text-3xl mt-5 mb-10 text-slate-100">{{ service?.title?.[this.langService.getLang()] | titlecase}}</h1>
-      <p class="p-3 font-light text-slate-100 text-md leading-loose mb-10">{{ service?.briefDescription?.[this.langService.getLang()] }}</p>
-      <p class="p-3 font-light text-slate-100 text-md leading-loose mb-10">{{ service?.longDescription?.[this.langService.getLang()] }}</p>
+      <p class="p-3 font-light text-slate-100 text-start text-md leading-loose w-full">{{ service?.briefDescription?.[this.langService.getLang()] }}</p>
+      <p class="p-3 font-light text-slate-100 text-md leading-loose mb-10 w-full">{{ service?.longDescription?.[this.langService.getLang()] }}</p>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-10">
+        @for (item of this.service?.subServices; track $index) {
+          <div class="bg-gray-700 rounded-xl hover:bg-gray-900 hover:scale-102 duration-700 p-5">
+            <figure class="w-10 h-10 p-2 bg-blue-800 rounded-md">
+              <span class="fa-solid text-white" [ngClass]="item?.icon"></span>
+            </figure>
+            <h4 class="py-2 text-white font-bold">{{ item?.title?.[this.langService.getLang()] | titlecase}}</h4>
+            <p class="text-md leading-7 text-white font-light space-y-4">{{ item?.briefDescription?.[this.langService.getLang()] }}</p>
+            <p class="text-xs text-slate-300 space-y-4">{{ item?.longDescription?.[this.langService.getLang()] }}</p>
+          </div>
+        }
+      </div>
   </div>
 </div>
 <app-footer></app-footer>
