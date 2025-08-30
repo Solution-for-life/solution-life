@@ -37,6 +37,11 @@ export class Service {
         this.url = res['id'];
         const response = await this.db.getItemByUrl('services', this.url!);
         this.service = response ? Object.values(response)[0] as ServiceInterface : null;
+
+        if(this.service?.subServices){
+              this.service.subServices = this.service.subServices.filter(s => s !== null);
+        }
+
       },
       error : (err) => {
         console.log(err);
