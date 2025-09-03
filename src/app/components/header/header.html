@@ -1,6 +1,6 @@
 
 <header [class.fixed]="isSticky" [class.top-0]="isSticky" [class.shadow-md]="isSticky" class="w-full transition-all! duration-300! z-90 p-4 bg-black/80">
-  <nav  class=" flex  items-center text-white  justify-between ">
+  <nav  class="max-w-7xl mx-auto flex  items-center text-white  justify-between ">
     <div class="flex lg:flex-1">
       <a href="#" class="-m-1.5 p-1.5">
         <span class="sr-only text-white">Your Company</span>
@@ -19,47 +19,47 @@
       </button>
     </div>
     <el-popover-group class="hidden lg:flex justify-between lg:gap-x-12">
-      <span  [routerLink]="['/about-us']" [routerLinkActive]="['tab-active']" class="p-2 rounded-sm text-sm/6 font-semibold text-white hover:bg-[#000675] cursor-pointer">{{"header.about us" | translate}}</span>
-      <span  [routerLink]="['/contact']" [routerLinkActive]="['tab-active']" class="p-2 rounded-sm text-sm/6 font-semibold text-white hover:bg-[#000675] cursor-pointer">{{"header.contact" | translate}}</span>
+      <span  [routerLink]="['/about-us']" [routerLinkActive]="['tab-active']" class="p-2 rounded-sm text-sm/6 font-semibold text-white hover:bg-[#07a248] cursor-pointer">{{"header.about us" | translate}}</span>
+      <span  [routerLink]="['/contact']" [routerLinkActive]="['tab-active']" class="p-2 rounded-sm text-sm/6 font-semibold text-white hover:bg-[#07a248] cursor-pointer">{{"header.contact" | translate}}</span>
 
-      <div class="relative hover:bg-[#000675] rounded-sm ">
+      <div class="relative hover:bg-[#07a248] rounded-sm ">
         <button popovertarget="desktop-menu-product" class="p-2  flex items-center gap-x-1 text-sm/6 font-semibold text-white cursor-pointer">
           {{"header.services" | translate}}
           <span class="fa-solid fa-chevron-down"></span>
         </button>
 
         <el-popover id="desktop-menu-product" anchor="bottom" popover class="w-screen max-w-md overflow-hidden rounded-3xl color-primary shadow-lg ring-1 ring-gray-900/5 transition transition-discrete [--anchor-gap:--spacing(3)] backdrop:bg-transparent open:block data-closed:translate-y-1 data-closed:opacity-0 data-enter:duration-200 data-enter:ease-out data-leave:duration-150 data-leave:ease-in">
-          <div class="p-4">
+          <div class="p-3">
             @for (item of this.services; track $index) {
-              <div class="group relative flex items-center gap-x-6 rounded-lg p-4 text-sm/6 hover:bg-[#000675]">
-                <div class="flex size-11 flex-none items-center justify-center rounded-lg text-white group-hover:bg-[#000675]">
+              <div class="group relative flex items-center gap-x-3 rounded-lg p-2 text-sm/6 hover:bg-[#07a248]">
+                <div class="flex size-11 flex-none items-center justify-center rounded-lg text-white group-hover:bg-[#07a248]">
                   <span class="fa-solid text-xl" [ngClass]="item.icon"></span>
                 </div>
                 <div class="flex-auto">
-                  <a [routerLink]="['/services', item.url]" class="text-white hover:text-white">
+                  <a [routerLink]="['/services', item.url]" class="text-white hover:text-white text-xl/6">
                     {{ item.title[this.langService.getLang()] | titlecase }}
                     <span class="absolute inset-0"></span>
                   </a>
-                  <p class="mt-1 text-white line-clamp-2">{{ item.briefDescription[this.langService.getLang()] }}</p>
+                  <!-- <p class="mt-1 text-white line-clamp-2">{{ item.briefDescription[this.langService.getLang()] }}</p> -->
                 </div>
               </div>
             }
           </div>
         </el-popover>
       </div>
-      <span  [routerLink]="['/company']" [routerLinkActive]="['tab-active']" class="p-2 rounded-sm text-sm/6 font-semibold text-white hover:bg-[#000675] cursor-pointer">{{"header.company" | translate}}</span>
+      <span  [routerLink]="['/company']" [routerLinkActive]="['tab-active']" class="p-2 rounded-sm text-sm/6 font-semibold text-white hover:bg-[#07a248] cursor-pointer">{{"header.company" | translate}}</span>
     </el-popover-group>
     <div class="hidden lg:flex lg:flex-1 gap-10 lg:justify-end">
-      <!-- <span (click)="router.navigate(['login'])" class="p-2 rounded-sm text-sm/6 font-semibold text-white hover:bg-[#000675]">{{"Login" | translate}} <span aria-hidden="true">&rarr;</span></span> -->
+      <!-- <span (click)="router.navigate(['login'])" class="p-2 rounded-sm text-sm/6 font-semibold text-white hover:bg-[#07a248]">{{"Login" | translate}} <span aria-hidden="true">&rarr;</span></span> -->
       <button popovertarget="menu-language">
         <span class="fa-solid fa-globe"></span>
         <span class="fa-solid fa-chevron-down text-xs"></span>
       </button>
       <el-popover id="menu-language" anchor="bottom" popover class="w-fit max-w-md overflow-hidden text-xs bg-[#00013A] shadow-lg ring-1 ring-gray-900/5 transition transition-discrete [--anchor-gap:--spacing(3)] backdrop:bg-transparent open:block data-closed:translate-y-1 data-closed:opacity-0 data-enter:duration-200 data-enter:ease-out data-leave:duration-150 data-leave:ease-in">
-        <div class="hover:bg-[#000675] rounded-md">
+        <div class="hover:bg-[#07a248] rounded-md">
           <button (click)="switchLang('es')" class="text-white p-2 cursor-pointer">🇪🇸 ES</button>
         </div>
-        <div class="hover:bg-[#000675] rounded-md">
+        <div class="hover:bg-[#07a248] rounded-md">
           <button (click)="switchLang('en')" class="text-white p-2 cursor-pointer">🇬🇧 EN</button>
         </div>
       </el-popover>
@@ -106,10 +106,10 @@
           </div>
 
           <div id="menu-language2"  class="flex w-full gap-4 text-xs justify-end">
-            <div class="hover:bg-[#000675] rounded-md">
+            <div class="hover:bg-[#07a248] rounded-md">
               <button (click)="switchLang('es')" class="text-white p-2 cursor-pointer">🇪🇸 ES</button>
             </div>
-            <div class="hover:bg-[#000675] rounded-md">
+            <div class="hover:bg-[#07a248] rounded-md">
               <button (click)="switchLang('en')" class="text-white p-2 cursor-pointer">🇬🇧 EN</button>
             </div>
           </div>

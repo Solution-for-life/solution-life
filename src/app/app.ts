@@ -3,6 +3,7 @@ import { RouterOutlet } from '@angular/router';
 import { TranslateService } from '@ngx-translate/core';
 import { LanguageService } from './services/language.service';
 import { Lang } from './types/lang';
+import { initFlowbite } from 'flowbite';
 
 @Component({
   selector: 'app-root',
@@ -25,6 +26,7 @@ export class App {
     // console.log(browserLang);
     translateService.use(lang);
     this.langService.setLang(lang);
+
   }
 
 }

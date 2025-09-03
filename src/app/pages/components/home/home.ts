@@ -8,6 +8,7 @@ import { TranslateModule } from '@ngx-translate/core';
 import { Footer } from '../../../components/footer/footer';
 import { RouterLink } from '@angular/router';
 import { CarruselComponent } from "../carrusel/carrusel";
+import { initFlowbite } from 'flowbite';
 
 @Component({
   selector: 'app-home',
@@ -23,5 +24,9 @@ export default class Home {
   faStar = faStar;
   faUniversity = faUniversity;
   faCogs = faCogs;
+
+  ngOnInit() {
+    initFlowbite();
+  }
 
 }
