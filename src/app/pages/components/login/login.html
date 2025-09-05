@@ -1,1 +1,60 @@
-<p>login works!</p>
+<!-- From Uiverse.io by Ameth1208 -->
+<div class="relative py-3 sm:mx-auto bg-[#1a2433] w-screen h-dvh flex items-center justify-center">
+
+  <div class="absolute top-0 left-0 w-full h-full z-1 overflow-hidden opacity-30">
+    <div class="absolute top-20 left-10 w-32 h-32 bg-blue-500 rounded-full filter blur-3xl animate-float1"></div>
+    <div class="absolute top-40 right-20 w-40 h-40 bg-purple-500 rounded-full filter blur-3xl animate-float2"></div>
+    <div class="absolute bottom-10 left-1/2 w-48 h-48 bg-cyan-500 rounded-full filter blur-3xl animate-float3"></div>
+  </div>
+
+  <div class="relative min-h-96 text-[#8B8E98] z-2 px-10 py-10 mt-4 text-left bg-white dark:bg-gray-900 rounded-xl shadow-lg">
+    <div class="flex flex-col justify-center items-center h-full select-none">
+      <div class="flex flex-col items-center justify-center gap-2 mb-8">
+
+        <img src="/assets/images/logo_solutions_sin_fondo.png" alt="" class="h-28 w-auto" />
+
+        <p class="m-0 font-semibold dark:text-white">
+          Login to your Account
+        </p>
+        <span class="m-0 max-w-[90%] text-center text-[#8B8E98]"
+          >Get started with our app, just start section and enjoy experience.
+        </span>
+      </div>
+    </div>
+    <form [formGroup]="form" (ngSubmit)="login()">
+      <div class="w-full flex flex-col gap-2">
+        <label class="font-semibold text-gray-400">Username</label>
+        <input
+          placeholder="Username"
+          class="border rounded-lg px-3 py-2 mb-5  w-full outline-none dark:border-gray-500 dark:bg-gray-900"
+          formControlName="email"
+        />
+      </div>
+      <div class="w-full flex flex-col gap-2 relative">
+        <label class="font-semibold text-gray-400">Password</label>
+         <div class="absolute inset-y-0 end-3 top-3 flex items-center ps-3.5 cursor-pointer" (click)="_loginService.seePass()">
+           <span class="fa text-gray-400" [ngClass]="{'fa-eye': !_loginService.showPass(), 'fa-eye-slash': _loginService.showPass()}">
+           </span>
+         </div>
+        <input
+          placeholder="••••••••"
+          class="border rounded-lg px-3 py-2 mb-5  w-full outline-none dark:border-gray-500 dark:bg-gray-900"
+          [type]="_loginService.showPass() ? 'text' : 'password'"
+          formControlName="password"
+        />
+      </div>
+      <div>
+      <p class="mb-5"> Don't have an account?
+          <a [routerLink]="['/']" class="text-[#09b850] hover:text-[#07a248] transition hover:underline">Sign Up</a>
+      </p>
+        <button class="py-3 px-8 bg-[#09b850] hover:bg-[#07a248] focus:ring-offset-blue-200 text-white w-full transition ease-in duration-200 text-center text-base font-semibold shadow-md focus:outline-none focus:ring-2 focus:ring-offset-2 rounded-lg cursor-pointer select-none">
+          Login
+        </button>
+      </div>
+    </form>
+  </div>
+</div>
+
+@if (this.loaderService.showLoader()) {
+  <app-loader></app-loader>
+}

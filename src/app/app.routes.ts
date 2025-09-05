@@ -7,12 +7,21 @@ import { Services } from './pages/components/services/services';
 import { Service } from './pages/components/service/service';
 import { PrivacyAndPolicy } from './pages/components/privacy-and-policy/privacy-and-policy';
 import { CookiesPolicy } from './pages/components/cookies-policy/cookies-policy';
+import { Register } from './pages/components/register/register';
+import { Dashboard } from './components/dashboard/dashboard';
+import { authGuard } from './guards/auth-guard';
 
 export const routes: Routes = [
   { path: '', component: Home},
   { path: 'about-us', component: AboutUs},
   { path: 'contact', component: Contact},
-  { path : 'login', component: Login},
+  { path: 'login', component: Login},
+  {
+    path : 'dashboard',
+    canActivate: [authGuard],
+    component: Dashboard
+  },
+  { path: 'register', component: Register},
   { path: 'services', component: Services},
   { path: 'services/:id', component: Service},
   { path: 'privacy-and-policies', component: PrivacyAndPolicy},
