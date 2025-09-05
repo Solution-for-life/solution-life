@@ -1,0 +1,53 @@
+<!-- From Uiverse.io by themrsami -->
+<div class="relative py-3 sm:mx-auto bg-[#1a2433] w-screen h-dvh flex items-center justify-center">
+  <div class="absolute top-0 left-0 w-full h-full z-1 overflow-hidden opacity-30">
+    <div class="absolute top-20 left-10 w-32 h-32 bg-blue-500 rounded-full filter blur-3xl animate-float1"></div>
+    <div class="absolute top-40 right-20 w-40 h-40 bg-purple-500 rounded-full filter blur-3xl animate-float2"></div>
+    <div class="absolute bottom-10 left-1/2 w-48 h-48 bg-cyan-500 rounded-full filter blur-3xl animate-float3"></div>
+  </div>
+
+  <div class="relative z-2 mt-4 flex flex-col h-dvh sm:h-auto bg-gray-900 sm:rounded-lg p-7 shadow-sm">
+      <div class="flex flex-col items-center justify-center gap-2 mb-8">
+
+        <img src="/assets/images/logo_solutions_sin_fondo.png" alt="" class="h-28 w-auto" />
+
+        <p class="m-0 font-semibold dark:text-white">
+          Create an account
+        </p>
+        <span class="m-0 max-w-[90%] text-center text-[#8B8E98]"
+          >Get started with our app, just start section and enjoy experience.
+        </span>
+      </div>
+
+      <form [formGroup]="form" (ngSubmit)="createUser()" class="text-white">
+        <div class="grid grid-cols-2 gap-3">
+          <div class="mt-4">
+              <label class="font-semibold text-gray-400" for="name">Name</label>
+              <input formControlName="name" placeholder="Your name" class="border rounded-lg px-3 py-2 mb-5  w-full outline-none dark:border-gray-500 dark:bg-gray-900" type="text">
+          </div>
+
+          <div class="mt-4">
+              <label for="lastname" class="font-semibold text-gray-400">Last Name</label>
+              <input formControlName="lastName" placeholder="Your last name" class="border rounded-lg px-3 py-2 mb-5  w-full outline-none dark:border-gray-500 dark:bg-gray-900" type="text">
+          </div>
+        </div>
+        <div>
+            <label for="email" class="font-semibold text-gray-400">Email</label>
+            <input formControlName="email" placeholder="Your email" class="border rounded-lg px-3 py-2 mb-5  w-full outline-none dark:border-gray-500 dark:bg-gray-900" type="email">
+        </div>
+        <div>
+            <label for="password" class="font-semibold text-gray-400">Password</label>
+            <input  formControlName="password" placeholder="••••••••" class="border rounded-lg px-3 py-2 mb-5  w-full outline-none dark:border-gray-500 dark:bg-gray-900" type="password">
+        </div>
+        <div>
+            <label for="confirmPassword" class="font-semibold text-gray-400">Confirm Password</label>
+            <input formControlName="confirmPassword" placeholder="••••••••" class="border rounded-lg px-3 py-2 mb-5  w-full outline-none dark:border-gray-500 dark:bg-gray-900" type="password">
+          </div>
+
+          <div class="mt-4 flex justify-end">
+              <button class="py-3 px-8 bg-[#09b850] hover:bg-[#07a248] focus:ring-offset-blue-200 text-white w-full transition ease-in duration-200 text-center text-base font-semibold shadow-md focus:outline-none focus:ring-2 focus:ring-offset-2 rounded-lg cursor-pointer select-none" type="submit">Submit</button>
+          </div>
+      </form>
+  </div>
+
+</div>

@@ -1,0 +1,69 @@
+import { inject, Injectable, signal } from '@angular/core';
+import { Auth, createUserWithEmailAndPassword, sendEmailVerification, signInWithEmailAndPassword, updateProfile } from '@angular/fire/auth';
+import { Database, get, ref, set } from '@angular/fire/database';
+import { Router } from '@angular/router';
+import { User } from '@interfaces/user';
+
+@Injectable({
+  providedIn: 'root'
+})
+export class LoginService {
+
+  showPass = signal(false);
+  private readonly auth = inject(Auth);
+  private readonly db = inject(Database);
+  private readonly router = inject(Router);
+
+  seePass() {
+    this.showPass.update(v => !v);
+  }
+
+
+  async login(email: string, password: string) {
+    const response = await signInWithEmailAndPassword(this.auth, email, password);
+    const token = await response.user.getIdToken();
+    const user = ref(this.db,`users/${response.user.uid}`)
+    const snapshot = await get(user);
+    if(!snapshot.exists()){
+      throw new Error('No existe el usuario');
+    }
+    return {
+      token,
+      user: snapshot.val()
+    }
+  }
+
+  async logout() {
+    await this.auth.signOut();
+  }
+
+  async createUser(payload : User ) {
+    const {email, password, name, lastName, confirmPassword} = payload;
+    const credential = await createUserWithEmailAndPassword(this.auth, email,password);
+
+    if(password !== confirmPassword){
+      throw new Error('Passwords do not match');
+    }
+
+    await updateProfile(credential.user,{
+      displayName: `${name} ${lastName}`
+    })
+
+    delete (payload as any).password;
+    delete (payload as any).confirmPassword;
+
+    await set(ref(this.db, `users/${credential.user.uid}`), {
+      ...payload,
+      id : credential.user.uid,
+      updatedAt: null,
+      createdAt: new Date().toISOString()
+    });
+
+    // await sendEmailVerification(credential.user);
+
+    return {
+      uid : credential.user.uid,
+      email : credential.user.email
+    }
+  }
+}
