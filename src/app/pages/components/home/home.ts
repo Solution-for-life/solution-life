@@ -25,7 +25,7 @@ export default class Home {
   faUniversity = faUniversity;
   faCogs = faCogs;
 
-  ngOnInit() {
+  ngAfterViewInit() {
     initFlowbite();
   }
 
