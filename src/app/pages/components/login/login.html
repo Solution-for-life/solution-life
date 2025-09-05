@@ -45,7 +45,7 @@
       </div>
       <div>
       <p class="mb-5"> Don't have an account?
-          <a [routerLink]="['/register']" class="text-[#09b850] hover:text-[#07a248] transition hover:underline">Sign Up</a>
+          <a [routerLink]="['/']" class="text-[#09b850] hover:text-[#07a248] transition hover:underline">Sign Up</a>
       </p>
         <button class="py-3 px-8 bg-[#09b850] hover:bg-[#07a248] focus:ring-offset-blue-200 text-white w-full transition ease-in duration-200 text-center text-base font-semibold shadow-md focus:outline-none focus:ring-2 focus:ring-offset-2 rounded-lg cursor-pointer select-none">
           Login
@@ -54,3 +54,7 @@
     </form>
   </div>
 </div>
+
+@if (this.loaderService.showLoader()) {
+  <app-loader></app-loader>
+}

@@ -1,5 +1,5 @@
 import { inject, Injectable, signal } from '@angular/core';
-import { Auth, createUserWithEmailAndPassword, sendEmailVerification, signInWithEmailAndPassword, updateProfile } from '@angular/fire/auth';
+import { Auth, createUserWithEmailAndPassword, onAuthStateChanged, sendEmailVerification, signInWithEmailAndPassword, updateProfile } from '@angular/fire/auth';
 import { Database, get, ref, set } from '@angular/fire/database';
 import { Router } from '@angular/router';
 import { User } from '@interfaces/user';
@@ -31,6 +31,19 @@ export class LoginService {
       token,
       user: snapshot.val()
     }
+  }
+
+  async getToken(forceRefresh = false): Promise<string | null> {
+    return new Promise((resolve) => {
+      onAuthStateChanged(this.auth, async (user) => {
+        if (user) {
+          const token = await user.getIdToken(forceRefresh);
+          resolve(token);
+        } else {
+          resolve(null);
+        }
+      });
+    });
   }
 
   async logout() {
