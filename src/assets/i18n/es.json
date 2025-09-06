@@ -30,8 +30,8 @@
   },
   "services": {
     "button" : "Obtener más información",
-    "title": "Servicios",
-    "description": "Lorem ipsum dolor sit amet, consectetur acommodo consequat lorem ipsum dolor sit amet, consectetur acommodo consequat. consectetur acommodo consequat lorem ipsum dolor sit amet, consectetur acommodo consequat. consectetur acommodo consequat lorem ipsum dolor sit amet, consectetur acommodo consequat. consectetur acommodo consequat lorem ipsum dolor sit amet, consectetur acommodo consequat. consectetur acommodo consequat lorem ipsum dolor sit amet, consectetur acommodo consequat. consectetur acommodo consequat lorem ipsum dolor sit amet, consectetur acommodo consequat. consectetur acommodo consequat lorem ipsum dolor sit amet, consectetur acommodo consequat."
+    "title": "Servicios de soluciones integrales",
+    "description": "Con nosotros encontrarás no solo un servicio, sino un aliado que trabaja contigo para proteger tu futuro, alcanzar tus metas y hacer más simple todo lo que parecía complicado. En Solutions for Life creemos que cada persona merece vivir con tranquilidad, confianza y seguridad. Somos una empresa dedicada a brindar soluciones fáciles, eficientes y personalizadas en seguros, impuestos, inmigración y bienes raíces. Nuestro compromiso es acompañarte en cada paso importante de tu vida, ofreciendo asesoría profesional, atención cercana y resultados que marcan la diferencia."
   },
   "contact": {
     "title": "Contactanos",
@@ -42,6 +42,12 @@
       "phone": "No. de teléfono",
       "message": "Dejanos tu mensaje"
     }
+  },
+  "contact-us": {
+    "title": "Te ofrecemos toda la asistencia profesional",
+    "tittle2": "que necesites.",
+    "description": "Impuestos sobre la renta, Contabilidad, Nóminas, Seguros de salud y de vida, Bienes raíces, Riesgos y Asesoría financiera."
+
   },
   "footer" : {
     "email" : "Correo electrónico",

@@ -44,6 +44,12 @@
       "message": "Message"
     }
   },
+  "contact-us": {
+    "title": "We offer you all the professional assistance",
+    "tittle2": "you need.",
+    "description": "Income taxes, Accounting, Payroll,Health and Life insurance, Real State, Risk and Financial Advice"
+
+  },
   "footer" : {
     "email" : "Email",
     "phone" : "Phone",

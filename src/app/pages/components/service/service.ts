@@ -3,7 +3,7 @@ import { Component, inject } from '@angular/core';
 import { Header } from '../../../components/header/header';
 import { DatabaseService } from '@dbService/database.service';
 import { Footer } from '../../../components/footer/footer';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, RouterLink } from '@angular/router';
 import { Subscription } from 'rxjs';
 import { Service as ServiceInterface } from '@interfaces/service';
 import { LanguageService } from '../../../services/language.service';
@@ -14,6 +14,7 @@ import { LanguageService } from '../../../services/language.service';
     CommonModule,
     Header,
     Footer,
+    RouterLink,
   ],
   templateUrl: './service.html',
   styleUrl: './service.css'
