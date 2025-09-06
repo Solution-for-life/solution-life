@@ -1,4 +1,6 @@
+
 <app-header></app-header>
+
 <div class="color-primary min-h-dvh w-full h-fit p-2 sm:p-5 pb-28 relative">
   <div class="absolute top-0 left-0 w-full h-full z-1 overflow-hidden opacity-50">
     <div class="absolute top-20 left-10 w-32 h-32 bg-[#09b850]  rounded-full filter blur-3xl animate-float1"></div>
@@ -13,13 +15,14 @@
 
       <div class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-10 mt-10">
         @for (item of this.service?.subServices; track $index) {
-          <div class="bg-gray-700 border-t-[#09b850] border-t-3 rounded-sm hover:bg-gray-900 hover:scale-102 duration-700 p-5">
+          <div class="bg-gray-800 border-t-[#09b850] border-t-3 rounded-sm hover:bg-gray-700  hover:scale-102 duration-700 p-5">
             <figure class="w-10 h-10  p-2 text-[#09b850]  rounded-md mb-2">
               <span class="fa-solid text-3xl" [ngClass]="item?.icon"></span>
             </figure>
             <h4 class="py-2 text-white font-bold text-xl">{{ item?.title?.[this.langService.getLang()] | titlecase}}</h4>
-            <p class="text-md leading-7 text-gray-400 font-light space-y-4">{{ item?.briefDescription?.[this.langService.getLang()] }}</p>
-            <p class="text-xs text-gray-400 space-y-4">{{ item?.longDescription?.[this.langService.getLang()] }}</p>
+            <p class="text-md leading-7 text-gray-300  font-light space-y-4">{{ item?.briefDescription?.[this.langService.getLang()] }}</p>
+            <p class="text-xs text-gray-400 space-y-4 mb-4">{{ item?.longDescription?.[this.langService.getLang()] }}</p>
+            <button type="button" [routerLink]="['/contact']" class="bg-[#09b850] hover:bg-[#07a248] text-white font-bold py-2 px-4 rounded cursor-pointer transition duration-300 transform hover:-translate-y-1 hover:scale-110">Contactanos</button>
           </div>
         }
       </div>

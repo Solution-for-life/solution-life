@@ -1,7 +1,5 @@
 
-<div class="bg-[#00013A] w-full">
-  <app-header></app-header>
-</div>
+<app-header></app-header>
 <div class="aling-center flex flex-col items-center justify-center color-primary ">
     <!-- SECTION DE INICIO -->
     <div class="relative bg-gradient-to-br w-full">
@@ -22,7 +20,9 @@
                      <img src="/assets/images/backgroundlanding.png" class="absolute block w-full h-full object-cover left-0 top-0" alt="...">
                      <div class="w-full h-50 bg-gray-900/70 absolute bottom-0 left-0 text-center p-5">
                          <p class="text-gray-400 text-xl mb-6" >{{"about-us.description" | translate}}</p>
+                         <button type="button" [routerLink]="['/contact']" class="bg-[#09b850] hover:bg-[#07a248] text-white font-bold py-2 px-4 rounded cursor-pointer transition duration-300 transform hover:-translate-y-1 hover:scale-110">Contactanos para más información</button>
                      </div>
+
                  </div>
                }
           </div>
@@ -78,7 +78,7 @@
                 </div>
                 <div class="p-4 flex flex-col items-center text-center justify-center h-[250px] bg-[#1a2433] transition duration-300 transform hover:-translate-y-1 hover:scale-110 shadow-lg border-t-4 border-t-indigo-0 border-t-[#09b850] rounded-sm">
                   <span class="fa fa-users text-[50px] text-white mb-2" aria-hidden="true"></span>
-                  <h1 class="text-2xl font-bold text-white">Confieanza</h1>
+                  <h1 class="text-2xl font-bold text-white">Confianza</h1>
                   <span class="">Te ofrecemos resultados que marcan la diferencia</span>
                 </div>
 
@@ -90,7 +90,7 @@
                 <p class="text-gray-400">Quedate tranquilo y disfruta de nuestros servicios</p>
               </div>
               <div>
-                <button class="bg-[#1a2433] hover:bg-gradient-to-br text-white shadow-lg font-bold py-2 px-4 rounded cursor-pointer transition duration-300 transform hover:-translate-y-1 hover:scale-110">Ver Mas Servicios</button>
+                <button [routerLink]="['/services']" class="bg-[#1a2433] hover:bg-gradient-to-br text-white shadow-lg font-bold py-2 px-4 rounded cursor-pointer transition duration-300 transform hover:-translate-y-1 hover:scale-110">Ver Mas Servicios</button>
 
               </div>
             </div>
@@ -139,7 +139,7 @@
                         <span class="text-sm"> Te acompañamos a proteger tu futuro y alcanzar tus metas.</span>
                       </li>
                     </ul>
-                    <a type="boton" class="bg-[#09b850] hover:bg-[#07a248] cursor-pointer w-48 text-center text-white font-bold py-2 px-4 rounded">Ver más</a>
+                    <a type="boton" [routerLink]="['/about-us']" class="bg-[#09b850] hover:bg-[#07a248] cursor-pointer w-48 text-center text-white font-bold py-2 px-4 rounded">Ver más</a>
                   </div>
                 </div>
 
@@ -170,7 +170,7 @@
               </div>
               <h5 class="align-middle text-xl  font-bold mb-5 " >Seguro de vida</h5>
               <p class="align-middle text-[0.8rem]  text-[#bebcbc] font-semibold mb-5 ">Protege el bienestar de tus seres queridos en caso de que faltes.</p>
-              <a href="http://" class="hover:text-[#64dd17]">Saber más <span><i class="fa fa-long-arrow-right" aria-hidden="true"></i></span></a>
+              <a [routerLink]="['/services/insurance']" class="hover:text-[#64dd17]">Ver más <span><i class="fa fa-long-arrow-right" aria-hidden="true"></i></span></a>
             </div>
             <div class="flex flex-col relative p-4  bg-[#1a2433] mt-[2.5rem] text-white  rounded-sm transition duration-300 transform hover:-translate-y-1 hover:scale-110">
               <div class=" mt-[-2.5rem] mb-[1.6rem] rounded-[50%] text-[1.2rem] bg-white text-[#64DD17] w-[3.5rem] h-[3.5rem] flex justify-center items-center line-height-[3.5rem]">
@@ -178,7 +178,7 @@
               </div>
               <h5 class="align-middle text-xl  font-bold mb-5 " >Seguro de salud</h5>
               <p class="align-middle text-[0.8rem]  text-[#bebcbc] font-semibold mb-5 ">Accede a atención médica de calidad sin preocuparte por los altos costos.</p>
-              <a href="http://" class="hover:text-[#64dd17]">Saber más <span><i class="fa fa-long-arrow-right" aria-hidden="true"></i></span></a>
+              <a [routerLink]="['/services/insurance']" class="hover:text-[#64dd17]">Ver más <span><i class="fa fa-long-arrow-right" aria-hidden="true"></i></span></a>
             </div>
             <div class="flex flex-col relative p-4  bg-[#1a2433] mt-[2.5rem] text-white  rounded-sm transition duration-300 transform hover:-translate-y-1 hover:scale-110">
               <div class=" mt-[-2.5rem] mb-[1.6rem] rounded-[50%] text-[1.2rem] bg-white text-[#64DD17] w-[3.5rem] h-[3.5rem] flex justify-center items-center line-height-[3.5rem]">
@@ -186,7 +186,7 @@
               </div>
               <h5 class="align-middle text-xl  font-bold mb-5 " >Declaraciones personales</h5>
               <p class="align-middle text-[0.8rem]  text-[#bebcbc] font-semibold mb-5 ">Te ayudamos a declarar tus impuestos de manera rápida.</p>
-              <a href="http://" class="hover:text-[#64dd17]">Saber más <span><i class="fa fa-long-arrow-right" aria-hidden="true"></i></span></a>
+              <a [routerLink]="['/services/taxes']" class="hover:text-[#64dd17]">Ver más <span><i class="fa fa-long-arrow-right" aria-hidden="true"></i></span></a>
             </div>
             <div class="flex flex-col relative p-4  bg-[#1a2433] mt-[2.5rem] text-white  rounded-sm transition duration-300 transform hover:-translate-y-1 hover:scale-110">
               <div class=" mt-[-2.5rem] mb-[1.6rem] rounded-[50%] text-[1.2rem] bg-white text-[#64DD17] w-[3.5rem] h-[3.5rem] flex justify-center items-center line-height-[3.5rem]">
@@ -194,7 +194,7 @@
               </div>
               <h5 class="align-middle text-xl  font-bold mb-5 " >Contabilidad de negocios</h5>
               <p class="align-middle text-[0.8rem]  text-[#bebcbc] font-semibold mb-5 ">Mantenemos tus finanzas organizadas, con  acompañamiento profesional.</p>
-              <a href="http://" class="hover:text-[#64dd17]">Saber más <span><i class="fa fa-long-arrow-right" aria-hidden="true"></i></span></a>
+              <a [routerLink]="['/services/taxes']" class="hover:text-[#64dd17]">Ver más <span><i class="fa fa-long-arrow-right" aria-hidden="true"></i></span></a>
             </div>
             <div class="flex flex-col relative p-4  bg-[#1a2433] mt-[2.5rem] text-white  rounded-sm transition duration-300 transform hover:-translate-y-1 hover:scale-110">
               <div class=" mt-[-2.5rem] mb-[1.6rem] rounded-[50%] text-[1.2rem] bg-white text-[#64DD17] w-[3.5rem] h-[3.5rem] flex justify-center items-center line-height-[3.5rem]">
@@ -202,7 +202,7 @@
               </div>
               <h5 class="align-middle text-xl  font-bold mb-5 " >Permisos de trabajo</h5>
               <p class="align-middle text-[0.8rem]  text-[#bebcbc] font-semibold mb-5 ">Te brindamos una gestión rápida y confiable para tus permisos de trabajo.</p>
-              <a href="http://" class="hover:text-[#64dd17]">Saber más <span><i class="fa fa-long-arrow-right" aria-hidden="true"></i></span></a>
+              <a [routerLink]="['/services/immigration']" class="hover:text-[#64dd17]">Ver más <span><i class="fa fa-long-arrow-right" aria-hidden="true"></i></span></a>
             </div>
             <div class="flex flex-col relative p-4  bg-[#1a2433] mt-[2.5rem] text-white  rounded-sm transition duration-300 transform hover:-translate-y-1 hover:scale-110">
               <div class=" mt-[-2.5rem] mb-[1.6rem] rounded-[50%] text-[1.2rem] bg-white text-[#64DD17] w-[3.5rem] h-[3.5rem] flex justify-center items-center line-height-[3.5rem]">
@@ -210,7 +210,7 @@
               </div>
               <h5 class="align-middle text-xl  font-bold mb-5 " >Ajustes de residencia</h5>
               <p class="align-middle text-[0.8rem]  text-[#bebcbc] font-semibold mb-5 ">Si deseas regularizar tu estatus migratorio, te ayudamos con confianza y seguridad.</p>
-              <a href="http://" class="hover:text-[#64dd17]">Saber más <span><i class="fa fa-long-arrow-right" aria-hidden="true"></i></span></a>
+              <a [routerLink]="['/services/immigration']" class="hover:text-[#64dd17]">Ver más <span><i class="fa fa-long-arrow-right" aria-hidden="true"></i></span></a>
             </div>
             <div class="flex flex-col relative p-4  bg-[#1a2433] mt-[2.5rem] text-white  rounded-sm transition duration-300 transform hover:-translate-y-1 hover:scale-110">
               <div class=" mt-[-2.5rem] mb-[1.6rem] rounded-[50%] text-[1.2rem] bg-white text-[#64DD17] w-[3.5rem] h-[3.5rem] flex justify-center items-center line-height-[3.5rem]">
@@ -218,7 +218,7 @@
               </div>
               <h5 class="align-middle text-xl  font-bold mb-5 " >Compra de vivienda</h5>
               <p class="align-middle text-[0.8rem]  text-[#bebcbc] font-semibold mb-5 ">Te acompañamos en la búsqueda para que compres la casa perfecta para ti y tu familia.</p>
-              <a href="http://" class="hover:text-[#64dd17]">Saber más <span><i class="fa fa-long-arrow-right" aria-hidden="true"></i></span></a>
+              <a [routerLink]="['/services/real-estate']" class="hover:text-[#64dd17]">Ver más <span><i class="fa fa-long-arrow-right" aria-hidden="true"></i></span></a>
             </div>
             <div class="flex flex-col relative p-4  bg-[#1a2433] mt-[2.5rem] text-white  rounded-sm transition duration-300 transform hover:-translate-y-1 hover:scale-110">
               <div class=" mt-[-2.5rem] mb-[1.6rem] rounded-[50%] text-[1.2rem] bg-white text-[#64DD17] w-[3.5rem] h-[3.5rem] flex justify-center items-center line-height-[3.5rem]">
@@ -226,7 +226,7 @@
               </div>
               <h5 class="align-middle text-xl  font-bold mb-5 " >Inversión en propiedades</h5>
               <p class="align-middle text-[0.8rem]  text-[#bebcbc] font-semibold mb-5 ">Te ayudamos a identificar oportunidades que sumen valor a tu futuro.</p>
-              <a href="http://" class="hover:text-[#64dd17]">Saber más <span><i class="fa fa-long-arrow-right" aria-hidden="true"></i></span></a>
+              <a [routerLink]="['/services/real-estate']" class="hover:text-[#64dd17]">Ver más <span><i class="fa fa-long-arrow-right" aria-hidden="true"></i></span></a>
             </div>
 
 

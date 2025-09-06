@@ -1,11 +1,11 @@
 
-<header [class.fixed]="isSticky" [class.top-0]="isSticky" [class.shadow-md]="isSticky" class="w-full transition-all! duration-300! z-90 p-4 bg-black/80">
+<header [class.fixed]="isSticky" [class.top-0]="isSticky" [class.shadow-md]="isSticky" class="w-full transition-all! duration-300! z-90 p-4 bg-[#010039]">
   <nav  class="max-w-7xl mx-auto flex  items-center text-white  justify-between ">
     <div class="flex lg:flex-1">
       <a href="#" class="-m-1.5 p-1.5">
         <span class="sr-only text-white">Your Company</span>
         @if (!isSticky) {
-          <img src="/assets/images/logo-white-background (2).svg" alt="" class="h-10 w-auto" />
+          <img src="/assets/images/logo-negative (1).svg" alt="" class="h-10 w-auto" />
         }
         @else {
           <img src="/assets/images/logo-negative (1).svg" alt="" class="h-10 w-auto" />
@@ -28,7 +28,7 @@
           <span class="fa-solid fa-chevron-down"></span>
         </button>
 
-        <el-popover id="desktop-menu-product" anchor="bottom" popover class="w-screen max-w-md overflow-hidden rounded-3xl color-primary shadow-lg ring-1 ring-gray-900/5 transition transition-discrete [--anchor-gap:--spacing(3)] backdrop:bg-transparent open:block data-closed:translate-y-1 data-closed:opacity-0 data-enter:duration-200 data-enter:ease-out data-leave:duration-150 data-leave:ease-in">
+        <el-popover id="desktop-menu-product" anchor="bottom" popover class="w-screen max-w-md overflow-hidden rounded bg-[#010039] shadow-lg ring-1 ring-gray-900/5 transition transition-discrete [--anchor-gap:--spacing(3)] backdrop:bg-transparent open:block data-closed:translate-y-1 data-closed:opacity-0 data-enter:duration-200 data-enter:ease-out data-leave:duration-150 data-leave:ease-in">
           <div class="p-3">
             @for (item of this.services; track $index) {
               <div class="group relative flex items-center gap-x-3 rounded-lg p-2 text-sm/6 hover:bg-[#07a248]">
@@ -47,7 +47,7 @@
           </div>
         </el-popover>
       </div>
-      <span  [routerLink]="['/company']" [routerLinkActive]="['tab-active']" class="p-2 rounded-sm text-sm/6 font-semibold text-white hover:bg-[#07a248] cursor-pointer">{{"header.company" | translate}}</span>
+      <!-- <span  [routerLink]="['/company']" [routerLinkActive]="['tab-active']" class="p-2 rounded-sm text-sm/6 font-semibold text-white hover:bg-[#07a248] cursor-pointer">{{"header.company" | translate}}</span> -->
     </el-popover-group>
     <div class="hidden lg:flex lg:flex-1 gap-10 lg:justify-end">
       <!-- <span (click)="router.navigate(['login'])" class="p-2 rounded-sm text-sm/6 font-semibold text-white hover:bg-[#07a248]">{{"Login" | translate}} <span aria-hidden="true">&rarr;</span></span> -->
@@ -93,11 +93,11 @@
                   </button>
                   <el-disclosure id="products" hidden class="mt-2 block space-y-2">
                     @for (item of this.services; track $index) {
-                      <a href="#" class="block rounded-lg py-2 pr-3 pl-6 text-sm/7 font-semibold text-white hover:text-white">{{ item.title[this.langService.getLang()] }}</a>
+                      <a [routerLink]="['/services ', item.url]" class="block rounded-lg py-2 pr-3 pl-6 text-sm/7 font-semibold text-white hover:text-white">{{ item.title[this.langService.getLang()] }}</a>
                     }
                   </el-disclosure>
                 </div>
-                <span [routerLink]="['/company']" [routerLinkActive]="['tab-active']" class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-white hover:text-white">{{"header.company" | translate}}</span>
+                <!-- <span [routerLink]="['/company']" [routerLinkActive]="['tab-active']" class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-white hover:text-white">{{"header.company" | translate}}</span> -->
               </div>
               <div class="py-6">
                 <span [routerLink]="['/login']" class="-mx-3 block rounded-lg px-3 py-2.5 text-base/7 font-semibold text-white hover:text-white">{{"header.login" | translate}} <span aria-hidden="true">&rarr;</span></span>
