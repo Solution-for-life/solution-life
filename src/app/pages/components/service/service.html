@@ -9,13 +9,13 @@
   </div>
 
   <div class="flex flex-col items-center max-w-7xl relative z-2 mx-auto pt-10 w-full h-full">
-      <h1 class="text-5xl! font-bold text-center mb-10 mt-6 text-slate-200">{{ service?.title?.[this.langService.getLang()] | titlecase}}</h1>
-      <p class="p-3 text-gray-400 text-xl">{{ service?.briefDescription?.[this.langService.getLang()] }}</p>
-      <p class="p-3 text-gray-400 text-xl mb-6">{{ service?.longDescription?.[this.langService.getLang()] }}</p>
+      <h1 class="lg:text-5xl text-3xl font-bold text-center mb-10 mt-6 text-slate-200">{{ service?.title?.[this.langService.getLang()] | titlecase}}</h1>
+      <p class="p-3 text-gray-400 lg:text-xl">{{ service?.briefDescription?.[this.langService.getLang()] }}</p>
+      <p class="p-3 text-gray-400 lg:text-xl mb-6">{{ service?.longDescription?.[this.langService.getLang()] }}</p>
 
-      <div class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-10 mt-10">
+      <div class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-10 mt-10 p-6">
         @for (item of this.service?.subServices; track $index) {
-          <div class="bg-gray-800 border-t-[#09b850] border-t-3 rounded-sm hover:bg-gray-700  hover:scale-102 duration-700 p-5">
+          <div class="bg-gray-800 border-t-[#09b850] border-t-3 rounded-sm hover:bg-gray-700  hover:scale-102 duration-700  p-5">
             <figure class="w-10 h-10  p-2 text-[#09b850]  rounded-md mb-2">
               <span class="fa-solid text-3xl" [ngClass]="item?.icon"></span>
             </figure>

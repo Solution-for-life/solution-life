@@ -93,7 +93,7 @@
                   </button>
                   <el-disclosure id="products" hidden class="mt-2 block space-y-2">
                     @for (item of this.services; track $index) {
-                      <a [routerLink]="['/services ', item.url]" class="block rounded-lg py-2 pr-3 pl-6 text-sm/7 font-semibold text-white hover:text-white">{{ item.title[this.langService.getLang()] }}</a>
+                      <a [routerLink]="['/services', item.url]" class="block rounded-lg py-2 pr-3 pl-6 text-sm/7 font-semibold text-white hover:text-white">{{ item.title[this.langService.getLang()] }}</a>
                     }
                   </el-disclosure>
                 </div>
