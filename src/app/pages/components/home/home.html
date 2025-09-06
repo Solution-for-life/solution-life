@@ -19,7 +19,8 @@
                  <div class="hidden duration-700 ease-in-out h-full" data-carousel-item>
                      <img src="/assets/images/backgroundlanding.png" class="absolute block w-full h-full object-cover left-0 top-0" alt="...">
                      <div class="w-full h-50 bg-gray-900/70 absolute bottom-0 left-0 text-center p-5">
-                         <p class="text-gray-400 text-xl mb-6" >{{"about-us.description" | translate}}</p>
+                         <p class="hidden md:block text-gray-400 text-xl mb-3" >{{"about-us.description" | translate}}</p>
+                         <p class="block md:hidden text-gray-400 mb-5" >{{"about-us.description_2" | translate}}</p>
                          <button type="button" [routerLink]="['/contact']" class="bg-[#09b850] hover:bg-[#07a248] text-white font-bold py-2 px-4 rounded cursor-pointer transition duration-300 transform hover:-translate-y-1 hover:scale-110">Contactanos para más información</button>
                      </div>
 
