@@ -12,11 +12,11 @@ export class CarruselComponent implements OnInit, OnDestroy {
   @ViewChild('carousel') carousel!: ElementRef;
 
   items = [
-    { title: 'Recomendaciones de nuestros clientes', name: 'Jeiner Aldana' },
-    { title: 'Recomendaciones de nuestros clientes', name: 'Laura Pérez' },
-    { title: 'Recomendaciones de nuestros clientes', name: 'Carlos Gómez' },
-    { title: 'Recomendaciones de nuestros clientes', name: 'Ana Martínez' },
-    { title: 'Recomendaciones de nuestros clientes', name: 'David Rodríguez' },
+    { title: 'Recomendaciones de nuestros clientes los mejores servicios', name: 'Jeiner Aldana', img: '/assets/images/img-equipo_1.jpg' },
+    { title: 'Recomendaciones de nuestros clientes opteniendo los mejores servicios', name: 'Laura Pérez', img: '/assets/images/img-equipo_1.jpg' },
+    { title: 'Recomendaciones de nuestros clientes opteniendo los mejores servicios', name: 'Carlos Gómez', img: '/assets/images/img-equipo_1.jpg' },
+    { title: 'Recomendaciones de nuestros clientes opteniendo los mejores servicios', name: 'Ana Martínez', img: '/assets/images/img-equipo_1.jpg' },
+    { title: 'Recomendaciones de nuestros clientes opteniendo los mejores servicios', name: 'David Rodríguez', img: '/assets/images/img-equipo_1.jpg' },
   ];
 
   displayItems = [...this.items, ...this.items]; // duplicamos para el loop

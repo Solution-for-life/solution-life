@@ -14,10 +14,10 @@
       <div class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-10 mt-10">
         @for (item of this.service?.subServices; track $index) {
           <div class="bg-gray-700 border-t-[#09b850] border-t-3 rounded-sm hover:bg-gray-900 hover:scale-102 duration-700 p-5">
-            <figure class="w-10 h-10  p-2 text-[#09b850]  rounded-md">
+            <figure class="w-10 h-10  p-2 text-[#09b850]  rounded-md mb-2">
               <span class="fa-solid text-3xl" [ngClass]="item?.icon"></span>
             </figure>
-            <h4 class="py-2 text-white font-bold">{{ item?.title?.[this.langService.getLang()] | titlecase}}</h4>
+            <h4 class="py-2 text-white font-bold text-xl">{{ item?.title?.[this.langService.getLang()] | titlecase}}</h4>
             <p class="text-md leading-7 text-gray-400 font-light space-y-4">{{ item?.briefDescription?.[this.langService.getLang()] }}</p>
             <p class="text-xs text-gray-400 space-y-4">{{ item?.longDescription?.[this.langService.getLang()] }}</p>
           </div>
