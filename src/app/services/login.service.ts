@@ -1,8 +1,11 @@
+import { HttpClient } from '@angular/common/http';
 import { inject, Injectable, signal } from '@angular/core';
 import { Auth, createUserWithEmailAndPassword, onAuthStateChanged, sendEmailVerification, signInWithEmailAndPassword, updateProfile } from '@angular/fire/auth';
 import { Database, get, ref, set } from '@angular/fire/database';
 import { Router } from '@angular/router';
+import { environment } from '@environments/environment';
 import { User } from '@interfaces/user';
+import { firstValueFrom } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -12,7 +15,8 @@ export class LoginService {
   showPass = signal(false);
   private readonly auth = inject(Auth);
   private readonly db = inject(Database);
-  private readonly router = inject(Router);
+  private readonly http = inject(HttpClient);
+  private readonly apiKey = environment.firebase.apiKey;
 
   seePass() {
     this.showPass.update(v => !v);
@@ -44,6 +48,11 @@ export class LoginService {
         }
       });
     });
+  }
+
+  async validateToken(token: string) {
+      const url = `https://identitytoolkit.googleapis.com/v1/accounts:lookup?key=${this.apiKey}`;
+      return await firstValueFrom(this.http.post(url, { idToken: token }));
   }
 
   async logout() {
