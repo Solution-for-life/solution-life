@@ -28,6 +28,29 @@
       }
     }
   },
+  "home": {
+    "card": "Bienestar",
+    "description": "Te brindamos transparencia",
+    "card1": "Seguridad",
+    "description1": "Protegemos tu futuro",
+    "card2": "Compromiso",
+    "description2": "Te acompañamos en cada paso importante de tu vida",
+    "card3": "Confianza",
+    "description3": "Te ofrecemos resultados que marcan la diferencia",
+    "title": "Quedate tranquilo y disfruta de nuestros servicios",
+    "btn_services": "Ver Mas Servicios"
+  },
+  "home-us": {
+    "span": "Años de experiencia",
+    "span2": "Clientes satisfechos",
+    "span3": "Tenemos los mejores resultados para tu futuro",
+    "title": "¡Simplificamos lo complicado para que disfrutes lo importante!",
+    "description": "En Solutions for Life creemos que cada persona merece vivir con tranquilidad, confianza y seguridad. Somos una empresa dedicada a brindar soluciones fáciles, eficientes y personalizadas en seguros, impuestos, inmigración y bienes raíces. Nuestro compromiso es acompañarte en cada paso importante de tu vida, ofreciendo asesoría profesional, atención cercana y resultados que marcan la diferencia.",
+    "list":"Ofrecemos soluciones integrales en seguros, impuestos, inmigración y bienes raíces",
+    "list2":"Creemos en la confianza, la transparencia y el trato humano.",
+    "list3":"Te acompañamos a proteger tu futuro y alcanzar tus metas.",
+    "btn": "Ver más"
+  },
   "services": {
     "button" : "Obtener más información",
     "title": "Servicios de soluciones integrales",

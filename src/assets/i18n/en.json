@@ -29,6 +29,29 @@
       }
     }
   },
+  "home": {
+    "card": "Welfare",
+    "description": "We offer you transparency",
+    "card1": "Security",
+    "description1": "We protect your future",
+    "card2": "Commitment",
+    "description2": "We accompany you in every important step of your life",
+    "card3": "Trust",
+    "description3": "We offer you results that make a difference",
+    "title": "Stay calm and enjoy our services",
+    "btn_services": "See More Services"
+  },
+  "home-us": {
+    "span": "Years of experience",
+    "span2": "Satisfied customers",
+    "span3": "We have the best results for your future",
+    "title": "We simplify the complicated so you can enjoy the important!",
+    "description": "At Solutions for Life, we believe that every person deserves to live with peace of mind, confidence, and security. We are a company dedicated to providing easy, efficient, and personalized solutions in insurance, taxes, immigration, and real estate. Our commitment is to accompany you through every important step of your life, offering professional advice, personal attention, and results that make a difference.",
+    "list":"We offer comprehensive solutions in insurance, taxes, immigration and real estate",
+    "list2":"We believe in trust, transparency, and humane treatment.",
+    "list3":"We help you protect your future and achieve your goals.",
+    "btn": "See more"
+  },
   "services": {
     "button" : "Get more information",
     "title": "Services",
