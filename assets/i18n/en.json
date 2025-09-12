@@ -85,10 +85,10 @@
     "title-description": "Need help? We're here to help!",
     "description": "Let us know your details so we can contact you and help you with your questions. We help with your taxes, insurance, real estate, immigration, etc.",
     "form": {
-      "name": "Name",
+      "name": "Full name",
       "email": "Email",
       "phone": "Phone",
-      "message": "Message",
+      "message": "Leave us your message",
       "btn-submit": "Send form"
     }
   },
