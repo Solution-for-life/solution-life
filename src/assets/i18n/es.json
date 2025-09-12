@@ -81,11 +81,11 @@
   },
   "contact": {
     "title": "Contactanos",
-    "tilte-description": "¡Necesitas ayuda, estamos para atenderte!",
+    "title-description": "¡Necesitas ayuda, estamos para atenderte!",
     "description": "Dejanos tus datos para poder contactarnos y ofreserte nuestro servicio y resolver tus dudas. Te ayudamos con tus impuestos, seguros, bienes raíces, inmigración, etc.",
     "form": {
       "name": "Nombre completo",
-      "email": "Correo electronico",
+      "email": "Correo electrónico",
       "phone": "No. de teléfono",
       "message": "Dejanos tu mensaje",
       "btn-submit": "Enviar formulario"
