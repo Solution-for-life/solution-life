@@ -21,7 +21,7 @@
                      <div class="w-full h-50 bg-gray-900/70 absolute bottom-0 left-0 text-center p-5">
                          <p class="hidden md:block text-gray-400 text-xl mb-3" >{{"about-us.description" | translate}}</p>
                          <p class="block md:hidden text-gray-400 mb-5" >{{"about-us.description_2" | translate}}</p>
-                         <button type="button" [routerLink]="['/contact']" class="bg-[#09b850] hover:bg-[#07a248] text-white font-bold py-2 px-4 rounded cursor-pointer transition duration-300 transform hover:-translate-y-1 hover:scale-110">Contactanos para más información</button>
+                         <button type="button" [routerLink]="['/contact']" class="bg-[#09b850] hover:bg-[#07a248] text-white font-bold py-2 px-4 rounded cursor-pointer transition duration-300 transform hover:-translate-y-1 hover:scale-110">{{"home.btn_contact" | translate}}</button>
                      </div>
 
                  </div>
@@ -160,8 +160,8 @@
       </div>
       <div class=" h-auto w-full">
         <div class="text-white text-center mt-[50px] text-[3.1rem] mb-10 font-bold">
-          <p class="lg:text-4xl text-3xl">Ofrecemos los mejores servicios </p>
-          <p class="lg:text-4xl text-3xl">Exclusivamente para usted.</p>
+          <p class="lg:text-4xl text-3xl">{{"home-services.title" | translate}}</p>
+          <p class="lg:text-4xl text-3xl">{{"home-services.title2" | translate}}</p>
         </div>
         <div class="flex justify-around mb-[30px] p-4">
           <div class="grid mt-[50px] xs:grid-cols-2 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 xl:grid-cols-4 grid-cols-1 gap-8 justify-center items-center p-4 h-full  max-w-7xl">
@@ -169,65 +169,65 @@
               <div class=" mt-[-2.5rem] mb-[1.6rem] rounded-[50%] text-[1.2rem] bg-white text-[#64DD17] w-[3.5rem] h-[3.5rem] flex justify-center items-center line-height-[3.5rem]">
                 <span class="fa-solid fa-heart-pulse" aria-hidden="true"></span>
               </div>
-              <h5 class="align-middle text-xl  font-bold mb-5 " >Seguro de vida</h5>
-              <p class="align-middle text-[0.8rem]  text-[#bebcbc] font-semibold mb-5 ">Protege el bienestar de tus seres queridos en caso de que faltes.</p>
-              <a [routerLink]="['/services/insurance']" class="hover:text-[#64dd17]">Ver más <span><i class="fa fa-long-arrow-right" aria-hidden="true"></i></span></a>
+              <h5 class="align-middle text-xl  font-bold mb-5 " >{{"home-services.title-card" | translate}}</h5>
+              <p class="align-middle text-[0.8rem]  text-[#bebcbc] font-semibold mb-5 ">{{"home-services.description-card" | translate}}</p>
+              <a [routerLink]="['/services/insurance']" class="hover:text-[#64dd17]">{{"home-services.btn-card" | translate}} <span><i class="fa fa-long-arrow-right" aria-hidden="true"></i></span></a>
             </div>
             <div class="flex flex-col relative p-4  bg-[#1a2433] mt-[2.5rem] text-white  rounded-sm transition duration-300 transform hover:-translate-y-1 hover:scale-110">
               <div class=" mt-[-2.5rem] mb-[1.6rem] rounded-[50%] text-[1.2rem] bg-white text-[#64DD17] w-[3.5rem] h-[3.5rem] flex justify-center items-center line-height-[3.5rem]">
                 <span class="fa-solid fa-staff-snake" aria-hidden="true"></span>
               </div>
-              <h5 class="align-middle text-xl  font-bold mb-5 " >Seguro de salud</h5>
-              <p class="align-middle text-[0.8rem]  text-[#bebcbc] font-semibold mb-5 ">Accede a atención médica de calidad sin preocuparte por los altos costos.</p>
-              <a [routerLink]="['/services/insurance']" class="hover:text-[#64dd17]">Ver más <span><i class="fa fa-long-arrow-right" aria-hidden="true"></i></span></a>
+              <h5 class="align-middle text-xl  font-bold mb-5 " >{{"home-services.title-card-2" | translate}}</h5>
+              <p class="align-middle text-[0.8rem]  text-[#bebcbc] font-semibold mb-5 ">{{"home-services.description-card-2" | translate}}</p>
+              <a [routerLink]="['/services/insurance']" class="hover:text-[#64dd17]">{{"home-services.btn-card" | translate}} <span><i class="fa fa-long-arrow-right" aria-hidden="true"></i></span></a>
             </div>
             <div class="flex flex-col relative p-4  bg-[#1a2433] mt-[2.5rem] text-white  rounded-sm transition duration-300 transform hover:-translate-y-1 hover:scale-110">
               <div class=" mt-[-2.5rem] mb-[1.6rem] rounded-[50%] text-[1.2rem] bg-white text-[#64DD17] w-[3.5rem] h-[3.5rem] flex justify-center items-center line-height-[3.5rem]">
                 <span class="fa-solid fa-user-check" aria-hidden="true"></span>
               </div>
-              <h5 class="align-middle text-xl  font-bold mb-5 " >Declaraciones personales</h5>
-              <p class="align-middle text-[0.8rem]  text-[#bebcbc] font-semibold mb-5 ">Te ayudamos a declarar tus impuestos de manera rápida.</p>
-              <a [routerLink]="['/services/taxes']" class="hover:text-[#64dd17]">Ver más <span><i class="fa fa-long-arrow-right" aria-hidden="true"></i></span></a>
+              <h5 class="align-middle text-xl  font-bold mb-5 " >{{"home-services.title-card-3" | translate}}</h5>
+              <p class="align-middle text-[0.8rem]  text-[#bebcbc] font-semibold mb-5 ">{{"home-services.description-card-3" | translate}}</p>
+              <a [routerLink]="['/services/taxes']" class="hover:text-[#64dd17]">{{"home-services.btn-card" | translate}} <span><i class="fa fa-long-arrow-right" aria-hidden="true"></i></span></a>
             </div>
             <div class="flex flex-col relative p-4  bg-[#1a2433] mt-[2.5rem] text-white  rounded-sm transition duration-300 transform hover:-translate-y-1 hover:scale-110">
               <div class=" mt-[-2.5rem] mb-[1.6rem] rounded-[50%] text-[1.2rem] bg-white text-[#64DD17] w-[3.5rem] h-[3.5rem] flex justify-center items-center line-height-[3.5rem]">
                 <span class="fa-solid fa-people-group" aria-hidden="true"></span>
               </div>
-              <h5 class="align-middle text-xl  font-bold mb-5 " >Contabilidad de negocios</h5>
-              <p class="align-middle text-[0.8rem]  text-[#bebcbc] font-semibold mb-5 ">Mantenemos tus finanzas organizadas, con  acompañamiento profesional.</p>
-              <a [routerLink]="['/services/taxes']" class="hover:text-[#64dd17]">Ver más <span><i class="fa fa-long-arrow-right" aria-hidden="true"></i></span></a>
+              <h5 class="align-middle text-xl  font-bold mb-5 " >{{"home-services.title-card-4" | translate}}</h5>
+              <p class="align-middle text-[0.8rem]  text-[#bebcbc] font-semibold mb-5 ">{{"home-services.description-card-4" | translate}}</p>
+              <a [routerLink]="['/services/taxes']" class="hover:text-[#64dd17]">{{"home-services.btn-card" | translate}} <span><i class="fa fa-long-arrow-right" aria-hidden="true"></i></span></a>
             </div>
             <div class="flex flex-col relative p-4  bg-[#1a2433] mt-[2.5rem] text-white  rounded-sm transition duration-300 transform hover:-translate-y-1 hover:scale-110">
               <div class=" mt-[-2.5rem] mb-[1.6rem] rounded-[50%] text-[1.2rem] bg-white text-[#64DD17] w-[3.5rem] h-[3.5rem] flex justify-center items-center line-height-[3.5rem]">
                 <span class="fa-solid fa-briefcase" aria-hidden="true"></span>
               </div>
-              <h5 class="align-middle text-xl  font-bold mb-5 " >Permisos de trabajo</h5>
-              <p class="align-middle text-[0.8rem]  text-[#bebcbc] font-semibold mb-5 ">Te brindamos una gestión rápida y confiable para tus permisos de trabajo.</p>
-              <a [routerLink]="['/services/immigration']" class="hover:text-[#64dd17]">Ver más <span><i class="fa fa-long-arrow-right" aria-hidden="true"></i></span></a>
+              <h5 class="align-middle text-xl  font-bold mb-5 " >{{"home-services.title-card-5" | translate}}</h5>
+              <p class="align-middle text-[0.8rem]  text-[#bebcbc] font-semibold mb-5 ">{{"home-services.description-card-5" | translate}}</p>
+              <a [routerLink]="['/services/immigration']" class="hover:text-[#64dd17]">{{"home-services.btn-card" | translate}} <span><i class="fa fa-long-arrow-right" aria-hidden="true"></i></span></a>
             </div>
             <div class="flex flex-col relative p-4  bg-[#1a2433] mt-[2.5rem] text-white  rounded-sm transition duration-300 transform hover:-translate-y-1 hover:scale-110">
               <div class=" mt-[-2.5rem] mb-[1.6rem] rounded-[50%] text-[1.2rem] bg-white text-[#64DD17] w-[3.5rem] h-[3.5rem] flex justify-center items-center line-height-[3.5rem]">
                 <span class="fa-solid fa-house-flag" aria-hidden="true"></span>
               </div>
-              <h5 class="align-middle text-xl  font-bold mb-5 " >Ajustes de residencia</h5>
-              <p class="align-middle text-[0.8rem]  text-[#bebcbc] font-semibold mb-5 ">Si deseas regularizar tu estatus migratorio, te ayudamos con confianza y seguridad.</p>
-              <a [routerLink]="['/services/immigration']" class="hover:text-[#64dd17]">Ver más <span><i class="fa fa-long-arrow-right" aria-hidden="true"></i></span></a>
+              <h5 class="align-middle text-xl  font-bold mb-5 " >{{"home-services.title-card-6" | translate}}</h5>
+              <p class="align-middle text-[0.8rem]  text-[#bebcbc] font-semibold mb-5 ">{{"home-services.description-card-6" | translate}}</p>
+              <a [routerLink]="['/services/immigration']" class="hover:text-[#64dd17]">{{"home-services.btn-card" | translate}} <span><i class="fa fa-long-arrow-right" aria-hidden="true"></i></span></a>
             </div>
             <div class="flex flex-col relative p-4  bg-[#1a2433] mt-[2.5rem] text-white  rounded-sm transition duration-300 transform hover:-translate-y-1 hover:scale-110">
               <div class=" mt-[-2.5rem] mb-[1.6rem] rounded-[50%] text-[1.2rem] bg-white text-[#64DD17] w-[3.5rem] h-[3.5rem] flex justify-center items-center line-height-[3.5rem]">
                 <span class="fa-solid fa-house-chimney" aria-hidden="true"></span>
               </div>
-              <h5 class="align-middle text-xl  font-bold mb-5 " >Compra de vivienda</h5>
-              <p class="align-middle text-[0.8rem]  text-[#bebcbc] font-semibold mb-5 ">Te acompañamos en la búsqueda para que compres la casa perfecta para ti y tu familia.</p>
-              <a [routerLink]="['/services/real-estate']" class="hover:text-[#64dd17]">Ver más <span><i class="fa fa-long-arrow-right" aria-hidden="true"></i></span></a>
+              <h5 class="align-middle text-xl  font-bold mb-5 " >{{"home-services.title-card-7" | translate}}</h5>
+              <p class="align-middle text-[0.8rem]  text-[#bebcbc] font-semibold mb-5 ">{{"home-services.description-card-7" | translate}}</p>
+              <a [routerLink]="['/services/real-estate']" class="hover:text-[#64dd17]">{{"home-services.btn-card" | translate}} <span><i class="fa fa-long-arrow-right" aria-hidden="true"></i></span></a>
             </div>
             <div class="flex flex-col relative p-4  bg-[#1a2433] mt-[2.5rem] text-white  rounded-sm transition duration-300 transform hover:-translate-y-1 hover:scale-110">
               <div class=" mt-[-2.5rem] mb-[1.6rem] rounded-[50%] text-[1.2rem] bg-white text-[#64DD17] w-[3.5rem] h-[3.5rem] flex justify-center items-center line-height-[3.5rem]">
                 <span class="fa-solid fa-key" aria-hidden="true"></span>
               </div>
-              <h5 class="align-middle text-xl  font-bold mb-5 " >Inversión en propiedades</h5>
-              <p class="align-middle text-[0.8rem]  text-[#bebcbc] font-semibold mb-5 ">Te ayudamos a identificar oportunidades que sumen valor a tu futuro.</p>
-              <a [routerLink]="['/services/real-estate']" class="hover:text-[#64dd17]">Ver más <span><i class="fa fa-long-arrow-right" aria-hidden="true"></i></span></a>
+              <h5 class="align-middle text-xl  font-bold mb-5 " >{{"home-services.title-card-8" | translate}}</h5>
+              <p class="align-middle text-[0.8rem]  text-[#bebcbc] font-semibold mb-5 ">{{"home-services.description-card-8" | translate}}</p>
+              <a [routerLink]="['/services/real-estate']" class="hover:text-[#64dd17]">{{"home-services.btn-card" | translate}} <span><i class="fa fa-long-arrow-right" aria-hidden="true"></i></span></a>
             </div>
 
 
@@ -240,10 +240,10 @@
         <div class="cuadro_serevices  h-full w-full  ">
           <div class="bg-[#000000b3] h-full w-full flex flex-col items-center justify-center text-white">
             <div class="mb-6 text-center">
-              <p class="lg:text-4xl text-3xl font-bold" >Ven y conoce todos los servicios que ofrecemos</p>
+              <p class="lg:text-4xl text-3xl font-bold" >{{"home-services.title-card-9" | translate}}</p>
             </div>
             <div>
-              <button [routerLink]="['/services']" class="bg-[#09b850] hover:bg-[#07a248] text-white font-bold py-2 px-4 rounded cursor-pointer">Ver Mas Servicios</button>
+              <button [routerLink]="['/services']" class="bg-[#09b850] hover:bg-[#07a248] text-white font-bold py-2 px-4 rounded cursor-pointer">{{"home.btn_services" | translate}}</button>
             </div>
 
           </div>
