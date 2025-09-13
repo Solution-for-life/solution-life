@@ -9,10 +9,20 @@ import { Footer } from '../../../components/footer/footer';
 import { RouterLink } from '@angular/router';
 
 import { initFlowbite } from 'flowbite';
+import { WhatsappButton } from '../whatsapp-button/whatsapp-button';
 
 @Component({
   selector: 'app-home',
-  imports: [Header, FontAwesomeModule, HomeContact, CommonModule, TranslateModule, Footer, RouterLink],
+  imports: [
+    Header,
+    FontAwesomeModule,
+    HomeContact,
+    CommonModule,
+    TranslateModule,
+    Footer,
+    RouterLink,
+    WhatsappButton
+],
   templateUrl: './home.html',
   styleUrl: './home.css'
 })
