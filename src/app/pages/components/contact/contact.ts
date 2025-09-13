@@ -7,6 +7,7 @@ import { Router, RouterLink, RouterLinkActive } from '@angular/router';
 import { DatabaseService } from '@dbService/database.service';
 import { FormBuilder, FormGroup, FormsModule, ReactiveFormsModule, Validators } from '@angular/forms';
 import { ToastrService } from 'ngx-toastr';
+import { WhatsappButton } from '../whatsapp-button/whatsapp-button';
 @Component({
   selector: 'app-contact',
   imports: [
@@ -16,6 +17,7 @@ import { ToastrService } from 'ngx-toastr';
     TranslateModule,
     ReactiveFormsModule,
     FormsModule,
+    WhatsappButton
     // RouterLink,
     // RouterLinkActive,
   ],

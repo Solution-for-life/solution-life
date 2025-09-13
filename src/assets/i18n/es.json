@@ -83,6 +83,12 @@
     "title": "Contactanos",
     "title-description": "¡Necesitas ayuda, estamos para atenderte!",
     "description": "Dejanos tus datos para poder contactarnos y ofreserte nuestro servicio y resolver tus dudas. Te ayudamos con tus impuestos, seguros, bienes raíces, inmigración, etc.",
+    "title-card-contact": "Dirección de la oficina",
+    "description-card-contact": "Oficina en EE.UU.:",
+    "title-card-email": "Envíenos un correo electrónico",
+    "description-card-email": "Estamos al tanto de todo y nuestro objetivo es responder a todas las consultas dentro de las 24 horas.",
+    "title-card-tel": "Llámanos",
+    "description-card-tel": "Trabajemos juntos hacia un objetivo común: ¡contáctanos!",
     "form": {
       "name": "Nombre completo",
       "email": "Correo electrónico",
@@ -321,6 +327,11 @@
     "descrition3": "Nuestro compromiso es acompañarte en cada paso importante de tu vida, ofreciendo asesoría profesional, atención cercana y resultados que marcan la diferencia.",
     "button2": "Contactanos ahora",
     "title3": "¡Definiendo el futuro de las experiencias en línea!",
-    "description3": "Nuestro equipo de expertos en soluciones integrales está comprometido con ofrecer soluciones personalizadas para que puedas realizar tus mas de Impuestos, seguros,salud, Bienes raices,inmigración, etc."
+    "description3": "Nuestro equipo de expertos en soluciones integrales está comprometido con ofrecer soluciones personalizadas para que puedas realizar tus mas de Impuestos, seguros,salud, Bienes raices,inmigración, etc.",
+    "list-1": "Beneficios esenciales de tu seguro médico.",
+    "list-2": "Beneficios sobre la presentación de impuestos.",
+    "list-3": "Declaración de impuestos",
+    "list-4": "Renovación de seguros médicos",
+    "list-5": "Asesoría financiera"
   }
 }
