@@ -6,9 +6,33 @@
     <!-- <div class="absolute bottom-10 left-1/2 w-48 h-48 bg-cyan-500 rounded-full filter blur-3xl animate-float3"></div> -->
   </div>
   <div class="container mx-auto px-4 lg:py-5 text-white flex flex-col items-center justify-center h-auto relative">
-    <div class="lg:w-[80%] p-6 mb-10 flex flex-col gap-5 items-center justify-center">
-      <h3 class="text-center text-white lg:text-5xl text-3xl font-bold mb-10">{{"services.title" | translate}}</h3>
-      <p class=" p-3  text-gray-400 lg:text-xl   mb-10">{{"services.description" | translate}}</p>
+    <div class="lg:p-6 mb-10 flex flex-col gap-5 items-center justify-center">
+      <h3 class="text-center text-white lg:text-5xl text-3xl font-bold ">{{"services.title" | translate}}</h3>
+      <h3 class="text-center text-white lg:text-5xl text-3xl font-bold mb-10">{{"services.title1" | translate}}</h3>
+      <div class="flex items-center justify-center h-auto relative grid grid-cols-1 lg:grid-cols-2 gap-5 place-items-center p-2 sm:p-5">
+        <div class="flex flex-colunm items-center justify-center h-auto relative grid grid-cols-1 ">
+          <div class="p-3">
+            <img src="/assets/images/seguro-de-vida-finco-banner-img.png" alt="" class="h-full w-full object-cover" />
+          </div>
+          <div class="p-3">
+            <p class="  text-gray-400 lg:text-xl">{{"services.description" | translate}}</p>
+          </div>
+        </div>
+        <div class="hidden lg:block md:block items-center justify-center h-auto relative grid grid-cols-1 ">
+
+          <div class="p-3">
+            <p class=" p-3  text-gray-400 lg:text-xl   mb-10">{{"services.description2" | translate}}</p>
+          </div>
+          <div class="p-3">
+            <img src="/assets/images/Banner_EstilosdeVida.png" alt="" class="h-full w-full object-cover" />
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+    <div class="text-center">
+      <h2 class="text-white text-3xl font-bold mb-10">{{"services.title2" | translate}}</h2>
     </div>
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 gap-10 place-items-center p-2 sm:p-5">
       @for (item of this.services; track $index) {
