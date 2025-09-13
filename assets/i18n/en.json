@@ -84,6 +84,12 @@
     "title": "Contact us",
     "title-description": "Need help? We're here to help!",
     "description": "Let us know your details so we can contact you and help you with your questions. We help with your taxes, insurance, real estate, immigration, etc.",
+    "title-card-contact": "Office address",
+    "description-card-contact": "Office in EE.UU.:",
+    "title-card-email": "Send us an email",
+    "description-card-email": "We are on it and our goal is to respond to all your queries within 24 hours.",
+    "title-card-tel": "Let's talk",
+    "description-card-tel": "We work together towards a common goal: contact us!",
     "form": {
       "name": "Full name",
       "email": "Email",
@@ -322,6 +328,11 @@
     "descrition3": "Our commitment is to accompany you on each important step of your life, offering professional advice, close attention and results that mark the difference.",
     "button2": "Contact us now",
     "title3": "Defining the future of online experiences!",
-    "description3": "Our team of experts in integrated solutions is committed to offering customized solutions to you so that you can achieve your most Imputes, insurance, health, real estate, immigration, etc."
+    "description3": "Our team of experts in integrated solutions is committed to offering customized solutions to you so that you can achieve your most Imputes, insurance, health, real estate, immigration, etc.",
+    "list-1": "Essential benefits of your health insurance.",
+    "list-2": "Benefits of taxes presentation.",
+    "list-3": "Declaration of taxes",
+    "list-4": "Renewal of medical insurance",
+    "list-5": "Financial advising"
   }
 }
