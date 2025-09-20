@@ -10,6 +10,7 @@ import { CookiesPolicy } from './pages/components/cookies-policy/cookies-policy'
 import { Register } from './pages/components/register/register';
 import { Dashboard } from './components/dashboard/dashboard';
 import { authGuard } from './guards/auth-guard';
+import { Carousel } from './components/dashboard/pages/carousel/carousel';
 
 export const routes: Routes = [
   { path: '', component: Home},
@@ -19,7 +20,10 @@ export const routes: Routes = [
   {
     path : 'dashboard',
     canActivate: [authGuard],
-    component: Dashboard
+    component: Dashboard,
+    children: [
+      { path:'carousel', component: Carousel, pathMatch: 'full', title: 'Carousel'},
+    ]
   },
   { path: 'register', component: Register},
   { path: 'services', component: Services},
