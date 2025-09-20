@@ -29,25 +29,96 @@
       }
     }
   },
+  "home": {
+    "card": "Welfare",
+    "description": "We offer you transparency",
+    "card1": "Security",
+    "description1": "We protect your future",
+    "card2": "Commitment",
+    "description2": "We accompany you in every important step of your life",
+    "card3": "Trust",
+    "description3": "We offer you results that make a difference",
+    "title": "Stay calm and enjoy our services",
+    "btn_services": "See More Services",
+    "btn_contact": "Contact us for more information"
+  },
+  "home-us": {
+    "span": "Years of experience",
+    "span2": "Satisfied customers",
+    "span3": "We have the best results for your future",
+    "title": "We simplify the complicated so you can enjoy the important!",
+    "description": "At Solutions for Life, we believe that every person deserves to live with peace of mind, confidence, and security. We are a company dedicated to providing easy, efficient, and personalized solutions in insurance, taxes, immigration, and real estate. Our commitment is to accompany you through every important step of your life, offering professional advice, personal attention, and results that make a difference.",
+    "list":"We offer comprehensive solutions in insurance, taxes, immigration and real estate",
+    "list2":"We believe in trust, transparency, and humane treatment.",
+    "list3":"We help you protect your future and achieve your goals.",
+    "btn": "See more"
+  },
+  "home-services": {
+    "title": "We offer the best services",
+    "title2": "Exclusively designed for your well-being.",
+    "btn-card": "See more",
+    "title-card": "Life insurance",
+    "description-card": "Protect the well-being of your loved ones in case you are gone.",
+    "title-card-2": "Health insurance",
+    "description-card-2": "Protect the well-being of your loved ones in case you are gone.",
+    "title-card-3": "Personal statements",
+    "description-card-3": "We help you file your taxes quickly.",
+    "title-card-4": "Business accounting",
+    "description-card-4": "We keep your finances organized, with professional support.",
+    "title-card-5": "Work permits",
+    "description-card-5": "We offer fast and reliable processing of your work permits.",
+    "title-card-6": "Residency adjustments",
+    "description-card-6": "If you want to regularize your immigration status, we can help you with confidence and security.",
+    "title-card-7": "Home Purchase",
+    "description-card-7": "We'll help you find the perfect home for you and your family.",
+    "title-card-8": "Property investment",
+    "description-card-8": "We help you identify opportunities that add value to your future.",
+    "title-card-9": "Come and learn about all the services we offer"
+  },
   "services": {
     "button" : "Get more information",
-    "title": "Services",
-    "description": "Lorem ipsum dolor sit amet, consectetur acommodo consequat lorem ipsum dolor sit amet, consectetur acommodo consequat. consectetur acommodo consequat lorem ipsum dolor sit amet, consectetur acommodo consequat. consectetur acommodo consequat lorem ipsum dolor sit amet, consectetur acommodo consequat. consectetur acommodo consequat lorem ipsum dolor sit amet, consectetur acommodo consequat. consectetur acommodo consequat lorem ipsum dolor sit amet, consectetur acommodo consequat. consectetur acommodo consequat lorem ipsum dolor sit amet, consectetur acommodo consequat. consectetur acommodo consequat lorem ipsum dolor sit amet, consectetur acommodo consequat."
+    "title": "Comprehensive solutions ",
+    "title1": "services ",
+    "title2": "List of services",
+    "description": "With us, you'll find not just a service, but a partner who works with you to protect your future, achieve your goals, and simplify everything that seemed complicated. At Solutions for Life, we believe that every person deserves to live with peace of mind, confidence, and security.",
+    "description2": "We are a company dedicated to providing easy, efficient, and personalized solutions in insurance, taxes, immigration, and real estate. Our commitment is to support you through every important step of your life, offering professional advice, personal attention, and results that make a difference."
   },
   "contact": {
     "title": "Contact us",
-    "description": "Lorem ipsum dolor sit amet, consectetur acommodo consequat.",
+    "title-description": "Need help? We're here to help!",
+    "description": "Let us know your details so we can contact you and help you with your questions. We help with your taxes, insurance, real estate, immigration, etc.",
+    "title-card-contact": "Office address",
+    "description-card-contact": "Office in EE.UU.:",
+    "title-card-email": "Send us an email",
+    "description-card-email": "We are on it and our goal is to respond to all your queries within 24 hours.",
+    "title-card-tel": "Let's talk",
+    "description-card-tel": "We work together towards a common goal: contact us!",
     "form": {
-      "name": "Name",
+      "name": "Full name",
       "email": "Email",
       "phone": "Phone",
-      "message": "Message"
+      "message": "Leave us your message",
+      "btn-submit": "Send form"
     }
   },
   "contact-us": {
     "title": "We offer you all the professional assistance",
     "tittle2": "you need.",
-    "description": "Income taxes, Accounting, Payroll,Health and Life insurance, Real State, Risk and Financial Advice"
+    "description": "Income taxes, Accounting, Payroll,Health and Life insurance, Real State, Risk and Financial Advice",
+    "btn-pro": "Professional Services",
+    "title-list": "What do we offer?",
+    "list-1": "Experiences of high quality",
+    "list-2": "Life insurance",
+    "list-3": "100% Safe Services",
+    "list-4": "Confidential services",
+    "list-5": "Customized attention",
+    "list-6": "24/7 support on our hotlines",
+    "btn-list": "Contact us now",
+    "title-card-contact": "Personalized Attention",
+    "description-card-contact": "Learn about our services and products",
+    "btn-card-contact": "Contact us",
+    "title-customers": "See how we're helping customers take care of their lives.",
+    "description-customers": "More than 1000 satisfied customers"
 
   },
   "footer" : {
@@ -260,6 +331,11 @@
     "descrition3": "Our commitment is to accompany you on each important step of your life, offering professional advice, close attention and results that mark the difference.",
     "button2": "Contact us now",
     "title3": "Defining the future of online experiences!",
-    "description3": "Our team of experts in integrated solutions is committed to offering customized solutions to you so that you can achieve your most Imputes, insurance, health, real estate, immigration, etc."
+    "description3": "Our team of experts in integrated solutions is committed to offering customized solutions to you so that you can achieve your most Imputes, insurance, health, real estate, immigration, etc.",
+    "list-1": "Essential benefits of your health insurance.",
+    "list-2": "Benefits of taxes presentation.",
+    "list-3": "Declaration of taxes",
+    "list-4": "Renewal of medical insurance",
+    "list-5": "Financial advising"
   }
 }

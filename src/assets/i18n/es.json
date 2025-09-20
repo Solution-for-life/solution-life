@@ -28,25 +28,96 @@
       }
     }
   },
+  "home": {
+    "card": "Bienestar",
+    "description": "Te brindamos transparencia",
+    "card1": "Seguridad",
+    "description1": "Protegemos tu futuro",
+    "card2": "Compromiso",
+    "description2": "Te acompañamos en cada paso importante de tu vida",
+    "card3": "Confianza",
+    "description3": "Te ofrecemos resultados que marcan la diferencia",
+    "title": "Quedate tranquilo y disfruta de nuestros servicios",
+    "btn_services": "Ver Mas Servicios",
+    "btn_contact": "Contáctanos para más información"
+  },
+  "home-us": {
+    "span": "Años de experiencia",
+    "span2": "Clientes satisfechos",
+    "span3": "Tenemos los mejores resultados para tu futuro",
+    "title": "¡Simplificamos lo complicado para que disfrutes lo importante!",
+    "description": "En Solutions for Life creemos que cada persona merece vivir con tranquilidad, confianza y seguridad. Somos una empresa dedicada a brindar soluciones fáciles, eficientes y personalizadas en seguros, impuestos, inmigración y bienes raíces. Nuestro compromiso es acompañarte en cada paso importante de tu vida, ofreciendo asesoría profesional, atención cercana y resultados que marcan la diferencia.",
+    "list":"Ofrecemos soluciones integrales en seguros, impuestos, inmigración y bienes raíces",
+    "list2":"Creemos en la confianza, la transparencia y el trato humano.",
+    "list3":"Te acompañamos a proteger tu futuro y alcanzar tus metas.",
+    "btn": "Ver más"
+  },
+  "home-services": {
+    "title": "Ofrecemos los mejores servicios",
+    "title2": "Exclusivamente pensados para su bienestar.",
+    "btn-card": "Ver más",
+    "title-card": "Seguro de vida",
+    "description-card": "Protege el bienestar de tus seres queridos en caso de que faltes.",
+    "title-card-2": "Seguro de salud",
+    "description-card-2": "Protege el bienestar de tus seres queridos en caso de que faltes.",
+    "title-card-3": "Declaraciones personales",
+    "description-card-3": "Te ayudamos a declarar tus impuestos de manera rápida.",
+    "title-card-4": "Contabilidad de negocios",
+    "description-card-4": "Mantenemos tus finanzas organizadas, con  acompañamiento profesional.",
+    "title-card-5": "Permisos de trabajo",
+    "description-card-5": "Te brindamos una gestión rápida y confiable para tus permisos de trabajo.",
+    "title-card-6": "Ajustes de residencia",
+    "description-card-6": "Si deseas regularizar tu estatus migratorio, te ayudamos con confianza y seguridad.",
+    "title-card-7": "Compra de vivienda",
+    "description-card-7": "Te acompañamos en la búsqueda para que compres la casa perfecta para ti y tu familia.",
+    "title-card-8": "Inversión en propiedades",
+    "description-card-8": "Te ayudamos a identificar oportunidades que sumen valor a tu futuro.",
+    "title-card-9": "Ven y conoce todos los servicios que ofrecemos"
+  },
   "services": {
     "button" : "Obtener más información",
-    "title": "Servicios de soluciones integrales",
-    "description": "Con nosotros encontrarás no solo un servicio, sino un aliado que trabaja contigo para proteger tu futuro, alcanzar tus metas y hacer más simple todo lo que parecía complicado. En Solutions for Life creemos que cada persona merece vivir con tranquilidad, confianza y seguridad. Somos una empresa dedicada a brindar soluciones fáciles, eficientes y personalizadas en seguros, impuestos, inmigración y bienes raíces. Nuestro compromiso es acompañarte en cada paso importante de tu vida, ofreciendo asesoría profesional, atención cercana y resultados que marcan la diferencia."
+    "title": "Servicios de soluciones",
+    "title1": "integrales",
+    "title2": "Lista de servicios",
+    "description": "Con nosotros encontrarás no solo un servicio, sino un aliado que trabaja contigo para proteger tu futuro, alcanzar tus metas y hacer más simple todo lo que parecía complicado. En Solutions for Life creemos que cada persona merece vivir con tranquilidad, confianza y seguridad.",
+    "description2": "Somos una empresa dedicada a brindar soluciones fáciles, eficientes y personalizadas en seguros, impuestos, inmigración y bienes raíces. Nuestro compromiso es acompañarte en cada paso importante de tu vida, ofreciendo asesoría profesional, atención cercana y resultados que marcan la diferencia."
   },
   "contact": {
     "title": "Contactanos",
-    "description": "Lorem ipsum dolor sit amet, consectetur acommodo consequat.",
+    "title-description": "¡Necesitas ayuda, estamos para atenderte!",
+    "description": "Dejanos tus datos para poder contactarnos y ofreserte nuestro servicio y resolver tus dudas. Te ayudamos con tus impuestos, seguros, bienes raíces, inmigración, etc.",
+    "title-card-contact": "Dirección de la oficina",
+    "description-card-contact": "Oficina en EE.UU.:",
+    "title-card-email": "Envíenos un correo electrónico",
+    "description-card-email": "Estamos al tanto de todo y nuestro objetivo es responder a todas las consultas dentro de las 24 horas.",
+    "title-card-tel": "Llámanos",
+    "description-card-tel": "Trabajemos juntos hacia un objetivo común: ¡contáctanos!",
     "form": {
       "name": "Nombre completo",
-      "email": "Correo electronico",
+      "email": "Correo electrónico",
       "phone": "No. de teléfono",
-      "message": "Dejanos tu mensaje"
+      "message": "Dejanos tu mensaje",
+      "btn-submit": "Enviar formulario"
     }
   },
   "contact-us": {
     "title": "Te ofrecemos toda la asistencia profesional",
     "tittle2": "que necesites.",
-    "description": "Impuestos sobre la renta, Contabilidad, Nóminas, Seguros de salud y de vida, Bienes raíces, Riesgos y Asesoría financiera."
+    "description": "Impuestos sobre la renta, Contabilidad, Nóminas, Seguros de salud y de vida, Bienes raíces, Riesgos y Asesoría financiera.",
+    "btn-pro": "Servicios profesionales",
+    "title-list": "¿Qué ofrecemos?",
+    "list-1": "Experiencias de alta calidad",
+    "list-2": "Seguros de vida",
+    "list-3": "Servicios 100% Seguros",
+    "list-4": "Servicos Confialbles",
+    "list-5": "Atención Personalizada",
+    "list-6": "Soporte 24/7 en nuestras líneas de atención",
+    "btn-list": "Contactanos ahora",
+    "title-card-contact": "Atención Personalizada",
+    "description-card-contact": "Conoce nuestros servicios y productos",
+    "btn-card-contact": "Contactanos",
+    "title-customers": "Vea cómo estamos ayudando a clientes a cuidar su vida.",
+    "description-customers": "Mas de 1000 clientes satisfechos"
 
   },
   "footer" : {
@@ -259,6 +330,11 @@
     "descrition3": "Nuestro compromiso es acompañarte en cada paso importante de tu vida, ofreciendo asesoría profesional, atención cercana y resultados que marcan la diferencia.",
     "button2": "Contactanos ahora",
     "title3": "¡Definiendo el futuro de las experiencias en línea!",
-    "description3": "Nuestro equipo de expertos en soluciones integrales está comprometido con ofrecer soluciones personalizadas para que puedas realizar tus mas de Impuestos, seguros,salud, Bienes raices,inmigración, etc."
+    "description3": "Nuestro equipo de expertos en soluciones integrales está comprometido con ofrecer soluciones personalizadas para que puedas realizar tus mas de Impuestos, seguros,salud, Bienes raices,inmigración, etc.",
+    "list-1": "Beneficios esenciales de tu seguro médico.",
+    "list-2": "Beneficios sobre la presentación de impuestos.",
+    "list-3": "Declaración de impuestos",
+    "list-4": "Renovación de seguros médicos",
+    "list-5": "Asesoría financiera"
   }
 }

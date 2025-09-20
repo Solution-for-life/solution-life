@@ -3,7 +3,7 @@
 <div class="w-full color-primary relative">
   <div class="container mx-auto px-4">
     <div class="flex flex-col items-center text-center justify-center">
-      <div class="lg:w-[70%] w-[90%] h-full">
+      <div class="lg:w-[70%] w-full h-full">
 
           <img src="/assets/images/contact.jpg" class="rounded w-full  object-cover" alt="">
 
@@ -13,11 +13,11 @@
               <div class="carrd-header text-left">
                 <ul class="flex  text-white!  lg:mb-5">
                   <li class="list-inside mr-2"><a href="#" class="text-white hover:text-[#64DD17]">Home</a></li>
-                  <li class="list-disc list-inside ml-2">{{"contact.title" | translate}}</li>
+                  <li class="list-disc list-inside ml-2 text-green-500">{{"contact.title" | translate}}</li>
                 </ul>
                 <!-- <p class="font-bold">{{"contact.title" | translate}}</p> -->
-                <h3 class="lg:text-4xl p-3 text-2xl font-bold text-white! lg:mb-2">¡Nesecitas ayuda, estamos para atenderte!.</h3>
-                <p class="lg:p-3 px-3 lg:text-xl text-gray-400">Dejanos tus datos para poder contactarnos y ofreserte nuestro servicio y resolver tus dudas. Te ayudamos con tus impuestos, seguros, bienes raíces, inmigración, etc.</p>
+                <h3 class="lg:text-4xl p-3 text-2xl font-bold text-white! lg:mb-2">{{"contact.title-description" | translate}}</h3>
+                <p class="lg:p-3 px-3 lg:text-xl text-gray-400">{{"contact.description" | translate}}</p>
               </div>
               <div class="w-full mt-10 lg:p-4">
                 <div class="w-full">
@@ -49,7 +49,7 @@
                     </div>
 
                     <div class="w-full flex justify-center text-center">
-                      <button type="submit" (click)="submitForm()" class="cursor-pointer flex w-[70%] justify-center rounded-md bg-[#64DD17] px-3 py-1.5 text-white font-semibold  hover:bg-[#09B850] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#09B850]">Enviar</button>
+                      <button type="submit" (click)="submitForm()" class="cursor-pointer flex w-[70%] justify-center rounded-md bg-[#64DD17] px-3 py-1.5 text-white font-semibold  hover:bg-[#09B850] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#09B850]">{{"contact.form.btn-submit" | translate}}</button>
                     </div>
                   </form>
                 </div>
@@ -63,26 +63,26 @@
         <div  class="p-6 shadow-lg bg-white/10 border rounded">
           <span class="fa fa-map-marker-alt text-[#64DD17] text-[2.5rem] mb-5 " aria-hidden="true"></span>
           <h5 class="text-2xl text-white font-bold mb-3">
-            Dirección de la oficina
+            {{"contact.title-card-contact" | translate}}
           </h5>
-          <div class="flex gap-2 "><img src="/assets/images/usa.svg" alt="" class="h-5 w-6 object-cover " /> <span> Oficina en EE.UU.:</span></div>
+          <div class="flex gap-2 "><img src="/assets/images/usa.svg" alt="" class="h-5 w-6 object-cover " /> <span> {{"contact.description-card-contact" | translate}}</span></div>
           <p>680 Hillcrest Rd NW, Lilburn, GA 30047, USA</p>
+        </div>
+        <div class="p-6 shadow-lg bg-white/10 border rounded">
+          <span class="fa fa-envelope  text-[#64DD17] text-[2.5rem] mb-5 " aria-hidden="true"></span>
+          <h5 class="text-2xl font-bold text-white mb-3">
+            {{"contact.title-card-email" | translate}}
+          </h5>
+          <p>{{"contact.description-card-email" | translate}}</p>
+          <a href="#" class=" hover:text-green-500" >services@solutionsforlifeatl.com</a>
         </div>
         <div class="p-6 shadow-lg bg-white/10 border rounded">
           <span class="fa fa-phone text-[#64DD17] text-[2.5rem] mb-5 " aria-hidden="true"></span>
           <h5 class="text-2xl font-bold text-white mb-3">
-            Envíenos un correo electrónico
+            {{"contact.title-card-tel" | translate}}
           </h5>
-          <p>Estamos al tanto de todo y nuestro objetivo es responder a todas las consultas dentro de las 24 horas.</p>
-          <a href="#" class=" hover:text-green-500" >services@solutionsforlifeatl.com</a>
-        </div>
-        <div class="p-6 shadow-lg bg-white/10 border rounded">
-          <span class="fa fa-envelope text-[#64DD17] text-[2.5rem] mb-5 " aria-hidden="true"></span>
-          <h5 class="text-2xl font-bold text-white mb-3">
-            Llámanos
-          </h5>
-          <p class="mb-3">Trabajemos juntos hacia un objetivo común: ¡contáctanos!</p>
-          <a href="#" class="hover:text-green-500" >(365)3214536114</a>
+          <p class="mb-3">{{"contact.description-card-tel" | translate}}</p>
+          <a href="#" class="hover:text-green-500" >(678) 525 1628</a>
         </div>
       </div>
     </div>
@@ -90,4 +90,5 @@
   <div class="w-full mt-10">
 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3311.624900385359!2d-84.14913122342874!3d33.89931307321493!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88f5a45ee410e8e5%3A0x1c6e101c68182178!2s680%20Hillcrest%20Rd%20NW%2C%20Lilburn%2C%20GA%2030047%2C%20EE.%20UU.!5e0!3m2!1ses-419!2sco!4v1755432618039!5m2!1ses-419!2sco" width="100%" height="500" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 </div>
+<app-whatsapp-button></app-whatsapp-button>
 <app-footer></app-footer>
