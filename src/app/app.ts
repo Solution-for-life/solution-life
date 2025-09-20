@@ -23,6 +23,8 @@ export class App {
 
     const lang: Lang = browserLang === 'es' || browserLang === 'en' ? browserLang : 'en';
 
+    initFlowbite();
+
     // console.log(browserLang);
     translateService.use(lang);
     this.langService.setLang(lang);

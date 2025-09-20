@@ -13,5 +13,4 @@ import { SideBar } from './side-bar/side-bar';
 })
 export class Dashboard {
 
-
 }
