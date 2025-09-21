@@ -10,6 +10,8 @@ import { RouterLink } from '@angular/router';
 
 import { initFlowbite } from 'flowbite';
 import { WhatsappButton } from '../whatsapp-button/whatsapp-button';
+import { DatabaseService } from '@dbService/database.service';
+import { Image } from '@interfaces/image';
 
 @Component({
   selector: 'app-home',
@@ -35,8 +37,21 @@ export default class Home {
   faUniversity = faUniversity;
   faCogs = faCogs;
 
-  ngAfterViewInit() {
-    initFlowbite();
+  items : Image[] = [];
+
+  readonly dbService = inject(DatabaseService);
+
+  async getImages() {
+    const images = await this.dbService.getCollection('carouselImages');
+    this.items = Object.values(images ?? {});
+      // espera un ciclo para que Angular pinte los items
+    setTimeout(() => {
+      initFlowbite();
+    }, 0);
+  }
+
+  ngOnInit() {
+    this.getImages();
   }
 
 }

@@ -10,6 +10,7 @@ import { initializeApp, provideFirebaseApp } from '@angular/fire/app';
 import { getAuth, provideAuth } from '@angular/fire/auth';
 import { getDatabase, provideDatabase } from '@angular/fire/database';
 import { provideToastr } from 'ngx-toastr';
+import { getStorage, provideStorage } from '@angular/fire/storage';
 
 
 export const appConfig: ApplicationConfig = {
@@ -36,6 +37,7 @@ export const appConfig: ApplicationConfig = {
       })
     ),
     provideFirebaseApp(() => initializeApp(environment.firebase)),
+    provideStorage(() => getStorage()),
     provideAuth(() => getAuth()),
     provideDatabase(() => getDatabase())
   ]

@@ -1,19 +1,18 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap")
+layer(base);
+
 @import "tailwindcss";/* You can add global styles to this file, and also import other style files */
-@plugin "flowbite/plugin";
+/* @plugin "flowbite/plugin"; */
 @import "flowbite/src/themes/default";
 @source "../node_modules/flowbite";
 @import "swiper/css/bundle";
 
 
-@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap")
-layer(base);
 
 :root {
   --color-primary: #000b1c;
 }
-* {
-  font-family: 'Roboto', sans-serif;
-}
+
 /* h2{
   font-size: 2.7rem;
   color: #202124;
@@ -32,8 +31,6 @@ layer(base);
 }
 
 .color-primary {
-
-  /* @apply bg-blue-950/90 */
 
   background-color: var(--color-primary);
 

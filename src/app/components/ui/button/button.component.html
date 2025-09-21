@@ -11,10 +11,10 @@
   (click)="onClick($event)"
 >
   @if (startIcon) {
-  <span class="flex items-center" [innerHTML]="startIcon | safeHtml"></span>
+  <span class="flex items-center" [ngClass]="startIcon"></span>
   }
   <ng-content></ng-content>
   @if (endIcon) {
-  <span class="flex items-center" [innerHTML]="endIcon | safeHtml"></span>
+  <span class="flex items-center" [ngClass]="endIcon"></span>
   }
 </button>

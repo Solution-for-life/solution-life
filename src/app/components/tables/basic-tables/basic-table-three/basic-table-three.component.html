@@ -2,7 +2,7 @@
   <div class="flex flex-col gap-2 px-5 mb-4 sm:flex-row sm:items-center sm:justify-between sm:px-6">
     <div>
       <h3 class="text-lg font-semibold text-gray-800 dark:text-white/90">
-        Latest Transactions
+        {{ title }}
       </h3>
     </div>
     <div class="flex flex-col gap-3 sm:flex-row sm:items-center">
@@ -26,11 +26,12 @@
       <table class="min-w-full">
         <thead class="border-gray-100 border-y dark:border-white/[0.05]">
           <tr>
-            <th class="py-3 font-normal text-gray-500 text-start text-theme-sm dark:text-gray-400">Name</th>
-            <th class="px-4 py-3 font-normal text-gray-500 text-start text-theme-sm dark:text-gray-400">Date</th>
-            <th class="px-4 py-3 font-normal text-gray-500 text-start text-theme-sm dark:text-gray-400">Price</th>
-            <th class="px-4 py-3 font-normal text-gray-500 text-start text-theme-sm dark:text-gray-400">Category</th>
-            <th class="px-4 py-3 font-normal text-gray-500 text-start text-theme-sm dark:text-gray-400">Status</th>
+            <th class="py-3 font-normal text-gray-500 text-start text-theme-sm dark:text-gray-400">Nombre</th>
+            <th class="px-4 py-3 font-normal text-gray-500 text-start text-theme-sm dark:text-gray-400">Descripcion</th>
+            <th class="px-4 py-3 font-normal text-gray-500 text-start text-theme-sm dark:text-gray-400">Fecha</th>
+            <th class="px-4 py-3 font-normal text-gray-500 text-start text-theme-sm dark:text-gray-400">Image</th>
+            <th class="px-4 py-3 font-normal text-gray-500 text-start text-theme-sm dark:text-gray-400">Opciones</th>
+
             <th class="px-4 py-3 font-normal text-gray-500 text-start text-theme-sm dark:text-gray-400">
               <span class="sr-only">Action</span>
             </th>
@@ -41,33 +42,23 @@
           <tr>
             <td class="px-4 py-4">
               <div class="flex items-center gap-3">
-                <div class="w-8 h-8">
-                  <img width="32" height="32" [src]="item.image" class="size-8" alt="brand" />
-                </div>
                 <div>
                   <span class="block font-medium text-gray-700 text-theme-sm dark:text-gray-400">
-                    {{ item.action }}
+                    {{ item.name }}
                   </span>
                 </div>
               </div>
             </td>
+            <td class="px-4 py-4 text-gray-700 text-theme-sm dark:text-gray-400">
+              {{ item.description }}
+            </td>
             <td class="px-4 py-4 text-gray-700 whitespace-nowrap text-theme-sm dark:text-gray-400">
-              {{ item.date }}
+              {{ item.createdAt }}
             </td>
             <td class="px-4 py-4 text-gray-700 text-theme-sm dark:text-gray-400">
-              {{ item.amount }}
+             <img src="{{ item.image }}" alt="brand" class="w-50 h-auto" />
             </td>
-            <td class="px-4 py-4 text-gray-700 text-theme-sm dark:text-gray-400">
-              {{ item.category }}
-            </td>
-            <td class="px-4 py-4 text-gray-700 text-theme-sm dark:text-gray-400">
-              <app-badge
-                size="sm"
-                [color]="getBadgeColor(item.status)"
-              >
-                {{ item.status }}
-              </app-badge>
-            </td>
+
             <td class="px-4 py-4 text-gray-700 text-theme-sm dark:text-gray-400">
               <div class="relative inline-block">
                 <app-table-dropdown>

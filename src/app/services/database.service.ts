@@ -1,7 +1,9 @@
 import { inject, Injectable } from '@angular/core';
 import { Database, equalTo, get, orderByChild, push, query, ref, set, update } from '@angular/fire/database';
 import { Client } from '../interfaces/client';
+import { Storage,getDownloadURL, ref as reference, uploadBytes } from '@angular/fire/storage';
 import { Service } from '../interfaces/service';
+import { Image } from '../interfaces/image';
 
 @Injectable({
   providedIn: 'root'
@@ -10,6 +12,7 @@ export class DatabaseService {
 
 
   private db = inject(Database);
+  private readonly storage = inject(Storage);
 
   async getCollection(collectionName: string) {
     const collection = ref(this.db, collectionName);
@@ -17,7 +20,7 @@ export class DatabaseService {
     return snapshot.exists() ? snapshot.val() : null;
   }
 
-  async setItem(collectionName: string, data : Client | Service) : Promise<void> {
+  async setItem(collectionName: string, data : Client | Service | Image) : Promise<void> {
     if(data.id){
       const reference = ref(this.db, `${collectionName}/${data.id}`);
       await update(reference, {...data, updatedAt : new Date().toISOString()});
@@ -40,6 +43,23 @@ export class DatabaseService {
     const snapshot = await get(q);
     console.log(snapshot.val());
     return snapshot.exists() ? snapshot.val() : null;
+  }
+  async getImageURL(filePath: string): Promise<string> {
+    try {
+      console.log('entro al get image url', filePath);
+
+      if (!filePath || filePath.trim() === '') {
+        throw new Error('Invalid image path');
+      }
+
+      const storageRef = reference(this.storage, filePath.trim());
+      return await getDownloadURL(storageRef);
+
+    } catch (error) {
+      console.error('Error en getImageURL:', error);
+      // fallback a una imagen local si falla
+      return 'assets/images/logo.png';
+    }
   }
 
 }

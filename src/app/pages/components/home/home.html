@@ -10,51 +10,122 @@
         <div class="absolute bottom-10 left-1/2 w-48 h-48 bg-cyan-500 rounded-full filter blur-3xl animate-float3"></div>
       </div>
 
-      <!-- CAROUSEL  -->
-      <div id="default-carousel" class="relative w-full" data-carousel="slide">
-          <!-- Carousel wrapper -->
-          <div class="relative overflow-hidden rounded-lg h-[70dvh] bg-gray-300">
-              <!-- Item 1 -->
-               @for (i of [].constructor(5); track $index) {
-                 <div class="hidden duration-700 ease-in-out h-full" data-carousel-item>
-                     <img src="/assets/images/backgroundlanding.png" class="absolute block w-full h-full object-cover left-0 top-0" alt="...">
-                     <div class="w-full h-50 bg-gray-900/70 absolute bottom-0 left-0 text-center p-5">
-                         <p class="hidden md:block text-gray-400 text-xl mb-3" >{{"about-us.description" | translate}}</p>
-                         <p class="block md:hidden text-gray-400 mb-5" >{{"about-us.description_2" | translate}}</p>
-                         <button type="button" [routerLink]="['/contact']" class="bg-[#09b850] hover:bg-[#07a248] text-white font-bold py-2 px-4 rounded cursor-pointer transition duration-300 transform hover:-translate-y-1 hover:scale-110">{{"home.btn_contact" | translate}}</button>
-                     </div>
-
-                 </div>
-               }
-          </div>
-          <!-- Slider indicators -->
-          <div class="absolute z-30 flex -translate-x-1/2 bottom-5 left-1/2 space-x-3 rtl:space-x-reverse">
-              <button type="button" class="w-3 h-3 rounded-full" aria-current="true" aria-label="Slide 1" data-carousel-slide-to="0"></button>
-              <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 2" data-carousel-slide-to="1"></button>
-              <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 3" data-carousel-slide-to="2"></button>
-              <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 4" data-carousel-slide-to="3"></button>
-              <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 5" data-carousel-slide-to="4"></button>
-          </div>
-          <!-- Slider controls -->
-          <button type="button" class="absolute top-0 start-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none" data-carousel-prev>
-              <span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
-                  <svg class="w-4 h-4 text-white dark:text-gray-800 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
-                      <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 1 1 5l4 4"/>
-                  </svg>
-                  <span class="sr-only">Previous</span>
-              </span>
-          </button>
-          <button type="button" class="absolute top-0 end-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none" data-carousel-next>
-              <span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
-                  <svg class="w-4 h-4 text-white dark:text-gray-800 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
-                      <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 9 4-4-4-4"/>
-                  </svg>
-                  <span class="sr-only">Next</span>
-              </span>
-          </button>
-      </div>
 
     </div>
+
+
+    <!-- CAROUSEL -->
+    <div id="default-carousel" class="relative w-full" data-carousel="slide">
+      <!-- Carousel wrapper -->
+      <div class="relative overflow-hidden rounded-lg h-[70dvh] bg-gray-300">
+        @for (item of items; track $index; let i = $index) {
+          <div
+            class="hidden duration-700 ease-in-out h-full"
+            data-carousel-item
+            [class.block]="i === 0"
+          >
+            <img
+              [src]="item.image"
+              class="absolute block w-full h-full object-cover left-0 top-0"
+              alt="carousel-image"
+            />
+
+            <div
+              class="w-full h-50 bg-gray-900/70 absolute bottom-0 left-0 text-center p-5"
+            >
+              <p
+                class="hidden md:block text-gray-400 text-xl mb-3"
+              >
+                {{"about-us.description" | translate}}
+              </p>
+              <p
+                class="block md:hidden text-gray-400 mb-5"
+              >
+                {{"about-us.description_2" | translate}}
+              </p>
+              <button
+                type="button"
+                [routerLink]="['/contact']"
+                class="bg-[#09b850] hover:bg-[#07a248] text-white font-bold py-2 px-4 rounded cursor-pointer transition duration-300 transform hover:-translate-y-1 hover:scale-110"
+              >
+                {{"home.btn_contact" | translate}}
+              </button>
+            </div>
+          </div>
+        }
+      </div>
+
+      <!-- Slider indicators dinámicos -->
+      <div
+        class="absolute z-30 flex -translate-x-1/2 bottom-5 left-1/2 space-x-3 rtl:space-x-reverse"
+      >
+        @for (item of items; track $index; let i = $index) {
+          <button
+            type="button"
+            class="w-3 h-3 rounded-full"
+            [attr.aria-current]="i === 0 ? 'true' : 'false'"
+            [attr.aria-label]="'Slide ' + (i + 1)"
+            [attr.data-carousel-slide-to]="i"
+          ></button>
+        }
+      </div>
+
+      <!-- Slider controls -->
+      <button
+        type="button"
+        class="absolute top-0 start-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
+        data-carousel-prev
+      >
+        <span
+          class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none"
+        >
+          <svg
+            class="w-4 h-4 text-white dark:text-gray-800 rtl:rotate-180"
+            aria-hidden="true"
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 6 10"
+          >
+            <path
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M5 1 1 5l4 4"
+            />
+          </svg>
+          <span class="sr-only">Previous</span>
+        </span>
+      </button>
+      <button
+        type="button"
+        class="absolute top-0 end-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
+        data-carousel-next
+      >
+        <span
+          class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none"
+        >
+          <svg
+            class="w-4 h-4 text-white dark:text-gray-800 rtl:rotate-180"
+            aria-hidden="true"
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 6 10"
+          >
+            <path
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="m1 9 4-4-4-4"
+            />
+          </svg>
+          <span class="sr-only">Next</span>
+        </span>
+      </button>
+    </div>
+
+
 
     <!-- SECTION DE SOBRE NOSOTROS -->
       <div class="bg-gradient-to-br text-white w-full max-w-7xl">

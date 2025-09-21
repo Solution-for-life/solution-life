@@ -1,5 +1,68 @@
   <div>
-    <app-component-card title="Basic Table 3">
-      <app-basic-table-three/>
+    <app-component-card title="Modificar y Agregar Imagenes">
+      <app-basic-table-three [title]="'Carousel Imagenes'" [items]="imagesCarousel"/>
     </app-component-card>
   </div>
+
+
+  <!-- Modal -->
+<app-modal
+  [isOpen]="modalService.isOpen"
+  (close)="closeModal()"
+  className=" m-4 max-w-5xl max-h-dvh"
+>
+  <div class="no-scrollbar relative overflow-y-auto rounded-3xl bg-white p-4 dark:bg-gray-900 lg:p-5">
+    <div class="px-2 pr-11">
+      <h4 class="mb-2 text-2xl font-semibold text-gray-800 dark:text-white/90">
+        Agregar imagen y detalles
+      </h4>
+      <p class="mb-6 text-sm text-gray-500 dark:text-gray-400 lg:mb-7">
+        Aqui podras agregar imagenes al carousel
+      </p>
+    </div>
+    <form class="flex flex-col" (ngSubmit)="handleSave()" [formGroup]="form">
+      <div class="custom-scrollbar max-h-[400px]  overflow-y-auto px-2 pb-3">
+        <div>
+          <div class="grid grid-cols-1 gap-x-6 gap-y-5">
+            <div class="">
+              <app-label>Nombre</app-label>
+              <app-input-field
+                formControlName="name"
+                [placeholder]="'Nombre de la imagen'"
+              ></app-input-field>
+            </div>
+            <div>
+              <app-label>Description</app-label>
+              <app-text-area
+                formControlName="description"
+                [rows]="4"
+              ></app-text-area>
+            </div>
+            <div>
+              <app-dropzone
+                formControlName="image"
+                (change)="onFileChange($event)"
+              />
+            </div>
+          </div>
+        </div>
+
+      </div>
+      <div class="flex items-center gap-3 px-2 mt-6 lg:justify-end">
+        <app-button
+          size="sm"
+          variant="outline"
+          (btnClick)="closeModal()"
+        >
+          Close
+        </app-button>
+        <app-button
+          size="sm"
+          (btnClick)="handleSave()"
+        >
+          Save Changes
+        </app-button>
+      </div>
+    </form>
+  </div>
+</app-modal>
