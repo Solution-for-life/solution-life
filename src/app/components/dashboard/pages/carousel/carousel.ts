@@ -1,4 +1,4 @@
-import { Component, inject } from '@angular/core';
+import { Component, inject, ViewChild } from '@angular/core';
 import { ComponentCardComponent } from '../../../common/component-card/component-card.component';
 import { BasicTableThreeComponent } from '../../../tables/basic-tables/basic-table-three/basic-table-three.component';
 import { ButtonComponent } from '../../../ui/button/button.component';
@@ -8,11 +8,11 @@ import { DropzoneComponent } from '../../../form/form-elements/dropzone/dropzone
 import { TextAreaComponent } from '../../../form/input/text-area.component';
 import { LabelComponent } from '../../../form/label/label.component';
 import { ModalService } from '../../../../services/modal.service';
-import { Storage, ref, uploadBytes, getDownloadURL } from '@angular/fire/storage';
+import { Storage, ref, uploadBytes } from '@angular/fire/storage';
 import { FormBuilder, FormGroup, FormsModule, ReactiveFormsModule, Validators } from "@angular/forms";
 import { DatabaseService } from '@dbService/database.service';
 import { Image } from '@interfaces/image';
-import { AsyncPipe } from '@angular/common';
+import { LoaderService } from '../../../../services/loader.service';
 
 @Component({
   selector: 'app-carousel',
@@ -27,7 +27,6 @@ import { AsyncPipe } from '@angular/common';
     LabelComponent,
     FormsModule,
     ReactiveFormsModule,
-    AsyncPipe
 ],
   templateUrl: './carousel.html',
   styles: ``
@@ -38,20 +37,31 @@ export class Carousel {
   private readonly fb = inject(FormBuilder);
   private readonly storage = inject(Storage);
   private readonly dbService = inject(DatabaseService);
+  private readonly loaderService = inject(LoaderService);
   public imagesCarousel: Image[] = [];
   public filePathGenerated: string = '';
   public fieldTouched = false;
   public uploadedFile: File | null = null;
   public imagePreview: string | null = null;
+  @ViewChild('dropzone') dropzone!: DropzoneComponent;
+
+
 
   form : FormGroup = this.fb.group({
     name: ['', Validators.required],
+    name_es: ['', Validators.required],
     description: ['', Validators.required],
+    description_es: ['', Validators.required],
     image: [null, Validators.required]
   });
 
   closeModal() {
     this.modalService.closeModal();
+    this.form.reset();
+    if(this.dropzone)
+    {
+      this.dropzone.reset();
+    }
   }
 
   openModal() {
@@ -76,17 +86,18 @@ export class Carousel {
     reader.onload = () => this.imagePreview = reader.result as string;
     reader.readAsDataURL(file);
 
-    // ⚠️ NO subir todavía, solo guardamos file en memoria
     this.form.patchValue({ image: file });
     this.form.get('image')?.updateValueAndValidity();
   }
 
   async handleSave() {
-      // Handle save logic here
     if (this.form.invalid || !this.uploadedFile) {
       console.warn('Formulario inválido o sin imagen seleccionada');
+      this.form.markAllAsTouched();
       return;
     }
+
+
     const file = this.uploadedFile;
     const ext = file.name.split('.').pop();
     const baseName = file.name.replace(/\.[^/.]+$/, "");
@@ -96,29 +107,47 @@ export class Carousel {
     this.filePathGenerated = `carouselImages/${Date.now()}_${finalName}`;
     const storageRef = ref(this.storage, this.filePathGenerated);
 
-      try {
-        await uploadBytes(storageRef, file);
-        const downloadURL = await this.dbService.getImageURL(this.filePathGenerated);
+    try {
+      this.loaderService.setLoader(true);
+      await uploadBytes(storageRef, file);
 
-        // Guardas el link en el form para enviarlo a DB
-        this.form.patchValue({ image: downloadURL });
+      const downloadURL = await this.dbService.getImageURL(this.filePathGenerated);
 
+      const newImage : Image = {
+        name: {
+          en: this.form.value.name,
+          es: this.form.value.name_es
+        },
+        description: {
+          en: this.form.value.description,
+          es: this.form.value.description_es
+        },
+        image: downloadURL,
+        storagePath: this.filePathGenerated,
+        createdAt: new Date().toISOString(),
+        updatedAt: ''
+      };
 
+      // 4. Guardar en la DB
+      await this.dbService.setItem('carouselImages', newImage);
 
-        console.log('✅ Imagen subida:', this.filePathGenerated);
-        console.log('📌 Form listo para enviar:', this.form.value);
+      this.loaderService.setLoader(false);
 
-        await this.dbService.setItem('carouselImages', this.form.value);
-        this.modalService.closeModal();
-        await this.getImages();
-      } catch (error) {
-        console.error('❌ Error subiendo imagen', error);
-      }
+      console.log('✅ Imagen subida:', this.filePathGenerated);
+      console.log('📌 Guardado en DB:', newImage);
+
+      // 5. Cerrar modal y refrescar lista
+      this.closeModal();
+      await this.getImages();
+
+    } catch (error) {
+      console.error('❌ Error subiendo imagen', error);
+      this.loaderService.setLoader(false);
+    }
   }
 
   async ngOnInit() {
     await this.getImages();
-    console.log('Images:', this.imagesCarousel);
   }
 
 }

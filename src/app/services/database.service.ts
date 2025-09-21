@@ -1,7 +1,7 @@
 import { inject, Injectable } from '@angular/core';
-import { Database, equalTo, get, orderByChild, push, query, ref, set, update } from '@angular/fire/database';
+import { Database, equalTo, get, orderByChild, push, query, ref, set, update, remove } from '@angular/fire/database';
 import { Client } from '../interfaces/client';
-import { Storage,getDownloadURL, ref as reference, uploadBytes } from '@angular/fire/storage';
+import { Storage,deleteObject,getDownloadURL, ref as reference, uploadBytes } from '@angular/fire/storage';
 import { Service } from '../interfaces/service';
 import { Image } from '../interfaces/image';
 
@@ -59,6 +59,17 @@ export class DatabaseService {
       console.error('Error en getImageURL:', error);
       // fallback a una imagen local si falla
       return 'assets/images/logo.png';
+    }
+  }
+
+  async deleteItem(id: string, collectionName: string, filePath : string = '') {
+    const collectionRef = ref(this.db, `${collectionName}/${id}`);
+    await remove(collectionRef);
+
+    if( collectionName === 'carouselImages' && filePath !== ''){
+      // Eliminar imagen de la galeria
+      const storageRef = reference(this.storage,filePath);
+      await deleteObject(storageRef);
     }
   }
 

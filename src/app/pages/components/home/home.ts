@@ -12,6 +12,7 @@ import { initFlowbite } from 'flowbite';
 import { WhatsappButton } from '../whatsapp-button/whatsapp-button';
 import { DatabaseService } from '@dbService/database.service';
 import { Image } from '@interfaces/image';
+import { LanguageService } from '../../../services/language.service';
 
 @Component({
   selector: 'app-home',
@@ -40,6 +41,7 @@ export default class Home {
   items : Image[] = [];
 
   readonly dbService = inject(DatabaseService);
+  readonly langService = inject(LanguageService);
 
   async getImages() {
     const images = await this.dbService.getCollection('carouselImages');

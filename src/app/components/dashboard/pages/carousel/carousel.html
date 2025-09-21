@@ -21,25 +21,47 @@
       </p>
     </div>
     <form class="flex flex-col" (ngSubmit)="handleSave()" [formGroup]="form">
-      <div class="custom-scrollbar max-h-[400px]  overflow-y-auto px-2 pb-3">
+      <div class="custom-scrollbar max-h-[450px]  overflow-y-auto px-2 pb-3">
         <div>
           <div class="grid grid-cols-1 gap-x-6 gap-y-5">
-            <div class="">
-              <app-label>Nombre</app-label>
-              <app-input-field
-                formControlName="name"
-                [placeholder]="'Nombre de la imagen'"
-              ></app-input-field>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+              <div>
+                <app-label>Name (english)</app-label>
+                <app-input-field
+                  formControlName="name"
+                  [placeholder]="'Image name'"
+                ></app-input-field>
+              </div>
+              <div>
+                <app-label>Nombre (español)</app-label>
+                <app-input-field
+                  formControlName="name_es"
+                  [placeholder]="'Nombre de la imagen'"
+                ></app-input-field>
+              </div>
             </div>
-            <div>
-              <app-label>Description</app-label>
-              <app-text-area
-                formControlName="description"
-                [rows]="4"
-              ></app-text-area>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+              <div>
+                <app-label>Description (ingles)</app-label>
+                <app-text-area
+                  formControlName="description"
+                  [placeholder]="'Description (English)'"
+                  [rows]="3"
+                ></app-text-area>
+              </div>
+              <div>
+                <app-label>Descripcion (español)</app-label>
+                <app-text-area
+                  formControlName="description_es"
+                  [rows]="3"
+                  [placeholder]="'Descripcion (español)'"
+                ></app-text-area>
+              </div>
+
             </div>
             <div>
               <app-dropzone
+                #dropzone
                 formControlName="image"
                 (change)="onFileChange($event)"
               />

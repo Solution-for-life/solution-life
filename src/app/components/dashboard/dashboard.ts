@@ -4,6 +4,8 @@ import { AppSidebarComponent } from './app-sidebar/app-sidebar.component';
 import { AppHeaderComponent } from './app-header/app-header.component';
 import { SidebarService } from '../../services/sidebar.service';
 import { Router, RouterOutlet } from '@angular/router';
+import { Loader } from '../loader/loader';
+import { LoaderService } from '../../services/loader.service';
 
 @Component({
   selector: 'app-dashboard',
@@ -11,7 +13,8 @@ import { Router, RouterOutlet } from '@angular/router';
     CommonModule,
     AppSidebarComponent,
     AppHeaderComponent,
-    RouterOutlet
+    RouterOutlet,
+    Loader
   ],
   templateUrl: './dashboard.html',
   styleUrl: './dashboard.css'
@@ -22,6 +25,7 @@ export class Dashboard {
   readonly isMobileOpen$;
 
   readonly router = inject(Router);
+  public readonly loaderService = inject(LoaderService);
 
   constructor(public sidebarService: SidebarService) {
     this.isExpanded$ = this.sidebarService.isExpanded$;

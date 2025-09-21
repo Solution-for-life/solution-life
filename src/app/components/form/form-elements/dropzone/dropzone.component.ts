@@ -5,7 +5,6 @@ import {
   HostListener
 } from '@angular/core';
 import { NG_VALUE_ACCESSOR, ControlValueAccessor } from '@angular/forms';
-
 @Component({
   selector: 'app-dropzone',
   imports: [CommonModule],
@@ -22,9 +21,7 @@ import { NG_VALUE_ACCESSOR, ControlValueAccessor } from '@angular/forms';
 export class DropzoneComponent implements ControlValueAccessor {
   isDragActive = false;
   files: File[] = [];
-
   previews: string[] = [];
-
 
   private onChange: (value: File[]) => void = () => {};
   private onTouched: () => void = () => {};
@@ -32,6 +29,12 @@ export class DropzoneComponent implements ControlValueAccessor {
   // Se llama cuando cambia el valor desde fuera
   writeValue(files: File[]): void {
     this.files = files || [];
+  }
+
+  reset() {
+    this.files = [];
+    this.previews = [];
+    this.onChange(this.files);
   }
 
   // Se registra la función que Angular usa para cambios
@@ -48,30 +51,30 @@ export class DropzoneComponent implements ControlValueAccessor {
     // opcional: manejar estado disabled
   }
 
-  // -------- eventos internos --------
-onFileSelected(event: Event) {
-  const input = event.target as HTMLInputElement;
-  if (input.files?.length) {
-    this.files = Array.from(input.files);
-    this.generatePreviews(this.files);
-    this.onChange(this.files);
-    this.onTouched();
+    // -------- eventos internos --------
+  onFileSelected(event: Event) {
+    const input = event.target as HTMLInputElement;
+    if (input.files?.length) {
+      this.files = Array.from(input.files);
+      this.generatePreviews(this.files);
+      this.onChange(this.files);
+      this.onTouched();
+    }
   }
-}
 
   @HostListener('drop', ['$event'])
-onDrop(event: DragEvent) {
-  event.preventDefault();
-  this.isDragActive = false;
-  if (event.dataTransfer?.files.length) {
-    this.files = Array.from(event.dataTransfer.files).filter(file =>
-      ['image/png', 'image/jpeg', 'image/webp', 'image/svg+xml'].includes(file.type)
-    );
-    this.generatePreviews(this.files);
-    this.onChange(this.files);
-    this.onTouched();
+  onDrop(event: DragEvent) {
+    event.preventDefault();
+    this.isDragActive = false;
+    if (event.dataTransfer?.files.length) {
+      this.files = Array.from(event.dataTransfer.files).filter(file =>
+        ['image/png', 'image/jpeg', 'image/webp', 'image/svg+xml'].includes(file.type)
+      );
+      this.generatePreviews(this.files);
+      this.onChange(this.files);
+      this.onTouched();
+    }
   }
-}
 
 
   @HostListener('dragover', ['$event'])

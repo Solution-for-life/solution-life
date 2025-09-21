@@ -26,8 +26,9 @@
       <table class="min-w-full">
         <thead class="border-gray-100 border-y dark:border-white/[0.05]">
           <tr>
-            <th class="py-3 font-normal text-gray-500 text-start text-theme-sm dark:text-gray-400">Nombre</th>
-            <th class="px-4 py-3 font-normal text-gray-500 text-start text-theme-sm dark:text-gray-400">Descripcion</th>
+            <th class="py-3 font-normal text-gray-500 text-start text-theme-sm dark:text-gray-400">Nombres</th>
+            <th class="px-4 py-3 font-normal text-gray-500 text-start text-theme-sm dark:text-gray-400">Description (English)</th>
+            <th class="px-4 py-3 font-normal text-gray-500 text-start text-theme-sm dark:text-gray-400">Descripcion (español)</th>
             <th class="px-4 py-3 font-normal text-gray-500 text-start text-theme-sm dark:text-gray-400">Fecha</th>
             <th class="px-4 py-3 font-normal text-gray-500 text-start text-theme-sm dark:text-gray-400">Image</th>
             <th class="px-4 py-3 font-normal text-gray-500 text-start text-theme-sm dark:text-gray-400">Opciones</th>
@@ -41,59 +42,40 @@
           @for (item of currentItems; track $index) {
           <tr>
             <td class="px-4 py-4">
-              <div class="flex items-center gap-3">
-                <div>
+              <div class="flex items-start flex-col gap-3">
+                <div class="mb-5">
+                   <span class="text-blue-600 dark:text-blue-300 font-bold">English:</span>
                   <span class="block font-medium text-gray-700 text-theme-sm dark:text-gray-400">
-                    {{ item.name }}
+                   {{ item.name.en }}
+                  </span>
+                </div>
+                <div>
+                  <span class="text-blue-600 dark:text-blue-300 font-bold">Español:</span>
+
+                  <span class="block font-medium text-gray-700 text-theme-sm dark:text-gray-400">
+                    {{ item.name.es }}
                   </span>
                 </div>
               </div>
             </td>
             <td class="px-4 py-4 text-gray-700 text-theme-sm dark:text-gray-400">
-              {{ item.description }}
+              {{ item.description.es }}
+            </td>
+            <td class="px-4 py-4 text-gray-700 text-theme-sm dark:text-gray-400">
+              {{ item.description.en }}
             </td>
             <td class="px-4 py-4 text-gray-700 whitespace-nowrap text-theme-sm dark:text-gray-400">
               {{ item.createdAt }}
             </td>
             <td class="px-4 py-4 text-gray-700 text-theme-sm dark:text-gray-400">
-             <img src="{{ item.image }}" alt="brand" class="w-50 h-auto" />
+             <img src="{{ item.image }}" alt="brand" class="w-60 h-auto rounded-xl" />
             </td>
 
             <td class="px-4 py-4 text-gray-700 text-theme-sm dark:text-gray-400">
-              <div class="relative inline-block">
-                <app-table-dropdown>
-                  <div dropdown-button>
-                    <button class="text-gray-500 dark:text-gray-400">
-                      <svg
-                        class="fill-current"
-                        width="24"
-                        height="24"
-                        viewBox="0 0 24 24"
-                        fill="none"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path
-                          fill-rule="evenodd"
-                          clip-rule="evenodd"
-                          d="M5.99902 10.245C6.96552 10.245 7.74902 11.0285 7.74902 11.995V12.005C7.74902 12.9715 6.96552 13.755 5.99902 13.755C5.03253 13.755 4.24902 12.9715 4.24902 12.005V11.995C4.24902 11.0285 5.03253 10.245 5.99902 10.245ZM17.999 10.245C18.9655 10.245 19.749 11.0285 19.749 11.995V12.005C19.749 12.9715 18.9655 13.755 17.999 13.755C17.0325 13.755 16.249 12.9715 16.249 12.005V11.995C16.249 11.0285 17.0325 10.245 17.999 10.245ZM13.749 11.995C13.749 11.0285 12.9655 10.245 11.999 10.245C11.0325 10.245 10.249 11.0285 10.249 11.995V12.005C10.249 12.9715 11.0325 13.755 11.999 13.755C12.9655 13.755 13.749 12.9715 13.749 12.005V11.995Z"
-                          fill=""
-                        />
-                      </svg>
-                    </button>
-                  </div>
-                  <div dropdown-content>
-                    <button
-                      class="text-xs flex w-full rounded-lg px-3 py-2 text-left font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-700 dark:text-gray-400 dark:hover:bg-white/5 dark:hover:text-gray-300"
-                    >
-                      View More
-                    </button>
-                    <button
-                      class="text-xs flex w-full rounded-lg px-3 py-2 text-left font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-700 dark:text-gray-400 dark:hover:bg-white/5 dark:hover:text-gray-300"
-                    >
-                      Delete
-                    </button>
-                  </div>
-                </app-table-dropdown>
+              <div class="relative inline-block text-center text-red-300!">
+                <button class="text-xs flex w-full rounded-lg px-3 py-2 text-left font-medium  hover:text-red-500" type="button" (click)="handleDelete(item)">
+                  <span class="fa fa-solid fa-trash text-xl"></span>
+                </button>
               </div>
             </td>
           </tr>
@@ -150,3 +132,84 @@
     </div>
   </div>
 </div>
+
+
+  <!-- Error Modal -->
+  <app-modal
+    [isOpen]="errorModal"
+    (close)="handleCloseModal('error')"
+    [itemImage]="item"
+    className="max-w-[600px] p-5 lg:p-10 mx-3 ms:mx-0"
+  >
+    <div class="text-center">
+      <div class="relative flex items-center justify-center z-1 mb-7">
+        <svg
+          class="fill-error-50 dark:fill-error-500/15"
+          width="90"
+          height="90"
+          viewBox="0 0 90 90"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M34.364 6.85053C38.6205 -2.28351 51.3795 -2.28351 55.636 6.85053C58.0129 11.951 63.5594 14.6722 68.9556 13.3853C78.6192 11.0807 86.5743 21.2433 82.2185 30.3287C79.7862 35.402 81.1561 41.5165 85.5082 45.0122C93.3019 51.2725 90.4628 63.9451 80.7747 66.1403C75.3648 67.3661 71.5265 72.2695 71.5572 77.9156C71.6123 88.0265 60.1169 93.6664 52.3918 87.3184C48.0781 83.7737 41.9219 83.7737 37.6082 87.3184C29.8831 93.6664 18.3877 88.0266 18.4428 77.9156C18.4735 72.2695 14.6352 67.3661 9.22531 66.1403C-0.462787 63.9451 -3.30193 51.2725 4.49185 45.0122C8.84391 41.5165 10.2138 35.402 7.78151 30.3287C3.42572 21.2433 11.3808 11.0807 21.0444 13.3853C26.4406 14.6722 31.9871 11.951 34.364 6.85053Z"
+            fill=""
+            fill-opacity=""
+          />
+        </svg>
+
+        <span
+          class="absolute -translate-x-1/2 -translate-y-1/2 left-1/2 top-1/2"
+        >
+          <svg
+            class="fill-error-600 dark:fill-error-500"
+            width="38"
+            height="38"
+            viewBox="0 0 38 38"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+              d="M9.62684 11.7496C9.04105 11.1638 9.04105 10.2141 9.62684 9.6283C10.2126 9.04252 11.1624 9.04252 11.7482 9.6283L18.9985 16.8786L26.2485 9.62851C26.8343 9.04273 27.7841 9.04273 28.3699 9.62851C28.9556 10.2143 28.9556 11.164 28.3699 11.7498L21.1198 18.9999L28.3699 26.25C28.9556 26.8358 28.9556 27.7855 28.3699 28.3713C27.7841 28.9571 26.8343 28.9571 26.2485 28.3713L18.9985 21.1212L11.7482 28.3715C11.1624 28.9573 10.2126 28.9573 9.62684 28.3715C9.04105 27.7857 9.04105 26.836 9.62684 26.2502L16.8771 18.9999L9.62684 11.7496Z"
+              fill=""
+            />
+          </svg>
+        </span>
+      </div>
+
+      <h4
+        class="mb-2 text-2xl font-semibold text-gray-800 dark:text-white/90 sm:text-title-sm"
+      >
+        Atencion esta accion no se puede deshacer
+      </h4>
+      <p class="text-sm leading-6 text-gray-500 dark:text-gray-400 mb-5">
+        Esta accion no se puede deshacer, ¿Estás seguro? de eliminar este
+        elemento?
+
+      </p>
+      {{ item ? item.name[langService.getLang()] : '' }}
+
+      <img src="{{ item?.image }}" alt="brand" class="w-50 rounded-xl mx-auto mt-5" />
+
+      <div class="flex items-center justify-center w-full gap-3 mt-7">
+        <button
+          type="button"
+          (click)="handleDeleteConfirm()"
+          class="flex justify-center w-full px-4 py-3 text-sm font-medium text-white rounded-lg bg-error-500 shadow-theme-xs hover:bg-error-600 sm:w-auto"
+        >
+          Si, Quiero Eliminar
+        </button>
+
+        <button
+          type="button"
+          (click)="handleCloseModal('error')"
+          class="flex justify-center w-full px-4 py-3 text-sm font-medium text-white rounded-lg bg-gray-500 shadow-theme-xs hover:bg-gray-600 sm:w-auto"
+        >
+          Cancelar
+        </button>
+
+      </div>
+    </div>
+  </app-modal>
