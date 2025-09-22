@@ -21,7 +21,7 @@
         @for (item of items; track $index; let i = $index) {
           <div
             class="hidden duration-700 ease-in-out h-full"
-            data-carousel-item
+            [attr.data-carousel-item]="i === 0 ? 'active' : ''"
             [class.block]="i === 0"
           >
             <img
@@ -29,7 +29,6 @@
               class="absolute block w-full h-full object-cover left-0 top-0"
               alt="carousel-image"
             />
-
             <div
               class="w-full h-50 bg-gray-900/70 absolute bottom-0 left-0 text-center p-5"
             >
