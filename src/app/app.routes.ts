@@ -11,6 +11,8 @@ import { Register } from './pages/components/register/register';
 import { Dashboard } from './components/dashboard/dashboard';
 import { authGuard } from './guards/auth-guard';
 import { Carousel } from './components/dashboard/pages/carousel/carousel';
+import { Clients } from './components/dashboard/pages/clients/clients';
+
 
 export const routes: Routes = [
   { path: '', component: Home},
@@ -23,6 +25,7 @@ export const routes: Routes = [
     component: Dashboard,
     children: [
       { path:'carousel', component: Carousel, pathMatch: 'full', title: 'Carousel'},
+      { path:'clients', component: Clients, pathMatch: 'full', title: 'Clientes'},
     ]
   },
   { path: 'register', component: Register},

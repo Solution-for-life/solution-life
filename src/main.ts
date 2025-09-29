@@ -1,9 +1,9 @@
 /// <reference types="@angular/localize" />
+import '@tailwindplus/elements';
 
 import { bootstrapApplication } from '@angular/platform-browser';
 import { appConfig } from './app/app.config';
 import { App } from './app/app';
-import '@tailwindplus/elements';
 
 
 

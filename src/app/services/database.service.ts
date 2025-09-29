@@ -72,6 +72,10 @@ export class DatabaseService {
       await deleteObject(storageRef);
     }
   }
+  async deleteCliente(id: string) {
+    const collectionRef = ref(this.db, `clients/${id}`);
+    await remove(collectionRef);
+  }
 
 }
 

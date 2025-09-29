@@ -9,6 +9,7 @@ import {
   OnDestroy,
   HostListener
 } from '@angular/core';
+import { Client } from '@interfaces/client';
 import { Image } from '@interfaces/image';
 
 @Component({
@@ -27,6 +28,7 @@ export class ModalComponent {
   @Input() showCloseButton = true;
   @Input() isFullscreen = false;
   @Input( {required: false}) itemImage?: Image | null = null;
+  @Input( {required: false}) client?: Client | null = null;
 
   constructor(private el: ElementRef) {}
 
