@@ -2,6 +2,7 @@ import * as functions from "firebase-functions";
 import * as admin from "firebase-admin";
 import { logger } from "firebase-functions/v1";
 import { sendEmailWithHostinger, createHostingerTransporter } from "./smtp-config";
+import { getEmailConfig } from "./email-config";
 
 admin.initializeApp();
 
@@ -10,6 +11,7 @@ export const sendEmailOnNewClient = functions.database.ref('/clients/{clientId}'
   .onCreate(async (snapshot, context) => {
     const clientData = snapshot.val();
     const clientId = context.params.clientId;
+    const config = getEmailConfig();
 
     const htmlContent = `
       <h2>Nuevo Cliente Registrado</h2>
@@ -24,7 +26,7 @@ export const sendEmailOnNewClient = functions.database.ref('/clients/{clientId}'
 
     try {
       await sendEmailWithHostinger(
-        "solutionforlife2@gmail.com",
+        config.replyto, // Email configurado en Firebase (asistentesolutionforlife@gmail.com)
         "Nuevo cliente registrado",
         htmlContent
       );

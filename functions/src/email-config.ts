@@ -10,11 +10,13 @@ export const getEmailConfig = () => {
     return {
       email: functions.config().hostinger?.email || '',
       password: functions.config().hostinger?.password || '',
+      replyto: functions.config().hostinger?.replyto || '',
     };
   } else {
     return {
       email: process.env.HOSTINGER_EMAIL || '',
       password: process.env.HOSTINGER_PASSWORD || '',
+      replyto: process.env.HOSTINGER_REPLYTO || '',
     };
   }
 };
