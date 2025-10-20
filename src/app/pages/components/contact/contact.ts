@@ -33,11 +33,48 @@ export class Contact {
   fb = inject(FormBuilder);
 
   form : FormGroup = this.fb.group({
-    name: ['', [Validators.required, Validators.minLength(1), Validators.maxLength(50)]],
+    name: ['', [Validators.required, Validators.minLength(2), Validators.maxLength(50)]],
     email: ['', [Validators.required, Validators.email]],
-    phone: ['', [Validators.required, Validators.pattern('[0-9]{10}')]],
-    message: ['', [Validators.required, Validators.minLength(1), Validators.maxLength(500)]],
+    phone: ['', [Validators.required, Validators.pattern('^[0-9]{10,14}$')]],
+    message: ['', [Validators.required, Validators.minLength(10), Validators.maxLength(500)]],
   });
+
+  // Método para verificar si un campo es inválido
+  isFieldInvalid(fieldName: string): boolean {
+    const field = this.form.get(fieldName);
+    return field ? field.invalid && (field.dirty || field.touched) : false;
+  }
+
+  // Método para obtener el mensaje de error específico
+  getFieldError(fieldName: string): string {
+    const field = this.form.get(fieldName);
+    if (field && field.errors && (field.dirty || field.touched)) {
+      if (field.errors['required']) return `${this.getFieldLabel(fieldName)} es requerido`;
+      if (field.errors['email']) return 'Correo electrónico inválido';
+      if (field.errors['pattern'] && fieldName === 'phone') return 'El teléfono debe contener entre 10 y 14 dígitos';
+      if (field.errors['minlength']) {
+        const requiredLength = field.errors['minlength'].requiredLength;
+        if (fieldName === 'message') return `El mensaje debe tener mínimo ${requiredLength} caracteres`;
+        return `${this.getFieldLabel(fieldName)} debe tener mínimo ${requiredLength} caracteres`;
+      }
+      if (field.errors['maxlength']) {
+        const maxLength = field.errors['maxlength'].requiredLength;
+        return `${this.getFieldLabel(fieldName)} debe tener máximo ${maxLength} caracteres`;
+      }
+    }
+    return '';
+  }
+
+  // Método helper para obtener etiquetas de campos
+  private getFieldLabel(fieldName: string): string {
+    const labels: {[key: string]: string} = {
+      'name': 'El nombre',
+      'email': 'El email',
+      'phone': 'El teléfono',
+      'message': 'El mensaje'
+    };
+    return labels[fieldName] || fieldName;
+  }
 
   submitForm() {
     if(this.form.valid){
@@ -46,10 +83,10 @@ export class Contact {
       this.router.navigate(['/home']);
     }
     else{
-      console.log('invalid');
-      this.toastr.error('Complete los campos requeridos');
+      // Marcar todos los campos como touched para mostrar errores
+      this.form.markAllAsTouched();
+      this.toastr.error('Complete los campos requeridos correctamente');
     }
-
   }
 
 }

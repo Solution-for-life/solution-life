@@ -24,27 +24,47 @@
                   <form [formGroup]="form" class="space-y-6">
                     <div class="flex flex-col">
                       <div class="mt-2 relative">
-                        <input formControlName="name" id="name" type="text"  required class="block w-full border rounded-md bg-[#1a2433] px-3 py-2.5 text-base  outline-1 -outline-offset-1 outline-white/10 placeholder:text-gray-700 focus:outline-2 focus:-outline-offset-2 focus:outline-[#fff] sm:text-sm/6" />
+                        <input formControlName="name" id="name" type="text" required
+                               [class]="'block w-full border rounded-md bg-[#1a2433] px-3 py-2.5 text-base outline-1 -outline-offset-1 placeholder:text-gray-700 focus:outline-2 focus:-outline-offset-2 sm:text-sm/6 ' +
+                                       (isFieldInvalid('name') ? 'border-red-500 outline-red-500/10 focus:outline-red-500' : 'outline-white/10 focus:outline-[#fff]')" />
                         <label for="name" class="font-semibold text-left text-gray-200">{{"contact.form.name" | translate}}</label>
                       </div>
-                    </div>
-                    <div class="flex flex-col">
-                      <div class="mt-2 relative">
-                        <input formControlName="email" id="email" type="text" name="email" required class="block w-full rounded-md bg-[#1a2433] px-3 py-2.5 border  outline-1 -outline-offset-1 outline-white/10 placeholder:text-gray-500 focus:outline-2 focus:-outline-offset-2 focus:outline-[#fff] sm:text-sm/6" />
-                        <label for="email" class="font-semibold text-left text-gray-200">{{"contact.form.email" | translate}}</label>
+                      <div *ngIf="isFieldInvalid('name')" class="mt-1 text-red-400 text-sm">
+                        {{ getFieldError('name') }}
                       </div>
                     </div>
                     <div class="flex flex-col">
                       <div class="mt-2 relative">
-                        <input formControlName="phone" id="phone" type="text" name="phone" required  class="block w-full border rounded-md bg-[#1a2433] px-3 py-2.5 text-base  outline-1 -outline-offset-1 outline-white/10 placeholder:text-gray-500 focus:outline-2 focus:-outline-offset-2 focus:outline-[#fff] sm:text-sm/6" />
+                        <input formControlName="email" id="email" type="email" name="email" required
+                               [class]="'block w-full rounded-md bg-[#1a2433] px-3 py-2.5 border outline-1 -outline-offset-1 placeholder:text-gray-500 focus:outline-2 focus:-outline-offset-2 sm:text-sm/6 ' +
+                                       (isFieldInvalid('email') ? 'border-red-500 outline-red-500/10 focus:outline-red-500' : 'outline-white/10 focus:outline-[#fff]')" />
+                        <label for="email" class="font-semibold text-left text-gray-200">{{"contact.form.email" | translate}}</label>
+                      </div>
+                      <div *ngIf="isFieldInvalid('email')" class="mt-1 text-red-400 text-sm">
+                        {{ getFieldError('email') }}
+                      </div>
+                    </div>
+                    <div class="flex flex-col">
+                      <div class="mt-2 relative">
+                        <input formControlName="phone" id="phone" type="tel" name="phone" required maxlength="14"
+                               [class]="'block w-full border rounded-md bg-[#1a2433] px-3 py-2.5 text-base outline-1 -outline-offset-1 placeholder:text-gray-500 focus:outline-2 focus:-outline-offset-2 sm:text-sm/6 ' +
+                                       (isFieldInvalid('phone') ? 'border-red-500 outline-red-500/10 focus:outline-red-500' : 'outline-white/10 focus:outline-[#fff]')" />
                         <label for="phone" class="font-semibold text-left text-gray-200">{{"contact.form.phone" | translate}}</label>
+                      </div>
+                      <div *ngIf="isFieldInvalid('phone')" class="mt-1 text-red-400 text-sm">
+                        {{ getFieldError('phone') }}
                       </div>
                     </div>
 
                     <div class="flex flex-col mb-10">
                       <div class="mt-2 relative">
-                        <textarea formControlName="message" id="message" type="text" name="message" required  class="block w-full border rounded-md bg-[#1a2433] px-3 py-2.5 text-base  outline-1 -outline-offset-1 outline-white/10 placeholder:text-gray-500 focus:outline-2 focus:-outline-offset-2 focus:outline-[#fff] sm:text-sm/6"></textarea>
+                        <textarea formControlName="message" id="message" name="message" required rows="4" maxlength="500"
+                                  [class]="'block w-full border rounded-md bg-[#1a2433] px-3 py-2.5 text-base outline-1 -outline-offset-1 placeholder:text-gray-500 focus:outline-2 focus:-outline-offset-2 sm:text-sm/6 ' +
+                                          (isFieldInvalid('message') ? 'border-red-500 outline-red-500/10 focus:outline-red-500' : 'outline-white/10 focus:outline-[#fff]')"></textarea>
                         <label for="message" class="font-semibold text-left text-gray-200">{{"contact.form.message" | translate}}</label>
+                      </div>
+                      <div *ngIf="isFieldInvalid('message')" class="mt-1 text-red-400 text-sm">
+                        {{ getFieldError('message') }}
                       </div>
                     </div>
 
