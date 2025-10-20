@@ -8,7 +8,7 @@ import { Component } from '@angular/core';
   styleUrl: './whatsapp-button.css'
 })
 export class WhatsappButton {
-  private phoneNumber = '573014782081'; // El número en formato internacional
+  private phoneNumber = '+17706392929'; // El número en formato internacional
   private message = 'Hola, quiero más información'; // mensaje opcional
 
   openWhatsApp() {

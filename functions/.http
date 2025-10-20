@@ -1,0 +1,12 @@
+### Probar conexión SMTP
+GET https://us-central1-solution-for-life.cloudfunctions.net/testSMTPConnection
+
+### Enviar email de prueba
+POST https://us-central1-solution-for-life.cloudfunctions.net/sendTestEmail
+Content-Type: application/json
+
+{
+  "to": "jeinerarenas435@gmail.com",
+  "subject": "Prueba desde VS Code",
+  "message": "Este es un email de prueba"
+}
