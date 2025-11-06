@@ -79,8 +79,23 @@ export class Contact {
   submitForm() {
     if(this.form.valid){
       const data = this.form.value;
-      this.db.setItem('clients', data);
-      this.router.navigate(['/home']);
+      this.db.setItem('clients', data)
+        .then(() => {
+          // Mostrar mensaje de éxito
+          this.toastr.success('¡Mensaje enviado con éxito!', 'Éxito');
+          // Limpiar el formulario
+          this.form.reset();
+          // Remover estado touched/dirty de todos los campos
+          Object.keys(this.form.controls).forEach(key => {
+            const control = this.form.get(key);
+            control?.markAsUntouched();
+            control?.markAsPristine();
+          });
+        })
+        .catch(error => {
+          this.toastr.error('Ocurrió un error al enviar el mensaje', 'Error');
+          console.error('Error al guardar los datos:', error);
+        });
     }
     else{
       // Marcar todos los campos como touched para mostrar errores

@@ -5,6 +5,15 @@ import { RouterLink } from '@angular/router';
 import { Footer } from "../../../components/footer/footer";
 import { TranslateModule } from '@ngx-translate/core';
 
+interface TeamMember {
+  name: string;
+  role: string;
+  img?: string;
+  twitter: string;
+  instagram: string;
+  facebook: string;
+}
+
 @Component({
   selector: 'app-about-us',
   imports: [
@@ -18,5 +27,30 @@ import { TranslateModule } from '@ngx-translate/core';
   styleUrl: './about-us.css'
 })
 export class AboutUs {
-
+  teamMembers: TeamMember[] = [
+    {
+      name: 'Juneth Romero',
+      role: 'CEO & Fundadora',
+      img: '/assets/images/img_juneth.png',
+      twitter: 'https://twitter.com/juanperez',
+      instagram: 'https://instagram.com/juanperez',
+      facebook: 'https://facebook.com/juanperez'
+    },
+    {
+      name: 'Carolina Romero',
+      role: 'Asistente Administrativa',
+      // Sin imagen, mostrará la inicial 'M'
+      twitter: 'https://twitter.com/mariagonzalez',
+      instagram: 'https://instagram.com/mariagonzalez',
+      facebook: 'https://facebook.com/mariagonzalez'
+    },
+    {
+      name: 'Geraldine Romero',
+      role: 'Marketing digital',
+      img: '/assets/images/geral_img.jpg',
+      twitter: 'https://twitter.com/carlosrodriguez',
+      instagram: 'https://instagram.com/carlosrodriguez',
+      facebook: 'https://facebook.com/carlosrodriguez'
+    }
+  ];
 }

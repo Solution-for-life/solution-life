@@ -7,22 +7,19 @@
   </div>
 
   <!-- Main footer content -->
-  <div class="relative max-w-7xl mx-auto px-6 py-16 sm:py-20 z-2 lg:px-8">
+  <div class="relative max-w-7xl mx-auto px-6 py-12 z-2 lg:px-8">
     <!-- Grid layout -->
-    <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-12">
-
+    <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-8">
       <!-- Logo/Name section with interactive effect -->
-      <div class="group border-b pb-10 border-gray-800 sm:border-b-0">
-        <div class="flex items-center justify-center mb-6">
+      <div class="group border-b border-gray-800 sm:border-b-0 pb-6">
+        <div class="flex items-center justify-center mb-4">
           <div class="w-auto rounded-lg flex items-center justify-center transform group-hover:rotate-12 transition duration-500">
-            <img src="/assets/images/logo-negative (1).svg" alt="" class="h-30 w-40" />
+            <img src="/assets/images/logo-negative (1).svg" alt="" class="h-28 w-36 object-contain" />
           </div>
-
         </div>
-        <p class="text-gray-300 mb-6 text-center sm:text-start">Innovating digital experiences one line of code at a time.</p>
-
+        <p class="text-gray-300 mb-4 text-center sm:text-start px-2 line-clamp-2">Innovating digital experiences one line of code at a time.</p>
         <!-- Social media with hover glow -->
-        <div class="flex space-x-4">
+        <div class="flex space-x-4 justify-center sm:justify-start">
           <a href="https://www.instagram.com/solutionsforlifeatl?igsh=MWdvY2NxaDk0eTd1cg==" target="_blank" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-sky-500 hover:shadow-lg hover:shadow-sky-500/30 transition-all duration-300">
             <span class="fa-brands fa-instagram text-xl"></span>
           </a>
@@ -33,68 +30,67 @@
       </div>
 
       <!-- Quick links with hover effect -->
-      <div class="md:border-r md:border-gray-800">
-        <h3 class="text-lg font-semibold mb-6 relative inline-block">
+      <div class="md:border-r md:border-gray-800 md:px-4">
+        <h3 class="text-lg font-semibold mb-4 relative inline-block">
           <span class="relative z-10">{{"footer.quick links" | translate}}</span>
           <span class="absolute bottom-0 left-0 w-full h-1 bg-blue-500 transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-300"></span>
         </h3>
-        <ul class="space-y-3">
+        <ul class="space-y-2">
           <li><a href="#" class="text-gray-300 hover:text-white hover:pl-2 transition-all duration-300 flex items-center">
             <span class="w-1 h-1 bg-blue-500 rounded-full mr-2 opacity-0 group-hover:opacity-100 transition duration-300"></span>
             {{ "footer.home" | translate}}</a></li>
           <li><a href="#" class="text-gray-300 hover:text-white hover:pl-2 transition-all duration-300 flex items-center">
             <span class="w-1 h-1 bg-blue-500 rounded-full mr-2 opacity-0 group-hover:opacity-100 transition duration-300"></span>
             {{"footer.Services" | translate}}</a></li>
-
         </ul>
       </div>
 
       <!-- Contact info with animated icons -->
-      <div class="md:border-r md:border-gray-800">
-        <h3 class="text-lg font-semibold mb-6">{{"footer.get in touch" | translate}}</h3>
-        <ul class="space-y-4">
+      <div class="md:border-r md:border-gray-800 md:px-4">
+        <h3 class="text-lg font-semibold mb-4 truncate">{{"footer.get in touch" | translate}}</h3>
+        <ul class="space-y-3">
           <li class="flex items-start">
-            <div class="flex-shrink-0 mt-1">
+            <div class="flex-shrink-0">
               <div class="w-8 h-8 bg-slate-200 rounded-full flex items-center justify-center animate-pulse">
                 <span class="fa-solid fa-envelope text-[#07a248]"></span>
               </div>
             </div>
-            <div class="ml-3">
-              <p class="text-sm text-gray-300">{{"footer.email" | translate}}</p>
-              <a href="mailto:manueljosedala@hotmail.com" class="text-white hover:text-[#07a248] transition">info@solutionsforlife.com</a>
+            <div class="ml-3 min-w-0"> <!-- añadido min-w-0 para que el texto se ajuste -->
+              <p class="text-sm text-gray-300 truncate">{{"footer.email" | translate}}</p>
+              <a href="mailto:asistentesolutionsforlife@gmail.com" class="text-white hover:text-[#07a248] transition block truncate">asistentesolutionsforlife@gmail.com</a>
             </div>
           </li>
           <li class="flex items-start">
-            <div class="flex-shrink-0 mt-1">
+            <div class="flex-shrink-0">
               <div class="w-8 h-8 rounded-full bg-slate-200 flex items-center justify-center animate-pulse" style="animation-delay: 0.2s">
                 <span class="fa-solid fa-phone text-[#07a248]"></span>
               </div>
             </div>
-            <div class="ml-3">
-              <p class="text-sm text-gray-300">{{"footer.phone" | translate}}</p>
-              <a href="tel:+244941540352" class="text-white  hover:text-[#07a248]  transition">+244 941 540 352</a>
+            <div class="ml-3 min-w-0"> <!-- añadido min-w-0 para que el texto se ajuste -->
+              <p class="text-sm text-gray-300 truncate">{{"footer.phone" | translate}}</p>
+              <a href="tel:+244941540352" class="text-white hover:text-[#07a248] transition block truncate">+244 941 540 352</a>
             </div>
           </li>
         </ul>
       </div>
 
       <!-- Newsletter with floating input -->
-      <div class="flex flex-col justify-between min-h-70">
+      <div class="flex flex-col justify-between h-full md:px-4">
         <div>
-          <h3 class="text-lg font-semibold mb-6">{{"footer.Stay Updated" | translate}}</h3>
-          <p class="text-gray-300 mb-4">{{"footer.newsletter" | translate}}</p>
-          <form class="mt-4">
+          <h3 class="text-lg font-semibold mb-4 truncate">{{"footer.Stay Updated" | translate}}</h3>
+          <p class="text-gray-300 mb-3 line-clamp-2">{{"footer.newsletter" | translate}}</p>
+          <form class="mt-3">
             <div class="relative">
-              <input type="email" [placeholder]="'footer.placeholder' | translate" class="w-full bg-gray-800 border border-gray-700 rounded-lg py-3 px-4 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent placeholder-gray-500 text-white">
-              <button type="submit" class="absolute right-2 top-1/2 transform -translate-y-1/2 bg-[#09b850] hover:bg-[#07a248]  text-white rounded-lg px-4 py-1 transition">
-                <span class="fa-solid fa-arrow-right"></span>
-              </button>
+              <a [routerLink]="['/contact']" class="inline-block bg-[#09b850] hover:bg-[#07a248] text-white rounded-lg px-4 py-2 transition whitespace-nowrap">
+                Contactanos
+                <span class="fa-solid fa-arrow-right ml-2"></span>
+              </a>
             </div>
           </form>
         </div>
-        <div class="flex justify-end text-xs">
-          <button (click)="switchLang('es')" class="text-white p-2 cursor-pointer">🇪🇸 ES</button>
-          <button (click)="switchLang('en')" class="text-white p-2 cursor-pointer">🇬🇧 EN</button>
+        <div class="flex justify-end text-xs mt-4">
+          <button (click)="switchLang('es')" class="text-white p-2 cursor-pointer whitespace-nowrap">🇪🇸 ES</button>
+          <button (click)="switchLang('en')" class="text-white p-2 cursor-pointer whitespace-nowrap">🇬🇧 EN</button>
         </div>
       </div>
     </div>

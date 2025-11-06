@@ -3,20 +3,38 @@
     #carousel
     class="flex gap-4">
 
-    <div *ngFor="let item of displayItems" class="w-[295px] flex-shrink-0 bg-[#1a2433] text-white shadow-md rounded-lg p-4">
-      <div class="mb-6 flex py-2">
+    <div *ngFor="let item of displayItems"
+      class="w-[295px] h-[280px] flex-shrink-0 bg-[#1a2433] text-white shadow-md rounded-lg p-4 flex flex-col items-center justify-start relative hover:shadow-xl transition-all duration-300"
+      (mouseenter)="onMouseEnter(item)"
+      (mouseleave)="onMouseLeave(item)">      <!-- Imagen o letra -->
+      <div class="mb-2 flex items-center justify-center w-16 h-16 rounded-full bg-gray-700 overflow-hidden">
+        <ng-container *ngIf="item.img; else noImage">
+          <img [src]="item.img" alt="" class="w-16 h-16 object-cover rounded-full" />
+        </ng-container>
+        <ng-template #noImage>
+          <span class="text-3xl font-bold text-white">
+            {{ item.name ? item.name.charAt(0).toUpperCase() : '?' }}
+          </span>
+        </ng-template>
+      </div>
 
-        <span class="fa fa-star text-[#64DD17] mr-2" aria-hidden="true"></span>
-        <span class="fa fa-star text-[#64DD17] mr-2" aria-hidden="true"></span>
-        <span class="fa fa-star text-[#64DD17] mr-2" aria-hidden="true"></span>
-        <span class="fa fa-star text-[#64DD17] mr-2" aria-hidden="true"></span>
-        <span class="fa fa-star text-[#64DD17] mr-2" aria-hidden="true"></span>
+      <!-- Nombre -->
+      <span class="font-semibold mb-2 text-lg text-center">{{ item.name }}</span>
+
+      <!-- Estrellas -->
+      <div class="mb-2 flex justify-center py-1">
+        <span class="fa fa-star text-yellow-400 mr-1" aria-hidden="true" *ngFor="let star of [1,2,3,4,5]"></span>
       </div>
-      <p class="text-gray-500">{{ item.title }}</p>
-      <div class="flex  items-center justify-between py-2">
-        <img src="{{ item.img }}" alt="" class="rounded w-16 h-16 object-cover" />
+
+      <!-- Descripción con "Leer más" -->
+      <div class="w-full text-gray-300 text-sm text-center">
+        <span>
+          {{ item.title.length > 100 && !item.showMore ? (item.title | slice:0:100) + '...' : item.title }}
+        </span>
+        <button *ngIf="item.title.length > 100" class="text-yellow-400 underline ml-1" (click)="item.showMore = !item.showMore">
+          {{ item.showMore ? 'Leer menos' : 'Leer más' }}
+        </button>
       </div>
-      <span class="font-semibold">{{ item.name }}</span>
     </div>
 
   </div>
