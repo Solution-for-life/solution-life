@@ -1,31 +1,101 @@
 
 <app-header></app-header>
 
-<div class="color-primary min-h-dvh w-full h-fit p-2 sm:p-5 pb-28 relative">
-  <div class="absolute top-0 left-0 w-full h-full z-1 overflow-hidden opacity-50">
-    <div class="absolute top-20 left-10 w-32 h-32 bg-[#09b850]  rounded-full filter blur-3xl animate-float1"></div>
-    <div class="absolute top-40 right-20 w-40 h-40 bg-purple-500 rounded-full filter blur-3xl animate-float2"></div>
-    <div class="absolute bottom-10 left-1/2 w-48 h-48 bg-cyan-500 rounded-full filter blur-3xl animate-float3"></div>
+<div class="color-primary min-h-dvh w-full">
+  <!-- Header section with main service info -->
+  <div class="relative w-full text-white py-16">
+    <div class="absolute top-0 left-0 w-full h-full z-1 overflow-hidden opacity-50">
+      <div class="absolute top-20 left-10 w-32 h-32 bg-[#09b850] rounded-full filter blur-3xl animate-float1"></div>
+      <div class="absolute top-40 right-20 w-40 h-40 bg-purple-500 rounded-full filter blur-3xl animate-float2"></div>
+      <div class="absolute bottom-10 left-1/2 w-48 h-48 bg-cyan-500 rounded-full filter blur-3xl animate-float3"></div>
+    </div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid lg:grid-cols-2 gap-8 items-start">
+        <!-- Left side with content -->
+        <div class="relative">
+          <h1 class="text-4xl lg:text-5xl font-bold mb-6 text-[#64dd17]">{{ service?.title?.[this.langService.getLang()] | titlecase}}</h1>
+          <p class="text-lg text-gray-300 mb-6">{{ service?.briefDescription?.[this.langService.getLang()] }}</p>
+
+          <!-- Quick access icons -->
+          <div class="flex flex-col gap-4 mt-8">
+            <div class="flex items-center gap-4 bg-gray-800/50 p-4 rounded-xl hover:bg-gray-800 transition-all transform hover:-translate-x-2">
+              <div class="w-12 h-12 rounded-full bg-[#09b850]/10 flex items-center justify-center">
+                <span class="fa fa-building text-[#09b850] text-xl"></span>
+              </div>
+              <div>
+                <span class="text-white font-medium">{{ "service.canales_atencion" | translate }}</span>
+                <p class="text-sm text-gray-400">{{ "service.canales_atencion_desc" | translate }}</p>
+              </div>
+            </div>
+
+            <div class="flex items-center gap-4 bg-gray-800/50 p-4 rounded-xl hover:bg-gray-800 transition-all transform hover:-translate-x-2">
+              <div class="w-12 h-12 rounded-full bg-[#09b850]/10 flex items-center justify-center">
+                <span class="fa fa-credit-card text-[#09b850] text-xl"></span>
+              </div>
+              <div>
+                <span class="text-white font-medium">{{ "service.canales_atencion2" | translate }}</span>
+                <p class="text-sm text-gray-400">{{ "service.canales_atencion2_desc" | translate }}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right side with dynamic image -->
+        <div class="relative">
+          <div class="relative w-full h-[500px] rounded-2xl overflow-hidden">           
+            <img [src]="serviceImage" [alt]="service?.title?.[this.langService.getLang()]"
+                 class="w-full h-full object-contain"  />
+          </div>
+        </div>
+      </div>
+
+      <!-- Description section below -->
+      <div class="mt-12 p-6 bg-gray-800/50 rounded-xl">
+        <p class="text-gray-300 leading-relaxed">{{ service?.longDescription?.[this.langService.getLang()] }}</p>
+      </div>
+
+
   </div>
 
-  <div class="flex flex-col items-center max-w-7xl relative z-2 mx-auto pt-10 w-full h-full">
-      <h1 class="lg:text-5xl text-3xl font-bold text-center mb-10 mt-6 text-slate-200">{{ service?.title?.[this.langService.getLang()] | titlecase}}</h1>
-      <p class="p-3 text-gray-400 lg:text-xl">{{ service?.briefDescription?.[this.langService.getLang()] }}</p>
-      <p class="p-3 text-gray-400 lg:text-xl mb-6">{{ service?.longDescription?.[this.langService.getLang()] }}</p>
+  <!-- Services Grid Section -->
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+    <h2 class="text-2xl lg:text-3xl font-bold text-white text-center mb-12">Conoce cómo te acompañamos</h2>
 
-      <div class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-10 mt-10 p-6">
-        @for (item of this.service?.subServices; track $index) {
-          <div class="bg-gray-800 border-t-[#09b850] border-t-3 rounded-sm hover:bg-gray-700  hover:scale-102 duration-700  p-5">
-            <figure class="w-10 h-10  p-2 text-[#09b850]  rounded-md mb-2">
-              <span class="fa-solid text-3xl" [ngClass]="item?.icon"></span>
-            </figure>
-            <h4 class="py-2 text-white font-bold text-xl">{{ item?.title?.[this.langService.getLang()] | titlecase}}</h4>
-            <p class="text-md leading-7 text-gray-300  font-light space-y-4">{{ item?.briefDescription?.[this.langService.getLang()] }}</p>
-            <p class="text-xs text-gray-400 space-y-4 mb-4">{{ item?.longDescription?.[this.langService.getLang()] }}</p>
-            <button type="button" [routerLink]="['/contact']" class="bg-[#09b850] hover:bg-[#07a248] text-white font-bold py-2 px-4 rounded cursor-pointer transition duration-300 transform hover:-translate-y-1 hover:scale-110">Contactanos</button>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+      @for (item of this.service?.subServices; track $index) {
+        <div class="bg-gray-800 rounded-lg p-6 hover:bg-gray-700 transition-all duration-300 group border-t-[#09b850] border-t-3">
+          <!-- Icon Container -->
+          <div class="mb-6 transition-transform duration-300 group-hover:scale-110">
+            <div class="w-16 h-16 flex items-center justify-center mx-auto">
+              <span class="fa-solid text-3xl text-[#09b850]" [ngClass]="item?.icon"></span>
+            </div>
           </div>
-        }
-      </div>
+
+          <!-- Content -->
+          <div class="text-center">
+            <h3 class="text-xl font-bold text-white mb-3">
+              {{ item?.title?.[this.langService.getLang()] | titlecase}}
+            </h3>
+            <p class="text-gray-300 mb-4">
+              {{ item?.briefDescription?.[this.langService.getLang()] }}
+            </p>
+            <div class="h-0 overflow-hidden group-hover:h-auto group-hover:mt-4 transition-all duration-300">
+              <p class="text-sm text-gray-400">
+                {{ item?.longDescription?.[this.langService.getLang()] }}
+              </p>
+            </div>
+            <button type="button" [routerLink]="['/contact']"
+                    class="mt-4 bg-[#09b850] hover:bg-[#07a248] text-white font-bold py-2 px-4 rounded
+                           transition duration-300 transform hover:-translate-y-1 hover:scale-110">
+              Contáctanos
+              <span class="fa fa-arrow-right ml-2"></span>
+            </button>
+          </div>
+        </div>
+      }
+    </div>
   </div>
 </div>
+<app-whatsapp-button></app-whatsapp-button>
 <app-footer></app-footer>

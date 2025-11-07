@@ -82,6 +82,12 @@
     "description": "Con nosotros encontrarás no solo un servicio, sino un aliado que trabaja contigo para proteger tu futuro, alcanzar tus metas y hacer más simple todo lo que parecía complicado. En Solutions for Life creemos que cada persona merece vivir con tranquilidad, confianza y seguridad.",
     "description2": "Somos una empresa dedicada a brindar soluciones fáciles, eficientes y personalizadas en seguros, impuestos, inmigración y bienes raíces. Nuestro compromiso es acompañarte en cada paso importante de tu vida, ofreciendo asesoría profesional, atención cercana y resultados que marcan la diferencia."
   },
+  "service": {
+    "canales_atencion" : "Canales de atención",
+    "canales_atencion_desc": "WhatsApp, Formulario de contacto, líneas telefónicas",
+    "canales_atencion2" : "La mejor asesoría",
+    "canales_atencion2_desc": "Disponibles 24/7, aprovecha las temporadas de impuestos, y los mejores planes médicos etc."
+    },
   "contact": {
   "title": "Contáctanos",
     "title-description": "¡Necesitas ayuda, estamos para atenderte!",

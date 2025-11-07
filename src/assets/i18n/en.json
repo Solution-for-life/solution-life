@@ -83,6 +83,12 @@
     "description": "With us, you'll find not just a service, but a partner who works with you to protect your future, achieve your goals, and simplify everything that seemed complicated. At Solutions for Life, we believe that every person deserves to live with peace of mind, confidence, and security.",
     "description2": "We are a company dedicated to providing easy, efficient, and personalized solutions in insurance, taxes, immigration, and real estate. Our commitment is to support you through every important step of your life, offering professional advice, personal attention, and results that make a difference."
   },
+  "service": {
+    "canales_atencion" : "Channels of attention",
+    "canales_atencion_desc": "WhatsApp, Contact form, phone lines",
+    "canales_atencion2" : "The best advice",
+    "canales_atencion2_desc": "Available 24/7, take advantage of tax seasons, and the best medical plans, etc."
+    },
   "contact": {
     "title": "Contact us",
     "title-description": "Need help? We're here to help!",

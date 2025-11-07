@@ -46,6 +46,25 @@ export class Header {
 
   closeDropdown() {
     this.isOpen.set(false);
+    // Cerrar el menú desplegable de escritorio
+    const desktopMenu = document.getElementById('desktop-menu-product') as HTMLElement;
+    if (desktopMenu) {
+      desktopMenu.removeAttribute('open');
+    }
+    // Cerrar el menú móvil y su desplegable
+    const mobileMenu = document.getElementById('mobile-menu') as HTMLDialogElement;
+    const productsDisclosure = document.getElementById('products') as HTMLElement;
+    if (mobileMenu) {
+      mobileMenu.close();
+    }
+    if (productsDisclosure) {
+      productsDisclosure.setAttribute('hidden', '');
+    }
+  }
+
+  onServiceClick() {
+    // Cerrar todos los menús desplegables
+    this.closeDropdown();
   }
 
   async getServices() {

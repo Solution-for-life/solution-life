@@ -4,6 +4,7 @@ import { Header } from '../../../components/header/header';
 import { RouterLink } from '@angular/router';
 import { Footer } from "../../../components/footer/footer";
 import { TranslateModule } from '@ngx-translate/core';
+import { WhatsappButton } from "../whatsapp-button/whatsapp-button";
 
 interface TeamMember {
   name: string;
@@ -21,7 +22,8 @@ interface TeamMember {
     TranslateModule,
     Header,
     RouterLink,
-    Footer
+    Footer,
+    WhatsappButton
 ],
   templateUrl: './about-us.html',
   styleUrl: './about-us.css'
