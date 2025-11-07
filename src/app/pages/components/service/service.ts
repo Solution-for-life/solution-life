@@ -47,6 +47,7 @@ export class Service {
     // Añade más mapeos según tus servicios
   };
 
+  
   async getService() : Promise<ServiceInterface | null> {
     return await this.db.getItemByUrl('services', this.url!);
   }
