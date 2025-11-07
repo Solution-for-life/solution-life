@@ -41,7 +41,7 @@ export class Service {
   // Mapeo de URLs a imágenes
   private serviceImages: { [key: string]: string } = {
     'insurance': '/assets/images/Hero-Seguros-de-salud.webp',
-    'taxes': '/assets/images/taxes_new.png',
+    'taxes': '/assets/images/taxes_new2.png',
     'real-estate': '/assets/images/bienes_r.webp',
     'immigration': '/assets/images/inmigraciones.jpg',
     // Añade más mapeos según tus servicios

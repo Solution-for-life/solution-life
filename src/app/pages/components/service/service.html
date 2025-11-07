@@ -4,16 +4,12 @@
 <div class="color-primary min-h-dvh w-full">
   <!-- Header section with main service info -->
   <div class="relative w-full text-white py-16">
-    <div class="absolute top-0 left-0 w-full h-full z-1 overflow-hidden opacity-50">
-      <div class="absolute top-20 left-10 w-32 h-32 bg-[#09b850] rounded-full filter blur-3xl animate-float1"></div>
-      <div class="absolute top-40 right-20 w-40 h-40 bg-purple-500 rounded-full filter blur-3xl animate-float2"></div>
-      <div class="absolute bottom-10 left-1/2 w-48 h-48 bg-cyan-500 rounded-full filter blur-3xl animate-float3"></div>
-    </div>
+    
 
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="grid lg:grid-cols-2 gap-8 items-start">
         <!-- Left side with content -->
-        <div class="relative">
+        <div class="">
           <h1 class="text-4xl lg:text-5xl font-bold mb-6 text-[#64dd17]">{{ service?.title?.[this.langService.getLang()] | titlecase}}</h1>
           <p class="text-lg text-gray-300 mb-6">{{ service?.briefDescription?.[this.langService.getLang()] }}</p>
 

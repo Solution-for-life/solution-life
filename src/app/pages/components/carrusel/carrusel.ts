@@ -32,7 +32,7 @@ export class CarruselComponent implements OnInit, OnDestroy {
       showMore: false
     },
     {
-      title: 'Como agente inmobiliario, he trabajado con muchas empresas, pero el servicio de Solutions for Life en la gestión de propiedades y seguros es excepcional. Su atención al detalle y conocimiento del mercado ayudó a mis clientes a tomar las mejores decisiones.',
+      title: 'Ha sido un verdadero placer trabajar con Juneth Romero y su equipo de Solutions for Life . Gracias a su apoyo, pudimos llevar adelante nuestro sueño de abrir un restaurante. Su asesoría, compromiso y profesionalismo hicieron de este proceso una experiencia clara y exitosa. Estamos muy agradecidos y confiamos en seguir contando con ellos para futuros proyectos. ¡Gracias por ayudarnos a construir un gran futuro!.',
       name: 'Ana Martínez',
       img: '',
       showMore: false

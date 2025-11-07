@@ -4,7 +4,7 @@
     class="flex gap-4">
 
     <div *ngFor="let item of displayItems"
-      class="w-[295px] h-[280px] flex-shrink-0 bg-[#1a2433] text-white shadow-md rounded-lg p-4 flex flex-col items-center justify-start relative hover:shadow-xl transition-all duration-300"
+      class="w-[295px] h-auto flex-shrink-0 bg-[#1a2433] text-white shadow-md rounded-lg p-4 flex flex-col items-center justify-start relative hover:shadow-xl transition-all duration-300"
       (mouseenter)="onMouseEnter(item)"
       (mouseleave)="onMouseLeave(item)">      <!-- Imagen o letra -->
       <div class="mb-2 flex items-center justify-center w-16 h-16 rounded-full bg-gray-700 overflow-hidden">
@@ -29,9 +29,9 @@
       <!-- Descripción con "Leer más" -->
       <div class="w-full text-gray-300 text-sm text-center">
         <span>
-          {{ item.title.length > 100 && !item.showMore ? (item.title | slice:0:100) + '...' : item.title }}
+          {{ item.title.length > 170 && !item.showMore ? (item.title | slice:0:170) + '...' : item.title }}
         </span>
-        <button *ngIf="item.title.length > 100" class="text-yellow-400 underline ml-1" (click)="item.showMore = !item.showMore">
+        <button *ngIf="item.title.length > 170" class="text-yellow-400 underline ml-1" (click)="item.showMore = !item.showMore">
           {{ item.showMore ? 'Leer menos' : 'Leer más' }}
         </button>
       </div>
