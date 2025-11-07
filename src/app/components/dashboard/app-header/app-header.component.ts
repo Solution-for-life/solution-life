@@ -3,7 +3,6 @@ import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 import { SidebarService } from '../../../services/sidebar.service';
 import { ThemeToggleButtonComponent } from '../common/theme-toggle/theme-toggle-button.component';
-import { NotificationDropdownComponent } from './notification-dropdown/notification-dropdown.component';
 import { UserDropdownComponent } from './user-dropdown/user-dropdown.component';
 
 @Component({
@@ -11,8 +10,7 @@ import { UserDropdownComponent } from './user-dropdown/user-dropdown.component';
   imports: [
     CommonModule,
     RouterModule,
-    ThemeToggleButtonComponent,
-    NotificationDropdownComponent,
+    ThemeToggleButtonComponent,    
     UserDropdownComponent,
   ],
   templateUrl: './app-header.component.html',
