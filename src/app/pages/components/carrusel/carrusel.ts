@@ -20,9 +20,9 @@ export class CarruselComponent implements OnInit, OnDestroy {
 
   items: CarouselItem[] = [
     {
-      title: 'Excelente servicio en la gestión de mi seguro de vida. El equipo me ayudó a encontrar la mejor cobertura para mi familia y me explicaron todos los detalles de manera clara y profesional. El proceso fue rápido y sin complicaciones.',
-      name: 'María Rodriguez',
-      img: '',
+      title: 'En nuestras dos locaciones SFL nos han ayudado con la contabilidad y con los taxes de una manera excepcional, ellos son sumamente profesionales y sobre todo HONESTOS. Recomiendo ampliamente sus servicios y agradezco su interés en cada uno de los trámites que han gestionado para nosotros.',
+      name: 'Manuel Viggiano CEO Villano”s Tacos',
+      img: '/assets/images/Reseña_1.jpg',
       showMore: false
     },
     {
@@ -38,8 +38,8 @@ export class CarruselComponent implements OnInit, OnDestroy {
       showMore: false
     },
     {
-      title: 'El proceso de obtener un seguro médico parecía abrumador, pero el equipo me ayudó a encontrar el plan perfecto que se ajustaba a mis necesidades y presupuesto. Su seguimiento y atención al cliente son sobresalientes.',
-      name: 'David Thompson',
+      title: 'Llevo años con Juneth, y ella ha sido mi motor de vida. Amo su trabajo, siempre me ha guiado por el camino correcto para comprar casa y da lo mejor de sí en todo lo que hace. Gracias a ella he comprado dos casas, ¡y ya vamos por la tercera!, También quiero agradecerle por el excelente seguro médico que me brindó —sin duda, el mejor seguro de salud que he tenido. Gracias, Juneth, por tu esfuerzo, tu dedicación y por prepararme para cumplir mis metas. Te recomiendo al mundo entero porque eres la mejor en lo que haces. ¡Que Dios te bendiga siempre!',
+      name: 'Minerva Perez',
       img: '',
       showMore: false
     },
