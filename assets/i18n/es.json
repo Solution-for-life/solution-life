@@ -86,7 +86,9 @@
     "canales_atencion" : "Canales de atención",
     "canales_atencion_desc": "WhatsApp, Formulario de contacto, líneas telefónicas",
     "canales_atencion2" : "La mejor asesoría",
-    "canales_atencion2_desc": "Disponibles 24/7, aprovecha las temporadas de impuestos, y los mejores planes médicos etc."
+    "canales_atencion2_desc": "Disponibles 24/7, aprovecha las temporadas de impuestos, y los mejores planes médicos etc.",
+    "contact_button": "Contáctanos",
+    "title_2": "Descubre cómo te apoyamos"
     },
   "contact": {
   "title": "Contáctanos",
@@ -324,8 +326,8 @@
     "moreInfoText": "Puede obtener más información sobre las cookies: Cookies: ¿Qué hacen?.",
 
     "contactTitle": "Contáctenos",
-    "contactEmail": "Por correo electrónico: services@solutionsforlifeatl.com",
-    "contactAddress": "Por correo postal: 680 Hillcrest Rd NW, Lilburn, GA 30047, EE. UU."
+    "contactEmail": "Por correo electrónico: asistentesolutionsforlife@gmail.com",
+    "contactAddress": "Por correo postal: 680 Hillcrest Rd NW, Lilburn, GA 30047, ste. 300, EE. UU."
   },
   "about-us": {
     "title": "Somos una empresa independiente de soluciones integrales.",
