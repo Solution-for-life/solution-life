@@ -7,6 +7,7 @@ import { LanguageService } from '../../../services/language.service';
 import { TranslateModule, TranslateService } from '@ngx-translate/core';
 import { RouterLink } from '@angular/router';
 import { Footer } from '../../../components/footer/footer';
+import { WhatsappButton } from "../whatsapp-button/whatsapp-button";
 
 @Component({
   selector: 'app-services',
@@ -16,7 +17,8 @@ import { Footer } from '../../../components/footer/footer';
     TranslateModule,
     RouterLink,
     Footer,
-  ],
+    WhatsappButton
+],
   templateUrl: './services.html',
   styleUrl: './services.css'
 })

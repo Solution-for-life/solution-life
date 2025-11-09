@@ -3,6 +3,7 @@ import { Component, inject } from '@angular/core';
 import { Header } from '../../../components/header/header';
 import { Footer } from '../../../components/footer/footer';
 import { TranslateService, TranslateModule } from '@ngx-translate/core';
+import { WhatsappButton } from "../whatsapp-button/whatsapp-button";
 
 @Component({
   selector: 'app-privacy-and-policy',
@@ -10,8 +11,9 @@ import { TranslateService, TranslateModule } from '@ngx-translate/core';
     CommonModule,
     Header,
     Footer,
-    TranslateModule
-  ],
+    TranslateModule,
+    WhatsappButton
+],
   templateUrl: './privacy-and-policy.html',
   styles: ``
 })

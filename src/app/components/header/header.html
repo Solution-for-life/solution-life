@@ -62,10 +62,10 @@
       </div>
       <!-- <span  [routerLink]="['/company']" [routerLinkActive]="['tab-active']" class="p-2 rounded-sm text-sm/6 font-semibold text-white hover:bg-[#07a248] cursor-pointer">{{"header.company" | translate}}</span> -->
     </el-popover-group>
-    <div class="hidden lg:flex lg:flex-1 gap-10 lg:justify-end">
+    <div class="hidden lg:flex lg:flex-1 gap-5 lg:justify-end">
       <!-- <span (click)="router.navigate(['login'])" class="p-2 rounded-sm text-sm/6 font-semibold text-white hover:bg-[#07a248]">{{"Login" | translate}} <span aria-hidden="true">&rarr;</span></span> -->
       <app-theme-toggle-button />
-      <button popovertarget="menu-language">
+      <button popovertarget="menu-language" class="hover:bg-gray-100 dark:hover:bg-gray-800 rounded-lg p-2">
         <span class="fa-solid fa-globe"></span>
         <span class="fa-solid fa-chevron-down text-xs"></span>
       </button>
