@@ -1,4 +1,4 @@
-<footer class="relative bg-gradient-to-br  color-primary text-white overflow-hidden">
+<footer class="relative bg-gradient-to-br  theme-bg theme-text overflow-hidden">
   <!-- Animated background elements -->
   <div class="absolute top-0 left-0 w-full h-full z-1 overflow-hidden opacity-30">
     <div class="absolute top-20 left-10 w-32 h-32 bg-blue-500 rounded-full filter blur-3xl animate-float1"></div>
@@ -14,16 +14,16 @@
       <div class="group border-b border-gray-800 sm:border-b-0 pb-6">
         <div class="flex items-center justify-center mb-4">
           <div class="w-auto rounded-lg flex items-center justify-center transform group-hover:rotate-12 transition duration-500">
-            <img src="/assets/images/logo-negative (1).svg" alt="" class="h-28 w-36 object-contain" />
+            <img src="/assets/images/logo-white-background (2).svg" alt="" class="h-28 w-36 object-contain" />
           </div>
         </div>
-        <p class="text-gray-300 mb-4 text-center sm:text-start px-2 line-clamp-2">Innovating digital experiences one line of code at a time.</p>
+        <p class=" mb-4 text-center sm:text-start px-2 line-clamp-2">Innovating digital experiences one line of code at a time.</p>
         <!-- Social media with hover glow -->
         <div class="flex space-x-4 justify-center sm:justify-start">
-          <a href="https://www.instagram.com/solutionsforlifeatl?igsh=MWdvY2NxaDk0eTd1cg==" target="_blank" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-sky-500 hover:shadow-lg hover:shadow-sky-500/30 transition-all duration-300">
+          <a href="https://www.instagram.com/solutionsforlifeatl?igsh=MWdvY2NxaDk0eTd1cg==" target="_blank" class="w-10 h-10 rounded-full border-1 flex items-center justify-center hover:bg-orange-500 hover:shadow-lg hover:shadow-sky-500/30 transition-all duration-300">
             <span class="fa-brands fa-instagram text-xl"></span>
           </a>
-          <a href="#" target="_blank" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-purple-500 hover:shadow-lg hover:shadow-purple-500/30 transition-all duration-300">
+          <a href="#" target="_blank" class="w-10 h-10 rounded-full border-1 flex items-center justify-center hover:bg-blue-500 hover:shadow-lg hover:shadow-purple-500/30 transition-all duration-300">
             <span class="fa-brands fa-square-facebook text-xl"></span>
           </a>
         </div>
@@ -36,10 +36,10 @@
           <span class="absolute bottom-0 left-0 w-full h-1 bg-blue-500 transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-300"></span>
         </h3>
         <ul class="space-y-2">
-          <li><a href="#" class="text-gray-300 hover:text-white hover:pl-2 transition-all duration-300 flex items-center">
+          <li><a href="#" class=" hover:text-green-600 hover:pl-2 transition-all duration-300 flex items-center">
             <span class="w-1 h-1 bg-blue-500 rounded-full mr-2 opacity-0 group-hover:opacity-100 transition duration-300"></span>
             {{ "footer.home" | translate}}</a></li>
-          <li><a href="#" class="text-gray-300 hover:text-white hover:pl-2 transition-all duration-300 flex items-center">
+          <li><a [routerLink]="['/services']" class=" hover:text-green-600 hover:pl-2 transition-all duration-300 flex items-center">
             <span class="w-1 h-1 bg-blue-500 rounded-full mr-2 opacity-0 group-hover:opacity-100 transition duration-300"></span>
             {{"footer.Services" | translate}}</a></li>
         </ul>
@@ -56,8 +56,8 @@
               </div>
             </div>
             <div class="ml-3 min-w-0"> <!-- añadido min-w-0 para que el texto se ajuste -->
-              <p class="text-sm text-gray-300 truncate">{{"footer.email" | translate}}</p>
-              <a href="mailto:asistentesolutionsforlife@gmail.com" class="text-white hover:text-[#07a248] transition block truncate">asistentesolutionsforlife@gmail.com</a>
+              <p class="text-sm theme-text truncate">{{"footer.email" | translate}}</p>
+              <a href="mailto:asistentesolutionsforlife@gmail.com" class="theme-text hover:text-[#07a248] transition block truncate">asistentesolutionsforlife@gmail.com</a>
             </div>
           </li>
           <li class="flex items-start">
@@ -67,8 +67,9 @@
               </div>
             </div>
             <div class="ml-3 min-w-0"> <!-- añadido min-w-0 para que el texto se ajuste -->
-              <p class="text-sm text-gray-300 truncate">{{"footer.phone" | translate}}</p>
-              <a href="tel:+244941540352" class="text-white hover:text-[#07a248] transition block truncate">+17706392929</a>
+              <p class="text-sm theme-text truncate">{{"footer.phone" | translate}}</p>
+              <a href="tel:+17706392929" class="theme-text hover:text-[#07a248] transition block truncate">+17706392929</a>
+              <a href="tel:+16785251628" class="theme-text hover:text-[#07a248] transition block truncate">+16785251628</a>
             </div>
           </li>
         </ul>
@@ -78,7 +79,7 @@
       <div class="flex flex-col justify-between h-full md:px-4">
         <div>
           <h3 class="text-lg font-semibold mb-4 truncate">{{"footer.Stay Updated" | translate}}</h3>
-          <p class="text-gray-300 mb-3 line-clamp-2">{{"footer.newsletter" | translate}}</p>
+          <p class="theme-text mb-3 line-clamp-2">{{"footer.newsletter" | translate}}</p>
           <form class="mt-3">
             <div class="relative">
               <a [routerLink]="['/contact']" class="inline-block bg-[#09b850] hover:bg-[#07a248] text-white rounded-lg px-4 py-2 transition whitespace-nowrap">
@@ -89,20 +90,20 @@
           </form>
         </div>
         <div class="flex justify-end text-xs mt-4">
-          <button (click)="switchLang('es')" class="text-white p-2 cursor-pointer whitespace-nowrap">🇪🇸 ES</button>
-          <button (click)="switchLang('en')" class="text-white p-2 cursor-pointer whitespace-nowrap">🇬🇧 EN</button>
+          <button (click)="switchLang('es')" class="theme-text p-2 cursor-pointer whitespace-nowrap transition duration-300 transform hover:-translate-y-1 hover:scale-110 hover:bg-[#09b850]">🇪🇸 ES</button>
+          <button (click)="switchLang('en')" class="theme-text p-2 cursor-pointer whitespace-nowrap transition duration-300 transform hover:-translate-y-1 hover:scale-110 hover:bg-[#09b850]" >🇬🇧 EN</button>
         </div>
       </div>
     </div>
 
     <!-- Bottom section with animated copyright -->
     <div class="mt-16 pt-8 border-t border-gray-800 flex flex-col md:flex-row justify-between items-center">
-      <p class="text-gray-400 text-sm mb-10 md:mb-0">
+      <p class="theme-text text-sm mb-10 md:mb-0">
         &copy; <span id="year" class="text-blue-400"></span> Solutions for life, {{"footer.rights" | translate}}.
       </p>
       <div class="flex space-x-6 text-xs">
-        <a [routerLink]="['/privacy-and-policies']" class="text-gray-400 hover:text-white transition">{{"footer.terms" | translate}}</a>
-        <a [routerLink]="['/cookies-policy']" class="text-gray-400 hover:text-white transition">{{"footer.cookies" | translate}}</a>
+        <a [routerLink]="['/privacy-and-policies']" class="theme-text hover:text-white transition">{{"footer.terms" | translate}}</a>
+        <a [routerLink]="['/cookies-policy']" class="theme-text hover:text-white transition">{{"footer.cookies" | translate}}</a>
       </div>
     </div>
   </div>
