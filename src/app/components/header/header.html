@@ -38,12 +38,12 @@
         </button>
 
         <el-popover id="desktop-menu-product" anchor="bottom" popover 
-                   class="w-screen max-w-md overflow-hidden rounded-lg theme-card shadow-lg transition-all duration-200 backdrop:bg-transparent 
+                   class="w-screen max-w-md overflow-hidden rounded-lg theme-text theme-card shadow-lg transition-all duration-200 backdrop:bg-transparent 
                           open:block data-closed:translate-y-1 data-closed:opacity-0 data-enter:duration-200 
                           data-enter:ease-out data-leave:duration-150 data-leave:ease-in">
-          <div class="p-3">
+          <div class="p-3 theme-text">
             @for (item of this.services; track $index) {
-              <div class="group relative flex items-center gap-x-3 rounded-lg p-2 text-xl theme-hover">
+              <div class="group relative flex items-center gap-x-3 rounded-lg p-2 text-xl theme-hover theme-text">
                 <div class="flex size-11 flex-none items-center justify-center rounded-lg theme-text">
                   <span class="fa-solid text-xl" [ngClass]="item.icon"></span>
                 </div>
@@ -86,7 +86,7 @@
           <div class="flex items-center justify-between">
             <a href="#" class="-m-1.5 p-1.5">
               <span class="sr-only">Your Company</span>
-              <img src="/assets/images/logo_solutions_forlife.png" alt="" class="h-10 w-auto" />
+              <img src="/assets/images/logo-white-background (2).svg" alt="" class="h-10 w-auto" />
             </a>
             <button type="button" command="close" commandfor="mobile-menu" class="-m-2.5 rounded-md p-2.5 theme-text theme-hover">
               <span class="sr-only">Close menu</span>
@@ -115,7 +115,7 @@
                   <el-disclosure id="products" hidden class="mt-2 block space-y-2">
                     @for (item of this.services; track $index) {
                       <a [routerLink]="['/services', item.url]"
-                         class="block rounded-lg py-2 pr-3 pl-6 text-sm/7 font-semibold text-white hover:text-white"
+                         class="block rounded-lg py-2 pr-3 pl-6 text-sm/6 font-semibold theme-text theme-hover"
                          (click)="onServiceClick()">
                          {{ item.title[this.langService.getLang()] }}
                       </a>
