@@ -41,7 +41,7 @@ export class AboutUs {
     {
       name: 'Carolina Romero',
       role: 'Asistente Administrativa',
-      // Sin imagen, mostrará la inicial 'M'
+      img: '/assets/images/carolina.jpg',
       twitter: 'https://twitter.com/mariagonzalez',
       instagram: 'https://instagram.com/mariagonzalez',
       facebook: 'https://facebook.com/mariagonzalez'
@@ -49,7 +49,7 @@ export class AboutUs {
     {
       name: 'Geraldine Romero',
       role: 'Marketing digital',
-      img: '/assets/images/geral_img.jpg',
+      img: '/assets/images/gerald.jpg',
       twitter: 'https://twitter.com/carlosrodriguez',
       instagram: 'https://instagram.com/carlosrodriguez',
       facebook: 'https://facebook.com/carlosrodriguez'
