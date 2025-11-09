@@ -1,9 +1,9 @@
 
 <app-header></app-header>
 
-<div class="color-primary min-h-dvh w-full">
+<div class="min-h-dvh w-full theme-bg">
   <!-- Header section with main service info -->
-  <div class="relative w-full text-white py-16">
+  <div class="relative w-full py-16">
     
 
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -11,27 +11,27 @@
         <!-- Left side with content -->
         <div class="">
           <h1 class="text-4xl lg:text-5xl font-bold mb-6 text-[#64dd17]">{{ service?.title?.[this.langService.getLang()] | titlecase}}</h1>
-          <p class="text-lg text-gray-300 mb-6">{{ service?.briefDescription?.[this.langService.getLang()] }}</p>
+          <p class="text-lg theme-text-secondary mb-6">{{ service?.briefDescription?.[this.langService.getLang()] }}</p>
 
           <!-- Quick access icons -->
           <div class="flex flex-col gap-4 mt-8">
-            <div class="flex items-center gap-4 bg-gray-800/50 p-4 rounded-xl hover:bg-gray-800 transition-all transform hover:-translate-x-2">
+            <div class="flex items-center gap-4 theme-card p-4 rounded-xl hover:bg-gray-800 dark:hover:bg-gray-700 hover:bg-gray-100 transition-all transform hover:-translate-x-2">
               <div class="w-12 h-12 rounded-full bg-[#09b850]/10 flex items-center justify-center">
                 <span class="fa fa-building text-[#09b850] text-xl"></span>
               </div>
               <div>
-                <span class="text-white font-medium">{{ "service.canales_atencion" | translate }}</span>
-                <p class="text-sm text-gray-400">{{ "service.canales_atencion_desc" | translate }}</p>
+                <span class="theme-text font-medium">{{ "service.canales_atencion" | translate }}</span>
+                <p class="text-sm theme-text-secondary">{{ "service.canales_atencion_desc" | translate }}</p>
               </div>
             </div>
 
-            <div class="flex items-center gap-4 bg-gray-800/50 p-4 rounded-xl hover:bg-gray-800 transition-all transform hover:-translate-x-2">
+            <div class="flex items-center gap-4 theme-card p-4 rounded-xl hover:bg-gray-800 dark:hover:bg-gray-700 hover:bg-gray-100 transition-all transform hover:-translate-x-2">
               <div class="w-12 h-12 rounded-full bg-[#09b850]/10 flex items-center justify-center">
                 <span class="fa fa-credit-card text-[#09b850] text-xl"></span>
               </div>
               <div>
-                <span class="text-white font-medium">{{ "service.canales_atencion2" | translate }}</span>
-                <p class="text-sm text-gray-400">{{ "service.canales_atencion2_desc" | translate }}</p>
+                <span class="theme-text font-medium">{{ "service.canales_atencion2" | translate }}</span>
+                <p class="text-sm theme-text-secondary">{{ "service.canales_atencion2_desc" | translate }}</p>
               </div>
             </div>
           </div>
@@ -47,8 +47,8 @@
       </div>
 
       <!-- Description section below -->
-      <div class="mt-12 p-6 bg-gray-800/50 rounded-xl">
-        <p class="text-gray-300 leading-relaxed">{{ service?.longDescription?.[this.langService.getLang()] }}</p>
+      <div class="mt-12 p-6 theme-card rounded-xl">
+        <p class="theme-text-secondary leading-relaxed">{{ service?.longDescription?.[this.langService.getLang()] }}</p>
       </div>
 
 
@@ -56,11 +56,11 @@
 
   <!-- Services Grid Section -->
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-    <h2 class="text-2xl lg:text-3xl font-bold text-white text-center mb-12">Conoce cómo te acompañamos</h2>
+    <h2 class="text-2xl lg:text-3xl font-bold theme-text text-center mb-12">Conoce cómo te acompañamos</h2>
 
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
       @for (item of this.service?.subServices; track $index) {
-        <div class="bg-gray-800 rounded-lg p-6 hover:bg-gray-700 transition-all duration-300 group border-t-[#09b850] border-t-3">
+        <div class="theme-card rounded-lg p-6 hover:bg-gray-700 dark:hover:bg-gray-700 hover:bg-gray-100 transition-all duration-300 group border-t-[#09b850] border-t-3">
           <!-- Icon Container -->
           <div class="mb-6 transition-transform duration-300 group-hover:scale-110">
             <div class="w-16 h-16 flex items-center justify-center mx-auto">
@@ -70,14 +70,14 @@
 
           <!-- Content -->
           <div class="text-center">
-            <h3 class="text-xl font-bold text-white mb-3">
+            <h3 class="text-xl font-bold theme-text mb-3">
               {{ item?.title?.[this.langService.getLang()] | titlecase}}
             </h3>
-            <p class="text-gray-300 mb-4">
+            <p class="theme-text-secondary mb-4">
               {{ item?.briefDescription?.[this.langService.getLang()] }}
             </p>
             <div class="h-0 overflow-hidden group-hover:h-auto group-hover:mt-4 transition-all duration-300">
-              <p class="text-sm text-gray-400">
+              <p class="text-sm theme-text-secondary">
                 {{ item?.longDescription?.[this.langService.getLang()] }}
               </p>
             </div>

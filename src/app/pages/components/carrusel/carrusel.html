@@ -4,15 +4,15 @@
     class="flex gap-4">
 
     <div *ngFor="let item of displayItems"
-      class="w-[295px] h-auto flex-shrink-0 bg-[#1a2433] text-white shadow-md rounded-lg p-4 flex flex-col items-center justify-start relative hover:shadow-xl transition-all duration-300"
+      class="w-[295px] h-auto flex-shrink-0 border-1 theme-bg theme-text  shadow-lg rounded-lg p-4 flex flex-col items-center justify-start relative hover:shadow-xl transition-all duration-300"
       (mouseenter)="onMouseEnter(item)"
       (mouseleave)="onMouseLeave(item)">      <!-- Imagen o letra -->
-      <div class="mb-2 flex items-center justify-center w-16 h-16 rounded-full bg-gray-700 overflow-hidden">
+      <div class="mb-2 flex items-center justify-center w-16 h-16 theme-bg theme-text theme-bg-inverse theme-border border-2 rounded-full bg-gray-700 overflow-hidden">
         <ng-container *ngIf="item.img; else noImage">
           <img [src]="item.img" alt="" class="w-16 h-16 object-cover rounded-full" />
         </ng-container>
         <ng-template #noImage>
-          <span class="text-3xl font-bold text-white">
+          <span class="text-3xl font-bold theme-text">
             {{ item.name ? item.name.charAt(0).toUpperCase() : '?' }}
           </span>
         </ng-template>
@@ -27,7 +27,7 @@
       </div>
 
       <!-- Descripción con "Leer más" -->
-      <div class="w-full text-gray-300 text-sm text-center">
+      <div class="w-full text-gray-300 text-sm text-center theme-text">
         <span>
           {{ item.title.length > 170 && !item.showMore ? (item.title | slice:0:170) + '...' : item.title }}
         </span>

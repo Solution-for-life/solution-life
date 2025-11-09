@@ -10,7 +10,69 @@ layer(base);
 
 
 :root {
+  /* Colores base */
   --color-primary: #000b1c;
+  
+  /* Variables para temas */
+  --bg-primary: #FFFFFF;
+  --bg-secondary: #F9FAFB;
+  --bg-card: #FFFFFF;
+  --text-primary: #111827;
+  --text-secondary: #4B5563;
+  --border-color: #E5E7EB;
+  --hover-bg: #F3F4F6;
+  --active-bg: #E5E7EB;
+
+  /* Transiciones */
+  --transition-base: all 0.3s ease;
+}
+
+/* Clases de utilidad para temas */
+.theme-card {
+  @apply rounded-lg border transition-all duration-300;
+  background-color: var(--bg-card);
+  border-color: var(--border-color);
+}
+
+.theme-text {
+  color: var(--text-primary);
+}
+
+.theme-text-secondary {
+  color: var(--text-secondary);
+}
+
+.theme-bg {
+  background-color: var(--bg-primary);
+}
+
+.theme-bg-secondary {
+  background-color: var(--bg-secondary);
+}
+
+.theme-border {
+  border-color: var(--border-color);
+}
+
+.theme-hover {
+  @apply transition-colors duration-200;
+}
+
+.theme-hover:hover {
+  background-color: var(--hover-bg);
+}
+.theme-button{
+  @apply  font-medium border border-gray-300 px-4 py-2 rounded-lg shadow-sm transition duration-300;                                                                                               
+}
+
+/* Dark mode overrides */
+.dark .theme-card {
+  @apply shadow-lg;
+}
+
+/* Transiciones globales */
+.page-transition {
+  @apply transition-all duration-300 ease-in-out;
 }
 
 /* h2{
@@ -27,7 +89,7 @@ layer(base);
   scrollbar-width: none;
 }
 .tab-active{
-  background-color: #1a2433;
+  background-color: #1a243326;
 }
 
 .color-primary {

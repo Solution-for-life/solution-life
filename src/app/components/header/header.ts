@@ -6,6 +6,8 @@ import { TranslateService, TranslateModule } from '@ngx-translate/core';
 import { Service } from '@interfaces/service';
 import { Lang } from '../../types/lang';
 import { LanguageService } from '../../services/language.service';
+import { ThemeService } from '../../services/theme.service';
+import { ThemeToggleButtonComponent } from '../common/theme-toggle-button/theme-toggle-button.component';
 
 @Component({
   selector: 'app-header',
@@ -14,6 +16,7 @@ import { LanguageService } from '../../services/language.service';
     TranslateModule,
     RouterLink,
     RouterLinkActive,
+    ThemeToggleButtonComponent,
   ],
   templateUrl: './header.html',
   styleUrl: './header.css',
@@ -29,6 +32,8 @@ export class Header {
   private readonly db = inject(DatabaseService);
   public services : Service[] = [];
   public readonly langService = inject(LanguageService);
+  public readonly themeService = inject(ThemeService);
+  currentTheme$ = this.themeService.theme$;
 
   switchLang(lang: Lang) {
     this.langService.setLang(lang);
@@ -42,6 +47,10 @@ export class Header {
 
   toggleDropdown() {
     this.isOpen.update(open => !open);
+  }
+
+  toggleTheme() {
+    this.themeService.toggleTheme();
   }
 
   closeDropdown() {

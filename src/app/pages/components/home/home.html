@@ -1,8 +1,8 @@
 
 <app-header></app-header>
-<div class="aling-center flex flex-col items-center justify-center color-primary ">
+<div class="flex flex-col items-center justify-center theme-bg page-transition">
     <!-- SECTION DE INICIO -->
-    <div class="relative bg-gradient-to-br w-full">
+    <div class="relative w-full">
       <!-- Animated background elements -->
       <div class="absolute top-0 left-0 w-full h-full overflow-hidden opacity-20">
         <div class="absolute top-20 left-10 w-32 h-32 bg-[#09b850] rounded-full filter blur-3xl animate-float1"></div>
@@ -33,19 +33,19 @@
               class="w-full h-50 bg-gray-900/70 absolute bottom-0 left-0 text-center p-5"
             >
               <p
-                class="hidden md:block text-gray-400 text-xl mb-3"
+                class="hidden md:block theme-text-secondary text-xl mb-3"
               >
                 {{ item.description[this.langService.getLang()] }}
               </p>
               <p
-                class="block md:hidden text-gray-400 mb-5"
+                class="block md:hidden theme-text-secondary mb-5"
               >
                 {{ item.description[this.langService.getLang()] }}
               </p>
               <button
                 type="button"
                 [routerLink]="['/contact']"
-                class="bg-[#09b850] hover:bg-[#07a248] text-white font-bold py-2 px-4 rounded cursor-pointer transition duration-300 transform hover:-translate-y-1 hover:scale-110"
+                class="theme-button border-gray-700  font-bold py-2 px-4 rounded-lg cursor-pointer transition duration-300 transform hover:-translate-y-1 hover:scale-110"
               >
                 {{"home.btn_contact" | translate}}
               </button>
@@ -127,30 +127,29 @@
 
 
     <!-- SECTION DE SOBRE NOSOTROS -->
-      <div class="bg-gradient-to-br text-white w-full max-w-7xl">
-        <div class="container mx-auto px-4 lg:py-5  bg-gradient-to-br text-white flex justify-center h-auto ">
+      <div class="w-full max-w-7xl theme-text">
+        <div class="container mx-auto px-4 lg:py-5 flex justify-center h-auto">
           <div class="w-full p-6 flex flex-col gap-5 items-center justify-center">
-
-              <div class="grid  sm:grid-cols-2 lg:grid-cols-4  gap-5 justify-center items-center p-4 h-full  md:w-[60vw] lg:w-[60vw] xl:w-[70vw] w-[90vw]">
-                <div class="p-4 flex flex-col items-center text-center justify-center h-[250px] bg-[#1a2433] transition duration-300 transform hover:-translate-y-1 hover:scale-110 text-white shadow-lg border-t-4  border-t-[#09b850] rounded-sm">
-                  <span class="fa fa-university text-[50px] text-white mb-2" aria-hidden="true"></span>
-                  <h1 class="text-2xl font-bold text-white">{{"home.card" | translate}}</h1>
-                  <span class="">{{"home.description" | translate}}</span>
+              <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-5 justify-center items-center p-4 h-full md:w-[60vw] lg:w-[60vw] xl:w-[70vw] w-[90vw]">
+                <div class="theme-card p-4 flex flex-col items-center text-center justify-center h-[250px] transition duration-300 transform hover:-translate-y-1 hover:scale-110 shadow-lg border-t-4 border-t-[#09b850] rounded-lg">
+                  <span class="fa fa-university text-[50px] theme-text mb-2" aria-hidden="true"></span>
+                  <h1 class="text-2xl font-bold theme-text">{{"home.card" | translate}}</h1>
+                  <span class="theme-text-secondary">{{"home.description" | translate}}</span>
                 </div>
-                <div class="p-4 flex flex-col items-center text-center justify-center h-[250px] bg-[#1a2433] transition duration-300 transform hover:-translate-y-1 hover:scale-110 shadow-lg border-t-4 border-t-indigo-0 border-t-[#09b850] rounded-sm">
-                  <span class="fa fa-handshake text-[50px] text-white mb-2" aria-hidden="true"></span>
-                  <h1 class="text-2xl font-bold text-white">{{"home.card1" | translate}}</h1>
-                  <span class="">{{"home.description1" | translate}}</span>
+                <div class="theme-card p-4 flex flex-col items-center text-center justify-center h-[250px] transition duration-300 transform hover:-translate-y-1 hover:scale-110 shadow-lg border-t-4 border-t-[#09b850] rounded-lg">
+                  <span class="fa fa-handshake text-[50px] theme-text mb-2" aria-hidden="true"></span>
+                  <h1 class="text-2xl font-bold theme-text">{{"home.card1" | translate}}</h1>
+                  <span class="theme-text-secondary">{{"home.description1" | translate}}</span>
                 </div>
-                <div class="p-4 flex flex-col items-center text-center justify-center h-[250px] bg-[#1a2433] transition duration-300 transform hover:-translate-y-1 hover:scale-110 shadow-lg border-t-4 border-t-indigo-0 border-t-[#09b850] rounded-sm">
-                  <span class="fa fa-calendar text-[50px] text-white mb-2" aria-hidden="true"></span>
-                  <h1 class="text-2xl font-bold text-white">{{"home.card2" | translate}}</h1>
-                  <span class="">{{"home.description2" | translate}}</span>
+                <div class="theme-card p-4 flex flex-col items-center text-center justify-center h-[250px] transition duration-300 transform hover:-translate-y-1 hover:scale-110 shadow-lg border-t-4 border-t-[#09b850] rounded-lg">
+                  <span class="fa fa-calendar text-[50px] theme-text mb-2" aria-hidden="true"></span>
+                  <h1 class="text-2xl font-bold theme-text">{{"home.card2" | translate}}</h1>
+                  <span class="theme-text-secondary">{{"home.description2" | translate}}</span>
                 </div>
-                <div class="p-4 flex flex-col items-center text-center justify-center h-[250px] bg-[#1a2433] transition duration-300 transform hover:-translate-y-1 hover:scale-110 shadow-lg border-t-4 border-t-indigo-0 border-t-[#09b850] rounded-sm">
-                  <span class="fa fa-users text-[50px] text-white mb-2" aria-hidden="true"></span>
-                  <h1 class="text-2xl font-bold text-white">{{"home.card3" | translate}}</h1>
-                  <span class="">{{"home.description3" | translate}}</span>
+                <div class="theme-card p-4 flex flex-col items-center text-center justify-center h-[250px] transition duration-300 transform hover:-translate-y-1 hover:scale-110 shadow-lg border-t-4 border-t-[#09b850] rounded-lg">
+                  <span class="fa fa-users text-[50px] theme-text mb-2" aria-hidden="true"></span>
+                  <h1 class="text-2xl font-bold theme-text">{{"home.card3" | translate}}</h1>
+                  <span class="theme-text-secondary">{{"home.description3" | translate}}</span>
                 </div>
 
 
@@ -158,10 +157,10 @@
 
             <div class="container mx-auto mb-10 px-4 flex gap-5 items-center justify-center">
               <div>
-                <p class="text-gray-400">{{"home.title" | translate}}</p>
+                <p class="theme-text-secondary">{{"home.title" | translate}}</p>
               </div>
               <div>
-                <button [routerLink]="['/services']" class="bg-[#1a2433] hover:bg-gradient-to-br text-white shadow-lg font-bold py-2 px-4 rounded cursor-pointer transition duration-300 transform hover:-translate-y-1 hover:scale-110">{{"home.btn_services" | translate}}</button>
+                <button [routerLink]="['/services']" class="theme-button border-gray-400 theme-text font-bold py-2 px-4 rounded cursor-pointer transition duration-300 transform hover:-translate-y-1 hover:scale-110 hover:bg-green-500 hover:text-white shadow-lg">{{"home.btn_services" | translate}}</button>
 
               </div>
             </div>
@@ -176,11 +175,11 @@
 
                     <div class="flex flex-col items-center justify-between h-auto w-full">
                       <div class="grid-cols-2 gap-5 mb-5 flex items-center justify-center">
-                        <div class="bg-[#1a2433] text-white p-2 rounded-sm text-center">
-                          <h3 class="lg:text-[2.7rem] text-[1.8rem] font-bold">10+</h3>
-                          <p class="lg:text-[1.5rem] font-bold">{{"home-us.span" | translate}}</p>
+                        <div class="theme-card p-2 rounded-lg text-center">
+                          <h3 class="lg:text-[2.7rem] text-[1.8rem] font-bold theme-text">10+</h3>
+                          <p class="lg:text-[1.5rem] font-bold theme-text">{{"home-us.span" | translate}}</p>
                         </div>
-                        <div class="bg-[#09b850] text-white p-2 rounded-sm text-center">
+                        <div class="bg-[#09b850] text-white p-2 rounded-lg text-center">
                             <h3 class="lg:text-[2.7rem] text-[1.8rem] font-bold">1.2k</h3>
                           <p class="lg:text-[1.5rem] font-bold">{{"home-us.span2" | translate}}</p>
                         </div>
@@ -193,24 +192,24 @@
                   </div>
                   <div class="flex flex-col items-left lg:p-10 h-auto w-full">
                     <span class="mb-5 mt-3 font-[400] bg-[#80808030] p-1 max-w-90">✨{{"home-us.span3" | translate}}</span>
-                    <h2 class="mb-5 text-3xl lg:text-4xl font-bold">{{"home-us.title" | translate}}</h2>
-                    <p class="mb-5 font-[500] text-gray-400">{{"home-us.description" | translate}}</p>
+                    <h2 class="mb-5 text-3xl lg:text-4xl font-bold theme-text">{{"home-us.title" | translate}}</h2>
+                    <p class="mb-5 font-[500] theme-text-secondary">{{"home-us.description" | translate}}</p>
                     <ul class="mb-10">
                       <li class="p-2">
 
                         <i class="fa fa-check-circle text-[#09b850] mr-2"></i>
-                        <span class="text-sm"> {{"home-us.list" | translate}}</span>
+            <p class="text-sm theme-text-secondary">{{"home-us.list" | translate}}</p>
                       </li>
                       <li class="p-2">
                         <i class="fa fa-check-circle text-[#09b850] mr-2"></i>
-                        <span class="text-sm"> {{"home-us.list2" | translate}}</span>
+                        <span class="text-sm theme-text-secondary">{{"home-us.list2" | translate}}</span>
                       </li>
                       <li class="p-2">
                         <i class="fa fa-check-circle text-[#09b850] mr-2"></i>
-                        <span class="text-sm"> {{"home-us.list3" | translate}}</span>
+                        <span class="text-sm theme-text-secondary">{{"home-us.list3" | translate}}</span>
                       </li>
                     </ul>
-                    <a type="boton" [routerLink]="['/about-us']" class="bg-[#09b850] hover:bg-[#07a248] cursor-pointer w-48 text-center text-white font-bold py-2 px-4 rounded">{{"home-us.btn" | translate}}</a>
+                    <a type="boton" [routerLink]="['/about-us']" class="theme-button cursor-pointer w-48 text-center font-bold py-2 px-4 rounded transition duration-300 transform hover:-translate-y-1 hover:scale-110 hover:bg-green-500">{{"home-us.btn" | translate}}</a>
                   </div>
                 </div>
 
@@ -229,74 +228,74 @@
         <div class="absolute bottom-10 left-1/2 w-48 h-48 bg-cyan-500 rounded-full filter blur-3xl animate-float3"></div>
       </div>
       <div class=" h-auto w-full">
-        <div class="text-white text-center mt-[50px] text-[3.1rem] mb-10 font-bold">
-          <p class="lg:text-4xl text-3xl">{{"home-services.title" | translate}}</p>
-          <p class="lg:text-4xl text-3xl">{{"home-services.title2" | translate}}</p>
+        <div class="text-center mt-[50px] text-[3.1rem] mb-10 font-bold">
+          <p class="lg:text-4xl text-3xl theme-text">{{"home-services.title" | translate}}</p>
+          <p class="lg:text-4xl text-3xl theme-text">{{"home-services.title2" | translate}}</p>
         </div>
         <div class="flex justify-around mb-[30px] p-4">
           <div class="grid mt-[50px] xs:grid-cols-2 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 xl:grid-cols-4 grid-cols-1 gap-8 justify-center items-center p-4 h-full  max-w-7xl">
-            <div class="flex flex-col relative p-4  bg-[#1a2433] mt-[2.5rem] text-white  rounded-sm transition duration-300 transform hover:-translate-y-1 hover:scale-110">
-              <div class=" mt-[-2.5rem] mb-[1.6rem] rounded-[50%] text-[1.2rem] bg-white text-[#64DD17] w-[3.5rem] h-[3.5rem] flex justify-center items-center line-height-[3.5rem]">
+            <div class="theme-card flex flex-col relative p-4 mt-[2.5rem] rounded-lg transition duration-300 transform hover:-translate-y-1 hover:scale-110">
+              <div class="mt-[-2.5rem] mb-[1.6rem] rounded-[50%] text-[1.2rem] theme-bg-inverse theme-border border-1 bg-white text-[#64DD17] w-[3.5rem] h-[3.5rem] flex justify-center items-center line-height-[3.5rem]">
                 <span class="fa-solid fa-heart-pulse" aria-hidden="true"></span>
               </div>
-              <h5 class="align-middle text-xl  font-bold mb-5 " >{{"home-services.title-card" | translate}}</h5>
-              <p class="align-middle text-[0.8rem]  text-[#bebcbc] font-semibold mb-5 ">{{"home-services.description-card" | translate}}</p>
+              <h5 class="align-middle text-xl font-bold mb-5 theme-text" >{{"home-services.title-card" | translate}}</h5>
+              <p class="align-middle text-[0.8rem] theme-text-secondary font-semibold mb-5">{{"home-services.description-card" | translate}}</p>
               <a [routerLink]="['/services/insurance']" class="hover:text-[#64dd17]">{{"home-services.btn-card" | translate}} <span><i class="fa fa-long-arrow-right" aria-hidden="true"></i></span></a>
             </div>
-            <div class="flex flex-col relative p-4  bg-[#1a2433] mt-[2.5rem] text-white  rounded-sm transition duration-300 transform hover:-translate-y-1 hover:scale-110">
-              <div class=" mt-[-2.5rem] mb-[1.6rem] rounded-[50%] text-[1.2rem] bg-white text-[#64DD17] w-[3.5rem] h-[3.5rem] flex justify-center items-center line-height-[3.5rem]">
+            <div class="theme-card flex flex-col relative p-4 mt-[2.5rem] rounded-lg transition duration-300 transform hover:-translate-y-1 hover:scale-110">
+              <div class="mt-[-2.5rem] mb-[1.6rem] rounded-[50%] text-[1.2rem] theme-bg-inverse theme-border border-1 bg-white text-[#64DD17] w-[3.5rem] h-[3.5rem] flex justify-center items-center line-height-[3.5rem]">
                 <span class="fa-solid fa-staff-snake" aria-hidden="true"></span>
               </div>
-              <h5 class="align-middle text-xl  font-bold mb-5 " >{{"home-services.title-card-2" | translate}}</h5>
-              <p class="align-middle text-[0.8rem]  text-[#bebcbc] font-semibold mb-5 ">{{"home-services.description-card-2" | translate}}</p>
+              <h5 class="align-middle text-xl font-bold mb-5 theme-text" >{{"home-services.title-card-2" | translate}}</h5>
+              <p class="align-middle text-[0.8rem] theme-text-secondary font-semibold mb-5">{{"home-services.description-card-2" | translate}}</p>
               <a [routerLink]="['/services/insurance']" class="hover:text-[#64dd17]">{{"home-services.btn-card" | translate}} <span><i class="fa fa-long-arrow-right" aria-hidden="true"></i></span></a>
             </div>
-            <div class="flex flex-col relative p-4  bg-[#1a2433] mt-[2.5rem] text-white  rounded-sm transition duration-300 transform hover:-translate-y-1 hover:scale-110">
-              <div class=" mt-[-2.5rem] mb-[1.6rem] rounded-[50%] text-[1.2rem] bg-white text-[#64DD17] w-[3.5rem] h-[3.5rem] flex justify-center items-center line-height-[3.5rem]">
+            <div class="theme-card flex flex-col relative p-4 mt-[2.5rem] rounded-lg transition duration-300 transform hover:-translate-y-1 hover:scale-110">
+              <div class="mt-[-2.5rem] mb-[1.6rem] rounded-[50%] text-[1.2rem] theme-bg-inverse theme-border border-1 bg-white text-[#64DD17] w-[3.5rem] h-[3.5rem] flex justify-center items-center line-height-[3.5rem]">
                 <span class="fa-solid fa-user-check" aria-hidden="true"></span>
               </div>
-              <h5 class="align-middle text-xl  font-bold mb-5 " >{{"home-services.title-card-3" | translate}}</h5>
-              <p class="align-middle text-[0.8rem]  text-[#bebcbc] font-semibold mb-5 ">{{"home-services.description-card-3" | translate}}</p>
+              <h5 class="align-middle text-xl font-bold mb-5 theme-text" >{{"home-services.title-card-3" | translate}}</h5>
+              <p class="align-middle text-[0.8rem] theme-text-secondary font-semibold mb-5">{{"home-services.description-card-3" | translate}}</p>
               <a [routerLink]="['/services/taxes']" class="hover:text-[#64dd17]">{{"home-services.btn-card" | translate}} <span><i class="fa fa-long-arrow-right" aria-hidden="true"></i></span></a>
             </div>
-            <div class="flex flex-col relative p-4  bg-[#1a2433] mt-[2.5rem] text-white  rounded-sm transition duration-300 transform hover:-translate-y-1 hover:scale-110">
-              <div class=" mt-[-2.5rem] mb-[1.6rem] rounded-[50%] text-[1.2rem] bg-white text-[#64DD17] w-[3.5rem] h-[3.5rem] flex justify-center items-center line-height-[3.5rem]">
+            <div class="theme-card flex flex-col relative p-4 mt-[2.5rem] rounded-lg transition duration-300 transform hover:-translate-y-1 hover:scale-110">
+              <div class="mt-[-2.5rem] mb-[1.6rem] rounded-[50%] text-[1.2rem] theme-bg-inverse theme-border border-1 bg-white text-[#64DD17] w-[3.5rem] h-[3.5rem] flex justify-center items-center line-height-[3.5rem]">
                 <span class="fa-solid fa-people-group" aria-hidden="true"></span>
               </div>
-              <h5 class="align-middle text-xl  font-bold mb-5 " >{{"home-services.title-card-4" | translate}}</h5>
-              <p class="align-middle text-[0.8rem]  text-[#bebcbc] font-semibold mb-5 ">{{"home-services.description-card-4" | translate}}</p>
+              <h5 class="align-middle text-xl font-bold mb-5 theme-text" >{{"home-services.title-card-4" | translate}}</h5>
+              <p class="align-middle text-[0.8rem] theme-text-secondary font-semibold mb-5">{{"home-services.description-card-4" | translate}}</p>
               <a [routerLink]="['/services/taxes']" class="hover:text-[#64dd17]">{{"home-services.btn-card" | translate}} <span><i class="fa fa-long-arrow-right" aria-hidden="true"></i></span></a>
             </div>
-            <div class="flex flex-col relative p-4  bg-[#1a2433] mt-[2.5rem] text-white  rounded-sm transition duration-300 transform hover:-translate-y-1 hover:scale-110">
-              <div class=" mt-[-2.5rem] mb-[1.6rem] rounded-[50%] text-[1.2rem] bg-white text-[#64DD17] w-[3.5rem] h-[3.5rem] flex justify-center items-center line-height-[3.5rem]">
+            <div class="theme-card flex flex-col relative p-4 mt-[2.5rem] rounded-lg transition duration-300 transform hover:-translate-y-1 hover:scale-110">
+              <div class="mt-[-2.5rem] mb-[1.6rem] rounded-[50%] text-[1.2rem] theme-bg-inverse theme-border border-1 bg-white text-[#64DD17] w-[3.5rem] h-[3.5rem] flex justify-center items-center line-height-[3.5rem]">
                 <span class="fa-solid fa-briefcase" aria-hidden="true"></span>
               </div>
-              <h5 class="align-middle text-xl  font-bold mb-5 " >{{"home-services.title-card-5" | translate}}</h5>
-              <p class="align-middle text-[0.8rem]  text-[#bebcbc] font-semibold mb-5 ">{{"home-services.description-card-5" | translate}}</p>
+              <h5 class="align-middle text-xl font-bold mb-5 theme-text" >{{"home-services.title-card-5" | translate}}</h5>
+              <p class="align-middle text-[0.8rem] theme-text-secondary font-semibold mb-5">{{"home-services.description-card-5" | translate}}</p>
               <a [routerLink]="['/services/immigration']" class="hover:text-[#64dd17]">{{"home-services.btn-card" | translate}} <span><i class="fa fa-long-arrow-right" aria-hidden="true"></i></span></a>
             </div>
-            <div class="flex flex-col relative p-4  bg-[#1a2433] mt-[2.5rem] text-white  rounded-sm transition duration-300 transform hover:-translate-y-1 hover:scale-110">
-              <div class=" mt-[-2.5rem] mb-[1.6rem] rounded-[50%] text-[1.2rem] bg-white text-[#64DD17] w-[3.5rem] h-[3.5rem] flex justify-center items-center line-height-[3.5rem]">
+            <div class="theme-card flex flex-col relative p-4 mt-[2.5rem] rounded-lg transition duration-300 transform hover:-translate-y-1 hover:scale-110">
+              <div class="mt-[-2.5rem] mb-[1.6rem] rounded-[50%] text-[1.2rem] theme-bg-inverse theme-border border-1 bg-white text-[#64DD17] w-[3.5rem] h-[3.5rem] flex justify-center items-center line-height-[3.5rem]">
                 <span class="fa-solid fa-house-flag" aria-hidden="true"></span>
               </div>
-              <h5 class="align-middle text-xl  font-bold mb-5 " >{{"home-services.title-card-6" | translate}}</h5>
-              <p class="align-middle text-[0.8rem]  text-[#bebcbc] font-semibold mb-5 ">{{"home-services.description-card-6" | translate}}</p>
+              <h5 class="align-middle text-xl font-bold mb-5 theme-text" >{{"home-services.title-card-6" | translate}}</h5>
+              <p class="align-middle text-[0.8rem] theme-text-secondary font-semibold mb-5">{{"home-services.description-card-6" | translate}}</p>
               <a [routerLink]="['/services/immigration']" class="hover:text-[#64dd17]">{{"home-services.btn-card" | translate}} <span><i class="fa fa-long-arrow-right" aria-hidden="true"></i></span></a>
             </div>
-            <div class="flex flex-col relative p-4  bg-[#1a2433] mt-[2.5rem] text-white  rounded-sm transition duration-300 transform hover:-translate-y-1 hover:scale-110">
-              <div class=" mt-[-2.5rem] mb-[1.6rem] rounded-[50%] text-[1.2rem] bg-white text-[#64DD17] w-[3.5rem] h-[3.5rem] flex justify-center items-center line-height-[3.5rem]">
+            <div class="theme-card flex flex-col relative p-4 mt-[2.5rem] rounded-lg transition duration-300 transform hover:-translate-y-1 hover:scale-110">
+              <div class="mt-[-2.5rem] mb-[1.6rem] rounded-[50%] text-[1.2rem] theme-bg-inverse theme-border border-1 bg-white text-[#64DD17] w-[3.5rem] h-[3.5rem] flex justify-center items-center line-height-[3.5rem]">
                 <span class="fa-solid fa-house-chimney" aria-hidden="true"></span>
               </div>
-              <h5 class="align-middle text-xl  font-bold mb-5 " >{{"home-services.title-card-7" | translate}}</h5>
-              <p class="align-middle text-[0.8rem]  text-[#bebcbc] font-semibold mb-5 ">{{"home-services.description-card-7" | translate}}</p>
+              <h5 class="align-middle text-xl font-bold mb-5 theme-text" >{{"home-services.title-card-7" | translate}}</h5>
+              <p class="align-middle text-[0.8rem] theme-text-secondary font-semibold mb-5">{{"home-services.description-card-7" | translate}}</p>
               <a [routerLink]="['/services/real-estate']" class="hover:text-[#64dd17]">{{"home-services.btn-card" | translate}} <span><i class="fa fa-long-arrow-right" aria-hidden="true"></i></span></a>
             </div>
-            <div class="flex flex-col relative p-4  bg-[#1a2433] mt-[2.5rem] text-white  rounded-sm transition duration-300 transform hover:-translate-y-1 hover:scale-110">
-              <div class=" mt-[-2.5rem] mb-[1.6rem] rounded-[50%] text-[1.2rem] bg-white text-[#64DD17] w-[3.5rem] h-[3.5rem] flex justify-center items-center line-height-[3.5rem]">
+            <div class="theme-card flex flex-col relative p-4 mt-[2.5rem] rounded-lg transition duration-300 transform hover:-translate-y-1 hover:scale-110">
+              <div class="mt-[-2.5rem] mb-[1.6rem] rounded-[50%] text-[1.2rem] theme-bg-inverse theme-border border-1 bg-white text-[#64DD17] w-[3.5rem] h-[3.5rem] flex justify-center items-center line-height-[3.5rem]">
                 <span class="fa-solid fa-key" aria-hidden="true"></span>
               </div>
-              <h5 class="align-middle text-xl  font-bold mb-5 " >{{"home-services.title-card-8" | translate}}</h5>
-              <p class="align-middle text-[0.8rem]  text-[#bebcbc] font-semibold mb-5 ">{{"home-services.description-card-8" | translate}}</p>
+              <h5 class="align-middle text-xl font-bold mb-5 theme-text" >{{"home-services.title-card-8" | translate}}</h5>
+              <p class="align-middle text-[0.8rem] theme-text-secondary font-semibold mb-5">{{"home-services.description-card-8" | translate}}</p>
               <a [routerLink]="['/services/real-estate']" class="hover:text-[#64dd17]">{{"home-services.btn-card" | translate}} <span><i class="fa fa-long-arrow-right" aria-hidden="true"></i></span></a>
             </div>
 
@@ -308,12 +307,12 @@
     </div>
     <div class=" h-[70vh] w-full " >
         <div class="cuadro_serevices  h-full w-full  ">
-          <div class="bg-[#000000b3] h-full w-full flex flex-col items-center justify-center text-white">
+          <div class="theme-overlay h-full w-full flex flex-col items-center justify-center">
             <div class="mb-6 text-center">
-              <p class="lg:text-4xl text-3xl font-bold" >{{"home-services.title-card-9" | translate}}</p>
+              <p class="lg:text-4xl text-3xl font-bold text-white" >{{"home-services.title-card-9" | translate}}</p>
             </div>
             <div>
-              <button [routerLink]="['/services']" class="bg-[#09b850] hover:bg-[#07a248] text-white font-bold py-2 px-4 rounded cursor-pointer">{{"home.btn_services" | translate}}</button>
+              <button [routerLink]="['/services']" class="text-white bg-[#09b850] hover:bg-[#07a248] font-bold py-2 px-4 rounded cursor-pointer">{{"home.btn_services" | translate}}</button>
             </div>
 
           </div>

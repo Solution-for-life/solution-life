@@ -1,6 +1,6 @@
 
 <app-header></app-header>
-<div class="w-full color-primary relative">
+<div class="w-full relative theme-bg">
   <div class="container mx-auto px-4">
     <div class="flex flex-col items-center text-center justify-center">
       <div class="lg:w-[70%] w-full h-full">
@@ -9,25 +9,25 @@
 
         <div class="mt-[-5.5rem] flex flex-col items-center text-center">
           <div class="lg:w-[70%] w-[85%] flex flex-col items-center h-full ">
-            <div class=" card lg:p-10 p-3 w-full rounded-sm bg-[#1a2433] text-white shadow-lg mb-10">
+            <div class="card lg:p-10 p-3 w-full rounded-sm dark:bg-gray-800 bg-white shadow-lg mb-10">
               <div class="carrd-header text-left">
-                <ul class="flex  text-white!  lg:mb-5">
-                  <li class="list-inside mr-2"><a href="#" class="text-white hover:text-[#64DD17]">Home</a></li>
+                <ul class="flex lg:mb-5">
+                  <li class="list-inside mr-2"><a href="#" class="dark:text-white text-gray-800 hover:text-[#64DD17]">Home</a></li>
                   <li class="list-disc list-inside ml-2 text-green-500">{{"contact.title" | translate}}</li>
                 </ul>
                 <!-- <p class="font-bold">{{"contact.title" | translate}}</p> -->
-                <h3 class="lg:text-3xl p-3 text-2xl font-bold text-white! lg:mb-2">{{"contact.title-description" | translate}}</h3>
-                <p class="lg:p-3 px-3 lg:text-sm text-gray-400">{{"contact.description" | translate}}</p>
+                <h3 class="lg:text-3xl p-3 text-2xl font-bold theme-text lg:mb-2">{{"contact.title-description" | translate}}</h3>
+                <p class="lg:p-3 px-3 lg:text-sm theme-text-secondary">{{"contact.description" | translate}}</p>
               </div>
               <div class="w-full mt-10 lg:p-4">
                 <div class="w-full">
                   <form [formGroup]="form" class="space-y-6">
                     <div class="flex flex-col">
                       <div class="mt-2 relative">
-                        <input formControlName="name" id="name" type="text" required
-                               [class]="'block w-full border rounded-md bg-[#1a2433] px-3 py-2.5 text-base outline-1 -outline-offset-1 placeholder:text-gray-700 focus:outline-2 focus:-outline-offset-2 sm:text-sm/6 ' +
-                                       (isFieldInvalid('name') ? 'border-red-500 outline-red-500/10 focus:outline-red-500' : 'outline-white/10 focus:outline-[#fff]')" />
-                        <label for="name" class="font-semibold text-left text-gray-200">{{"contact.form.name" | translate}}</label>
+                        <input formControlName="name" id="name" type="text" required placeholder=" "
+                               [class]="'block w-full border rounded-md dark:bg-gray-700 bg-gray-50 px-3 py-2.5 text-base outline-1 -outline-offset-1 dark:text-white text-gray-800 placeholder:text-gray-500 focus:outline-2 focus:-outline-offset-2 sm:text-sm/6 ' +
+                                       (isFieldInvalid('name') ? 'border-red-500 outline-red-500/10 focus:outline-red-500' : 'dark:border-gray-600 border-gray-300')" />
+                        <label for="name" class="font-semibold text-left dark:text-gray-300 text-gray-600">{{"contact.form.name" | translate}}</label>
                       </div>
                       <div *ngIf="isFieldInvalid('name')" class="mt-1 text-red-400 text-sm">
                         {{ getFieldError('name') }}
@@ -35,10 +35,10 @@
                     </div>
                     <div class="flex flex-col">
                       <div class="mt-2 relative">
-                        <input formControlName="email" id="email" type="email" name="email" required
-                               [class]="'block w-full rounded-md bg-[#1a2433] px-3 py-2.5 border outline-1 -outline-offset-1 placeholder:text-gray-500 focus:outline-2 focus:-outline-offset-2 sm:text-sm/6 ' +
-                                       (isFieldInvalid('email') ? 'border-red-500 outline-red-500/10 focus:outline-red-500' : 'outline-white/10 focus:outline-[#fff]')" />
-                        <label for="email" class="font-semibold text-left text-gray-200">{{"contact.form.email" | translate}}</label>
+                        <input formControlName="email" id="email" type="email" name="email" required placeholder=" "
+                               [class]="'block w-full rounded-md dark:bg-gray-700 bg-gray-50 px-3 py-2.5 border outline-1 -outline-offset-1 dark:text-white text-gray-800 placeholder:text-gray-500 focus:outline-2 focus:-outline-offset-2 sm:text-sm/6 ' +
+                                       (isFieldInvalid('email') ? 'border-red-500 outline-red-500/10 focus:outline-red-500' : 'dark:border-gray-600 border-gray-300')" />
+                        <label for="email" class="font-semibold text-left dark:text-gray-300 text-gray-600">{{"contact.form.email" | translate}}</label>
                       </div>
                       <div *ngIf="isFieldInvalid('email')" class="mt-1 text-red-400 text-sm">
                         {{ getFieldError('email') }}
@@ -46,10 +46,10 @@
                     </div>
                     <div class="flex flex-col">
                       <div class="mt-2 relative">
-                        <input formControlName="phone" id="phone" type="tel" name="phone" required maxlength="14"
-                               [class]="'block w-full border rounded-md bg-[#1a2433] px-3 py-2.5 text-base outline-1 -outline-offset-1 placeholder:text-gray-500 focus:outline-2 focus:-outline-offset-2 sm:text-sm/6 ' +
-                                       (isFieldInvalid('phone') ? 'border-red-500 outline-red-500/10 focus:outline-red-500' : 'outline-white/10 focus:outline-[#fff]')" />
-                        <label for="phone" class="font-semibold text-left text-gray-200">{{"contact.form.phone" | translate}}</label>
+                        <input formControlName="phone" id="phone" type="tel" name="phone" required maxlength="14" placeholder=" "
+                               [class]="'block w-full border rounded-md dark:bg-gray-700 bg-gray-50 px-3 py-2.5 text-base outline-1 -outline-offset-1 dark:text-white text-gray-800 placeholder:text-gray-500 focus:outline-2 focus:-outline-offset-2 sm:text-sm/6 ' +
+                                       (isFieldInvalid('phone') ? 'border-red-500 outline-red-500/10 focus:outline-red-500' : 'dark:border-gray-600 border-gray-300')" />
+                        <label for="phone" class="font-semibold text-left dark:text-gray-300 text-gray-600">{{"contact.form.phone" | translate}}</label>
                       </div>
                       <div *ngIf="isFieldInvalid('phone')" class="mt-1 text-red-400 text-sm">
                         {{ getFieldError('phone') }}
@@ -58,10 +58,10 @@
 
                     <div class="flex flex-col mb-10">
                       <div class="mt-2 relative">
-                        <textarea formControlName="message" id="message" name="message" required rows="2" maxlength="500"
-                                  [class]="'block w-full border rounded-md bg-[#1a2433] px-3 py-2.5 text-base outline-1 -outline-offset-1 placeholder:text-gray-500 focus:outline-2 focus:-outline-offset-2 sm:text-sm/6 ' +
-                                          (isFieldInvalid('message') ? 'border-red-500 outline-red-500/10 focus:outline-red-500' : 'outline-white/10 focus:outline-[#fff]')"></textarea>
-                        <label for="message" class="font-semibold text-left text-gray-200">{{"contact.form.message" | translate}}</label>
+                        <textarea formControlName="message" id="message" name="message" required rows="2" maxlength="500" placeholder=" "
+                                  [class]="'block w-full border rounded-md dark:bg-gray-700 bg-gray-50 px-3 py-2.5 text-base outline-1 -outline-offset-1 dark:text-white text-gray-800 placeholder:text-gray-500 focus:outline-2 focus:-outline-offset-2 sm:text-sm/6 ' +
+                                          (isFieldInvalid('message') ? 'border-red-500 outline-red-500/10 focus:outline-red-500' : 'dark:border-gray-600 border-gray-300')"></textarea>
+                        <label for="message" class="font-semibold text-left dark:text-gray-300 text-gray-600">{{"contact.form.message" | translate}}</label>
                       </div>
                       <div *ngIf="isFieldInvalid('message')" class="mt-1 text-red-400 text-sm">
                         {{ getFieldError('message') }}
@@ -80,27 +80,27 @@
         </div>
       </div>
       <hr class="border-gray-400 my-8 w-full" />
-      <h2 class="text-white text-3xl">{{"contact.title-card-info" | translate}}</h2>
-      <div class="grid-cols-1 xs:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 w-full mt-10 grid justify-between text-left text-gray-400 gap-10 mb-10">
-        <div  class="p-6 shadow-lg bg-white/10 border rounded">
+      <h2 class="dark:text-white text-gray-800 text-3xl">{{"contact.title-card-info" | translate}}</h2>
+      <div class="grid-cols-1 xs:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 w-full mt-10 grid justify-between text-left dark:text-gray-300 text-gray-600 gap-10 mb-10">
+        <div  class="p-6 shadow-lg dark:bg-gray-800 bg-white border dark:border-gray-700 border-gray-200 rounded">
           <span class="fa fa-map-marker-alt text-[#64DD17] text-[2.5rem] mb-5 " aria-hidden="true"></span>
-          <h5 class="text-2xl text-white font-bold mb-3">
+          <h5 class="text-2xl dark:text-white text-gray-800 font-bold mb-3">
             {{"contact.title-card-contact" | translate}}
           </h5>
           <div class="flex gap-2 "><img src="/assets/images/usa.svg" alt="" class="h-5 w-6 object-cover " /> <span> {{"contact.description-card-contact" | translate}}</span></div>
           <p>680 Hillcrest Rd NW, Lilburn, GA 30047, USA</p>
         </div>
-        <div class="p-6 shadow-lg bg-white/10 border rounded">
+        <div class="p-6 shadow-lg dark:bg-gray-800 bg-white border dark:border-gray-700 border-gray-200 rounded">
           <span class="fa fa-envelope  text-[#64DD17] text-[2.5rem] mb-5 " aria-hidden="true"></span>
-          <h5 class="text-2xl font-bold text-white mb-3">
+          <h5 class="text-2xl font-bold dark:text-white text-gray-800 mb-3">
             {{"contact.title-card-email" | translate}}
           </h5>
           <p>{{"contact.description-card-email" | translate}}</p>
           <a href="#" class=" hover:text-green-500" >asistentesolutionsforlife@gmail.com</a>
         </div>
-        <div class="p-6 shadow-lg bg-white/10 border rounded">
+        <div class="p-6 shadow-lg dark:bg-gray-800 bg-white border dark:border-gray-700 border-gray-200 rounded">
           <span class="fa fa-phone text-[#64DD17] text-[2.5rem] mb-5 " aria-hidden="true"></span>
-          <h5 class="text-2xl font-bold text-white mb-3">
+          <h5 class="text-2xl font-bold dark:text-white text-gray-800 mb-3">
             {{"contact.title-card-tel" | translate}}
           </h5>
           <p class="mb-3">{{"contact.description-card-tel" | translate}}</p>

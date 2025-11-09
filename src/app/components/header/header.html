@@ -1,43 +1,55 @@
 
-<header [class.fixed]="isSticky" [class.top-0]="isSticky" [class.shadow-md]="isSticky" class="w-full transition-all! duration-300! z-90 p-4 bg-[#010039]">
-  <nav  class="max-w-7xl mx-auto flex  items-center text-white  justify-between ">
+<header [class.fixed]="isSticky" [class.top-0]="isSticky" [class.shadow-md]="isSticky" 
+        class="w-full z-90 p-4 theme-bg border-b theme-border page-transition">
+  <nav class="max-w-7xl mx-auto flex items-center justify-between theme-text">
     <div class="flex lg:flex-1">
       <a href="#" class="-m-1.5 p-1.5">
         <span class="sr-only text-white">Your Company</span>
         @if (!isSticky) {
-          <img src="/assets/images/logo_solutions_forlife.png" alt="" class="h-10 w-auto" />
+          <img src="/assets/images/logo-white-background (2).svg" alt="" class="h-12 w-auto" />
         }
         @else {
-          <img src="/assets/images/logo_solutions_forlife.png" alt="" class="h-10 w-auto" />
+          <img src="/assets/images/logo-white-background (2).svg" alt="" class="h-10 w-auto" />
         }
       </a>
     </div>
     <div class="flex lg:hidden">
-      <button type="button" command="show-modal" commandfor="mobile-menu" class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-white">
-        <span class="sr-only text-white">Open main menu</span>
+      <button type="button" command="show-modal" commandfor="mobile-menu" 
+              class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 theme-text theme-hover">
+        <span class="sr-only">Open main menu</span>
         <span class="fa-solid fa-bars"></span>
       </button>
     </div>
     <el-popover-group class="hidden lg:flex justify-between lg:gap-x-12">
-      <span  [routerLink]="['/about-us']" [routerLinkActive]="['tab-active']" class="p-2 rounded-sm text-sm/6 font-semibold text-white hover:bg-[#07a248] cursor-pointer">{{"header.about us" | translate}}</span>
-      <span  [routerLink]="['/contact']" [routerLinkActive]="['tab-active']" class="p-2 rounded-sm text-sm/6 font-semibold text-white hover:bg-[#07a248] cursor-pointer">{{"header.contact" | translate}}</span>
+      <span [routerLink]="['/about-us']" [routerLinkActive]="['tab-active']" 
+            class="p-2 rounded-lg text-xl font-semibold theme-text theme-hover cursor-pointer">
+            {{"header.about us" | translate}}
+      </span>
+      <span [routerLink]="['/contact']" [routerLinkActive]="['tab-active']" 
+            class="p-2 rounded-lg text-xl font-semibold theme-text theme-hover cursor-pointer">
+            {{"header.contact" | translate}}
+      </span>
 
-      <div class="relative hover:bg-[#07a248] rounded-sm ">
-        <button popovertarget="desktop-menu-product" class="p-2  flex items-center gap-x-1 text-sm/6 font-semibold text-white cursor-pointer">
+      <div class="relative">
+        <button popovertarget="desktop-menu-product" 
+                class="p-2 flex items-center gap-x-1 text-xl font-semibold cursor-pointer theme-text theme-hover rounded-lg">
           {{"header.services" | translate}}
-          <span class="fa-solid fa-chevron-down"></span>
+          <span class="fa-solid fa-chevron-down ml-1"></span>
         </button>
 
-        <el-popover id="desktop-menu-product" anchor="bottom" popover class="w-screen max-w-md overflow-hidden rounded bg-[#010039] shadow-lg ring-1 ring-gray-900/5 transition transition-discrete [--anchor-gap:--spacing(3)] backdrop:bg-transparent open:block data-closed:translate-y-1 data-closed:opacity-0 data-enter:duration-200 data-enter:ease-out data-leave:duration-150 data-leave:ease-in">
+        <el-popover id="desktop-menu-product" anchor="bottom" popover 
+                   class="w-screen max-w-md overflow-hidden rounded-lg theme-card shadow-lg transition-all duration-200 backdrop:bg-transparent 
+                          open:block data-closed:translate-y-1 data-closed:opacity-0 data-enter:duration-200 
+                          data-enter:ease-out data-leave:duration-150 data-leave:ease-in">
           <div class="p-3">
             @for (item of this.services; track $index) {
-              <div class="group relative flex items-center gap-x-3 rounded-lg p-2 text-sm/6 hover:bg-[#07a248]">
-                <div class="flex size-11 flex-none items-center justify-center rounded-lg text-white group-hover:bg-[#07a248]">
+              <div class="group relative flex items-center gap-x-3 rounded-lg p-2 text-xl theme-hover">
+                <div class="flex size-11 flex-none items-center justify-center rounded-lg theme-text">
                   <span class="fa-solid text-xl" [ngClass]="item.icon"></span>
                 </div>
                 <div class="flex-auto">
                   <a [routerLink]="['/services', item.url]"
-                     class="text-white hover:text-white text-xl/6"
+                     class="theme-text theme-hover text-xl"
                      (click)="onServiceClick()">
                     {{ item.title[this.langService.getLang()] | titlecase }}
                     <span class="absolute inset-0"></span>
@@ -52,16 +64,17 @@
     </el-popover-group>
     <div class="hidden lg:flex lg:flex-1 gap-10 lg:justify-end">
       <!-- <span (click)="router.navigate(['login'])" class="p-2 rounded-sm text-sm/6 font-semibold text-white hover:bg-[#07a248]">{{"Login" | translate}} <span aria-hidden="true">&rarr;</span></span> -->
+      <app-theme-toggle-button />
       <button popovertarget="menu-language">
         <span class="fa-solid fa-globe"></span>
         <span class="fa-solid fa-chevron-down text-xs"></span>
       </button>
-      <el-popover id="menu-language" anchor="bottom" popover class="w-fit max-w-md overflow-hidden text-xs bg-[#00013A] shadow-lg ring-1 ring-gray-900/5 transition transition-discrete [--anchor-gap:--spacing(3)] backdrop:bg-transparent open:block data-closed:translate-y-1 data-closed:opacity-0 data-enter:duration-200 data-enter:ease-out data-leave:duration-150 data-leave:ease-in">
+      <el-popover id="menu-language" anchor="bottom" popover class="w-fit max-w-md overflow-hidden text-xs theme-card shadow-lg ring-1 ring-gray-900/5 transition transition-discrete [--anchor-gap:--spacing(3)] backdrop:bg-transparent open:block data-closed:translate-y-1 data-closed:opacity-0 data-enter:duration-200 data-enter:ease-out data-leave:duration-150 data-leave:ease-in">
         <div class="hover:bg-[#07a248] rounded-md">
-          <button (click)="switchLang('es')" class="text-white p-2 cursor-pointer">🇪🇸 ES</button>
+          <button (click)="switchLang('es')" class="theme-text p-2 cursor-pointer">🇪🇸 ES</button>
         </div>
         <div class="hover:bg-[#07a248] rounded-md">
-          <button (click)="switchLang('en')" class="text-white p-2 cursor-pointer">🇬🇧 EN</button>
+          <button (click)="switchLang('en')" class="theme-text p-2 cursor-pointer">🇬🇧 EN</button>
         </div>
       </el-popover>
     </div>
@@ -69,14 +82,14 @@
   <el-dialog>
     <dialog id="mobile-menu" class="backdrop:bg-transparent lg:hidden">
       <div tabindex="0" class="fixed inset-0 focus:outline-none">
-        <el-dialog-panel class="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-[#010039] p-4 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
+        <el-dialog-panel class="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto theme-bg theme-card p-4 sm:max-w-sm">
           <div class="flex items-center justify-between">
             <a href="#" class="-m-1.5 p-1.5">
-              <span class="sr-only text-white">Your Company</span>
-              <img src="/assets/images/logo_solutions_forlife.png"  alt="" class="h-10 w-auto" />
+              <span class="sr-only">Your Company</span>
+              <img src="/assets/images/logo_solutions_forlife.png" alt="" class="h-10 w-auto" />
             </a>
-            <button type="button" command="close" commandfor="mobile-menu" class="-m-2.5 rounded-md p-2.5 text-white">
-              <span class="sr-only text-white">Close menu</span>
+            <button type="button" command="close" commandfor="mobile-menu" class="-m-2.5 rounded-md p-2.5 theme-text theme-hover">
+              <span class="sr-only">Close menu</span>
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" data-slot="icon" aria-hidden="true" class="size-6">
                 <path d="M6 18 18 6M6 6l12 12" stroke-linecap="round" stroke-linejoin="round" />
               </svg>
@@ -85,10 +98,17 @@
           <div class="mt-6 flow-root">
             <div class="-my-6 divide-y divide-gray-500/10">
               <div class="space-y-2 py-6">
-                <span [routerLink]="['/about-us']" [routerLinkActive]="['tab-active']" class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-white hover:text-white">{{"header.about us" | translate}}</span>
-                <span [routerLink]="['/contact']" [routerLinkActive]="['tab-active']" class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-white hover:text-white">{{"header.contact" | translate}}</span>
+                <span [routerLink]="['/about-us']" [routerLinkActive]="['tab-active']" 
+                      class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold theme-text theme-hover">
+                      {{"header.about us" | translate}}
+                </span>
+                <span [routerLink]="['/contact']" [routerLinkActive]="['tab-active']" 
+                      class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold theme-text theme-hover">
+                      {{"header.contact" | translate}}
+                </span>
                 <div class="-mx-3">
-                  <button type="button" command="--toggle" commandfor="products" class="flex w-full items-center justify-between rounded-lg py-2 pr-3.5 pl-3 text-base/7 font-semibold text-white hover:text-white">
+                  <button type="button" command="--toggle" commandfor="products" 
+                          class="flex w-full items-center justify-between rounded-lg py-2 pr-3.5 pl-3 text-base/7 font-semibold theme-text theme-hover">
                     {{"header.services" | translate}}
                     <span class="fa-solid fa-chevron-down"></span>
                   </button>
@@ -110,12 +130,19 @@
             </div>
           </div>
 
-          <div id="menu-language2"  class="flex w-full gap-4 text-xs justify-end">
+          <div id="menu-language2" class="flex w-full gap-4 text-xs justify-end items-center">
+            <!-- Theme Toggle Button -->
+            <button (click)="toggleTheme()" class="p-2 rounded-lg theme-hover">
+              <span class="fa-solid" 
+                    [class.fa-moon]="(currentTheme$ | async) === 'light'"
+                    [class.fa-sun]="(currentTheme$ | async) === 'dark'">
+              </span>
+            </button>
             <div class="hover:bg-[#07a248] rounded-md">
-              <button (click)="switchLang('es')" class="text-white p-2 cursor-pointer">🇪🇸 ES</button>
+              <button (click)="switchLang('es')" class="theme-text p-2 cursor-pointer">🇪🇸 ES</button>
             </div>
             <div class="hover:bg-[#07a248] rounded-md">
-              <button (click)="switchLang('en')" class="text-white p-2 cursor-pointer">🇬🇧 EN</button>
+              <button (click)="switchLang('en')" class="theme-text p-2 cursor-pointer">🇬🇧 EN</button>
             </div>
           </div>
         </el-dialog-panel>
