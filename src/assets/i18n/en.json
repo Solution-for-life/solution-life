@@ -86,7 +86,9 @@
     "canales_atencion" : "Channels of attention",
     "canales_atencion_desc": "WhatsApp, Contact form, phone lines",
     "canales_atencion2" : "The best advice",
-    "canales_atencion2_desc": "Available 24/7, take advantage of tax seasons, and the best medical plans, etc."
+    "canales_atencion2_desc": "Available 24/7, take advantage of tax seasons, and the best medical plans, etc.",
+    "contact_button": "Contact us",
+    "title_2": "Discover how we support you"
     },
   "contact": {
     "title": "Contact us",

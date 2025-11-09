@@ -56,7 +56,7 @@
 
   <!-- Services Grid Section -->
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-    <h2 class="text-2xl lg:text-3xl font-bold theme-text text-center mb-12">Conoce cómo te acompañamos</h2>
+    <h2 class="text-2xl lg:text-3xl font-bold theme-text text-center mb-12">{{ "service.title_2" | translate }}</h2>
 
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
       @for (item of this.service?.subServices; track $index) {
@@ -84,7 +84,7 @@
             <button type="button" [routerLink]="['/contact']"
                     class="mt-4 bg-[#09b850] hover:bg-[#07a248] text-white font-bold py-2 px-4 rounded
                            transition duration-300 transform hover:-translate-y-1 hover:scale-110">
-              Contáctanos
+              {{ "service.contact_button" | translate }}
               <span class="fa fa-arrow-right ml-2"></span>
             </button>
           </div>
