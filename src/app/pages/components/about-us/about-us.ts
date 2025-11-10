@@ -34,25 +34,25 @@ export class AboutUs {
       name: 'Juneth Romero',
       role: 'CEO & Fundadora',
       img: '/assets/images/juneth.jpg',
-      twitter: 'https://twitter.com/juanperez',
-      instagram: 'https://instagram.com/juanperez',
-      facebook: 'https://facebook.com/juanperez'
+      twitter: 'https://twitter.com',
+      instagram: 'https://www.instagram.com/solutionsforlifeatl?igsh=MWhmZm9jbXo3eTVkYg==',
+      facebook: 'https://facebook.com'
     },
     {
       name: 'Carolina Romero',
       role: 'Asistente Administrativa',
       img: '/assets/images/carolina.jpg',
       twitter: 'https://twitter.com/mariagonzalez',
-      instagram: 'https://instagram.com/mariagonzalez',
-      facebook: 'https://facebook.com/mariagonzalez'
+      instagram: 'https://www.instagram.com/solutionsforlifeatl?igsh=MWhmZm9jbXo3eTVkYg==',
+      facebook: 'https://facebook.com'
     },
     {
       name: 'Geraldine Romero',
       role: 'Marketing digital',
       img: '/assets/images/gerald.jpg',
-      twitter: 'https://twitter.com/carlosrodriguez',
-      instagram: 'https://instagram.com/carlosrodriguez',
-      facebook: 'https://facebook.com/carlosrodriguez'
+      twitter: 'https://twitter.com',
+      instagram: 'https://www.instagram.com/solutionsforlifeatl?igsh=MWhmZm9jbXo3eTVkYg==',
+      facebook: 'facebook.com/profile.php?id=100001489547323&ref=_ig_profile_ac'
     }
   ];
 }

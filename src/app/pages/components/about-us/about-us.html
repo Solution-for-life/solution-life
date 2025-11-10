@@ -46,7 +46,7 @@
                 <!-- Imagen o letra inicial -->
                 <div [class]="member.img ? 'w-24 h-24 rounded-full overflow-hidden flex items-center justify-center border-2 theme-border' : 'w-24 h-24 rounded-full overflow-hidden flex items-center justify-center theme-bg-inverse border-2 theme-border'">
                   @if (member.img) {
-                    <img [src]="member.img" class="w-full h-full object-cover" [alt]="member.name">
+                    <img [src]="member.img" class="w-full h-full object-contain" [alt]="member.name">
                   } @else {
                     <span class="text-4xl font-bold theme-text dark:text-gray-900">
                       {{member.name.charAt(0).toUpperCase()}}
