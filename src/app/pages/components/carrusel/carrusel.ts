@@ -33,7 +33,7 @@ export class CarruselComponent implements OnInit, OnDestroy {
     },
     {
       title: 'Ha sido un verdadero placer trabajar con Juneth Romero y su equipo de Solutions for Life . Gracias a su apoyo, pudimos llevar adelante nuestro sueño de abrir un restaurante. Su asesoría, compromiso y profesionalismo hicieron de este proceso una experiencia clara y exitosa. Estamos muy agradecidos y confiamos en seguir contando con ellos para futuros proyectos. ¡Gracias por ayudarnos a construir un gran futuro!.',
-      name: 'Ana Martínez',
+      name: 'Restaurante Date un gusto',
       img: '',
       showMore: false
     },
