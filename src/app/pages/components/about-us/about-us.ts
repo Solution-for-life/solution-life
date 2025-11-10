@@ -42,7 +42,7 @@ export class AboutUs {
       name: 'Carolina Romero',
       role: 'Asistente Administrativa',
       img: '/assets/images/carolina.jpg',
-      twitter: 'https://twitter.com/mariagonzalez',
+      twitter: 'https://twitter.com',
       instagram: 'https://www.instagram.com/solutionsforlifeatl?igsh=MWhmZm9jbXo3eTVkYg==',
       facebook: 'https://facebook.com'
     },
