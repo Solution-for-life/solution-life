@@ -33,7 +33,7 @@ export class AboutUs {
     {
       name: 'Juneth Romero',
       role: 'CEO & Fundadora',
-      img: '/assets/images/img_juneth.png',
+      img: '/assets/images/juneth.jpg',
       twitter: 'https://twitter.com/juanperez',
       instagram: 'https://instagram.com/juanperez',
       facebook: 'https://facebook.com/juanperez'
