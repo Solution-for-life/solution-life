@@ -50,14 +50,11 @@ export class CarruselComponent implements OnInit, OnDestroy {
       showMore: false
     },
   ];
-
   displayItems: CarouselItem[] = [];
   private animationFrameId: number | null = null;
   private position = 0;
   private isPaused = false;
-
   ngOnInit() {
-    // Inicializamos displayItems con showMore
     this.displayItems = [...this.items, ...this.items].map(item => ({
       ...item,
       showMore: false
